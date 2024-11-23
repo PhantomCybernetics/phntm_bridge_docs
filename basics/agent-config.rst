@@ -1,7 +1,7 @@
 Agent configuration
 ===================
 
-The Bridge Agent is a lightweight node that performs system monitoring and various related tasks.
+The Bridge Agent is a lightweight node that performs system monitoring, Docker container control, and various related tasks.
 Typically, it's run in the same container as the Bridge, but can be also installed separately and run in multiple instances in case of a distributed system (hence the separatae configuration).
 
 Here's an example config file, e.g. ~/phntm_agent.yaml with all possible configuration options.

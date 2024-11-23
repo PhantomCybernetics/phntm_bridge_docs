@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'PHNTM Bridge'
-copyright = '2024, Phantom Cybernetics'
+copyright = '2024, Phantom Cybernetics Inc'
 author = 'Mirek Burkon'
 
 # -- General configuration ---------------------------------------------------

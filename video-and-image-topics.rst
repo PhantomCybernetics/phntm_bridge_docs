@@ -1,36 +1,43 @@
 Video & Image topics
 ======================
 
-Video in transmitted as H.264, ROS sensor_msgs/msg/Image topics are also compressed and trasmitted as H.264 video.
-This includes depth frames and compressed frames.
+Phantom Bridge transmits all video as H.264 via WebRTC media streams. ROS Image messages are also converted into H.264,
+this includes depth frames and compressed image frames. 
 
-Hardware-encoded video
-----------------------
+Hardware-encoded H.264 video
+----------------------------
+Purely from teleoperation or remote monitoring point of view, having video streams encoded into H.264 by a hardware accelerator or GPU is preferable as it
+doesn't come at extra CPU cost. In this scenario, the Bridge node simply packetizes received `FFMPEGPacket <https://github.com/ros-misc-utilities/ffmpeg_image_transport_msgs/blob/master/msg/FFMPEGPacket.msg>`_ messages
+and sends them via the media stream.
 
-[Raspberry Pi Camera modules](https://www.raspberrypi.com/products/#cameras-and-displays) are automatically discovered out of the box and can stream very fast H264 video at high resolution with a very small CPU overhead. This is achieved utilizing hw-encoding capabilities on the VideoCore and Picam2 library included in the Docker image.
-picam_ros package (add CameraInfo)
+For instance, Raspberry Pi 4, Compute Module 4, or Raspberry Pi Zero 2 W all come with a H.264 hardware encoder that can be used with all compatible Pi Camera modules.
+**Raspberry PI 5 does not have a hardware video encoder**, video streams needs to be encoded on the CPU. In both cases, you may want to use our `picam_ros2 package <https://github.com/PhantomCybernetics/picam_ros2>`_ to ROSify your Pi Cameras.
 
-[OAK Cameras](https://shop.luxonis.com/collections/oak-cameras-1): TODO!
+Similarly, `OAK cameras <https://shop.luxonis.com/collections/oak-cameras-1>`_ by Luxonis offer hardware encoded H.264 video and their `ROS package <https://docs.luxonis.com/software/ros/depthai-ros/>`_ supports FFMPEGPacket output of the box.
 
-ROS sensor_msgs/msg/Image
--------------------------
+ROS Image messages
+------------------
+All ROS sensor_msgs/msg/Image messages will be transcoded into H.264 on the CPU and packetized before transmission.
+This may have an impact on your evengy consumtion and cut down on system recources. In general the latency difference is quite low where
+CPU is not the main constraint, for instance Raspberry PI 5 performs quite well.
 
-Standard ROS image topics can be subscribed to and streamed as WebRTC video. these will be software encoded and streamed as H.264. The ROS message contains a raw OpenCV frame, which needs to be encoded and packetized. At this moment the following frame encodings are impelemnted: rgb8 for RGB, 16UC1 and 32FC1 for depth.
+Several optimizations are implemented to keep the latency as low as possible, even with software frame encoding. However, performance will vastly depend on your hardware setup and utilization of resources.
+Consider dedicating at least one CPU core to video encoding.
 
-Software encoding requires significantly more CPU time compared to GPU-based video encoding and can lead to increased latency and power consumption. Despite being offloaded to a dedicated process[^1]. On Pi 4B, camera streaming 640x480 @ 30 FPS only achieves about 5-10 FPS transmission. With delay between frames this long, every frame is encoded as a keyframe.
-
-[^1] The process encoding image frames is in fact shared with all read subscriptions, including non-image ROS topics, in order ro isolate fast hw-encoded video streaming and inbound control data streams from potentially slower data.
+At this point, the following frame encoding types are supported: **rgb8** and **bgr8** (for RGB), **16UC1**, **mono16** and **32FC1** (for depth frames).
 
 Depth processing
 ----------------
+ROS Image messages containing depth frames will be processed and colorized for better visibility.
+As mentioned above, 16UC1, mono16 and 32FC1 frame encoginds are supported at this point.
 
-ROS Image messages containing depth data can be processed and colorized for better visibility. As mentioned above, 16UC1 and 32FC1 frame encoginds are supported at this point.
+See :doc:`Bridge configuration </basics/bridge-config>` for config options.
 
-Compressed image topics
+Compressed Image topics
 -----------------------
+ROS sensor_msgs/msg/CompressedImage mesages (JPEG or PNG frames) are also supported and will be transcoded
+into H.264 and streamed as video.
 
-Tested cameras
---------------
-Picams (w picam_ros2)
-Astra
-Oak (note about the Oak ROS package issues)
+Ogg/Theora video
+----------------
+Although some cameras offer Ogg/Theora video output, this format is not supported by Phantom Brige as WebRTC does not support it and most web browser implemenations `are depricated anyway <https://caniuse.com/ogv>`_.
