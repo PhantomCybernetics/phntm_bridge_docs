@@ -1,5 +1,5 @@
 Custom message & Service types
-------------------------------
+==============================
 
 The Bridge node looks for IDL files containing messsage type definition for every discovered ROS topic and service.
 These files are uploaded to the Cloud Bridge, parsed, and then pushed into the Web UI as JSON.
