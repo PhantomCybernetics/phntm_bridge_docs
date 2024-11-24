@@ -46,3 +46,42 @@
 .wy-breadcrumbs-aside A  {
     color: rgba(0, 0, 0, 0.1);
 }
+
+.conn-led, .data-led {
+    display: block;
+    background: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+}
+
+.conn-led.on {
+    background-color: red;
+}
+
+.conn-led.flashing-fast {
+    animation: conn-led-flashing-fast 600ms infinite linear;
+}
+
+@keyframes conn-led-flashing-fast {
+    0%, 100% {
+        background-color: white;
+    }
+    16.67% {
+        background-color: red;
+    }
+}
+
+.data-led.short-flash {
+    animation: data-led-short-flash 4ms infinite;
+}
+
+@keyframes data-led-short-flash {
+    0%, 50% {
+        background-color: white;
+    }
+    50.1%, 100% {
+        background-color: red;
+    }
+}
+

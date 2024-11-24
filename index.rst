@@ -55,7 +55,7 @@ Features
 
    video-and-image-topics
    wifi-scanning-and-roaming
-   connection-leds
+   status-leds
    
    performance
    ai
