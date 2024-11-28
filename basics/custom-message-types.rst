@@ -17,10 +17,10 @@ This is done using the extra_packages configuration option in the phntm_bridge.y
      - /ros2_ws/src/astra_camera_msgs
      - some_other_package
 
-This list contains either a package folder mounted into the Docker container,
+This list contains either a package folder mapped into the Docker container,
 or a ROS2 package name to be installed via apt-get (for "ros-distro-some-package" only use "some_package")
 
-Don't forget live package folders need to be mounted inside the container using the volumes attribute in compose.yaml.
+Don't forget live package folders need to be mapped inside the container using the volumes attribute in compose.yaml.
 You need to reference the package root (i.e. where the package.xml file is):
 
 .. code-block::
@@ -41,7 +41,7 @@ After editing the package list, to force the check and/or re-build, remove and r
     docker rm phntm-bridge
     docker compose up phntm-bridge
 
-You can also force this check on every start of the container with an enviromental variable in the compose.yaml:
+You can also force this check on every start of the container with the `FORCE_FIRST_RUN_CHECKS` enviromental variable in the compose.yaml:
 
 .. code-block::
    :caption: compose.yaml
