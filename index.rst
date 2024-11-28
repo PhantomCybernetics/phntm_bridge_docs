@@ -14,18 +14,18 @@ It comes with Docker Container control for the host machine, system load and Wi-
 and customizable Web Interface for both desktop and touch devices.
 
 This Bridge is indended to be a modern replacement for RViz, in some cases going beyong what is
-typically consideted a ROS visualization tool in order to make robotics development easier.
+typically consideted a ROS visualization tool, in order to make robotics development with ROS2 easier.
 
 Features
 ========
-- ROS2 Topic and Service discovery
+- ROS2 topic and service discovery
 - Fast streamimg of binary ROS2 messages (both in a out)
 - Fast H.264 video streaming (hw or sw-encodeded frames)
 - Software encoded ROS2 Image messages streamed as H.264 video (at CPU cost)
 - Docker container discovery and control
-- Reliable ROS2 Service calls
-- ROS2 Parameneters runtime discovery ,read and write
-- User input mapping to ROS control messages (keyboard, gamepad, touch)
+- Reliable ROS2 service calls
+- ROS2 parameneters runtime discovery, read and write
+- User input mapping to ROS control messages (keyboard, gamepad, touch interface)
 - Extra ROS2 packages can be easily included for custom message type support
 - Robot's Wi-Fi signal monitoring, scan & roaming (requires wpa_supplicant)
 - File retreival from any running Docker container and host fs (such as URDF models)
@@ -33,8 +33,9 @@ Features
 - Standalone lightweight Bridge Agent for monitoring and management of various parts of a distributed system
 - Connects P2P or via a TURN server when P2P link is not possible
 - Multiple peers can connect to the same machine at a very low extra CPU cost
-- ~5-10ms RTT on local network, 50ms+ RTT remote operation via a TURN server
+- ~5-10ms RTT on local network, 50ms+ RTT remote teleoperation via a TURN server
 - Works with rosbag and sims such as Gazebo or Webots
+- Fully open-source under the MIT license
 
 .. toctree::
    :maxdepth: 3
@@ -45,7 +46,6 @@ Features
    basics/install
    basics/bridge-config
    basics/agent-config
-   basics/docker
    basics/custom-message-types.rst
    
    ui/overview

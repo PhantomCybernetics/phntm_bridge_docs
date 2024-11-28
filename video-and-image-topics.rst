@@ -40,4 +40,4 @@ into H.264 and streamed as video.
 
 Ogg/Theora video
 ----------------
-Although some cameras offer Ogg/Theora video output, this format is not supported by Phantom Brige as WebRTC does not support it and most web browser implemenations `are depricated anyway <https://caniuse.com/ogv>`_.
+Although some cameras offer Ogg/Theora output, this format is not supported by Phantom Brige as the WebRTC standard does not include it and most web browser implemenations `are depricated anyway <https://caniuse.com/ogv>`_.

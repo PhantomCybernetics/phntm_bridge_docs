@@ -39,14 +39,14 @@ html_js_files = [
 github_url = 'https://github.com/PhantomCybernetics'
    
 html_theme_options = {
-   # 'analytics_id': 'G-XXXXXXXXXX',  #  Provided by Google in your dashboard
-   # 'analytics_anonymize_ip': False,
-   'logo_only': True,
-   'collapse_navigation': True,
-   'style_external_links': True,
+    'logo_only': True,
+    'collapse_navigation': True,
+    'style_external_links': True,
+    # 'analytics_id': 'G-XXXXXXXXXX',  #  Provided by Google in your dashboard
+    # 'analytics_anonymize_ip': False,
     # 'prev_next_buttons_location': 'bottom',
     # 'style_external_links': False,
-    'vcs_pageview_mode': '',
+    # 'vcs_pageview_mode': '',
     # 'style_nav_header_background': 'white',
     # 'flyout_display': 'hidden',
     # 'version_selector': True,
