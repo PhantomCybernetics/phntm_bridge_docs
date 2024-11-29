@@ -50,6 +50,7 @@ Features
    
    ui/overview
    ui/user-input
+   ui/services
    ui/touch-ui
    ui/custom-widgets
 

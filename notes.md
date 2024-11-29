@@ -1,8 +1,4 @@
-# Architecture and Motivation
-
 ## Docker Compose Configuration
-
-## Distributed Systems
 
 ## User Interface
 - desktop interface 
@@ -32,9 +28,6 @@
 - zoomable 3d tiles
 - multitopic
 - linking external library
-
-## User Input
-- custom drivers
 
 ## ROS Services
 

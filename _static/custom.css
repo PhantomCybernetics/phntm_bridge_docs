@@ -85,3 +85,24 @@
     }
 }
 
+.rst-content .align-right {
+    margin: 0 0 15px 24px;
+}
+
+.rst-content img {
+    border-radius: 5px;
+}
+
+img.user-input-ui {
+    width: 413px; /* @2x */
+}
+
+img.user-input-actions {
+    width: 205px; /* @2x */
+}
+
+img.user-input-services {
+    width: 570px; /* @2x */
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
