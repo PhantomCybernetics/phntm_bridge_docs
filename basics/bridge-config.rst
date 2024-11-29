@@ -71,9 +71,9 @@ Here's the full list of configurable options:
         docker_monitor_topic: /docker_info # produced by the Agent
 
         ## User input config
-        input_drivers: [ 'Twist', 'Joy' ] # enabled input drivers
-        input_defaults: /ros2_ws/phntm_input_config.json # path to input config file as mounted inside the container
-
+        input_drivers: [ 'Twist', 'Joy' ] # enabled input drivers, see User input & Teleoperation
+        input_defaults: /ros2_ws/phntm_input_config.json # See User input & Teleoperation
+        service_defaults: /ros2_ws/phntm_services_config.json # See Services
 
 Topic subscription options
 --------------------------
@@ -111,7 +111,7 @@ sensor_msgs/msg/BatteryState
       min_voltage: 9.0 # battery empty voltage
       max_voltage: 12.6 # battery full voltage
 
-vision_msgs/msg/Detection2DArray, vision_msgs/msg/Detection3DArray
+vision_msgs/msg/Detection2DArray, Detection3DArray
 ------------------------------------------------------------------
 .. code-block::
    :caption: phntm_bridge.yaml
@@ -129,7 +129,7 @@ Supported depth image types are '16UC1', 'mono16', and '32FC1'.
 
 .. code-block::
    :caption: phntm_bridge.yaml
-    
+
     /some_depth_image_topic:
       16UC1_max_sensor_value: 4000.0 # depth max distance from the sensor in mm
       16UC1_colormap: 13 # cv2.COLORMAP, e.g. 13 = cv2.COLORMAP_MAGMA

@@ -48,8 +48,8 @@ To tell the Bridge node which file to use, use `input_defaults` parameter in you
     input_drivers: [ 'Twist', 'Joy' ] # enabled input drivers
     input_defaults: /ros2_ws/phntm_input_config.json # path to input config file as mapped inside the container
 
-This setup is then used as the default for all devices and users accessing the robot's Bridge Web UI.
-At any point, these defaults can be overriden by the local browser's setup which always has priority.
+This setup is then used as the defaults for all devices and users accessing the robot's Bridge Web UI.
+At any point, these defaults can be overridden by the local browser's settings which always take priority.
 
 .. Note:: Modifying input profiles and configuration is always saved and applied to the current web browser only. Changes always need to be saved to your robot's phntm_input_config.json file in order to be apllied to other peers or devices you may want to control the robot with. Deleting the configuration or a profile in a web browser will reset it to the robot's defaults on the next Web UI page load.
 
