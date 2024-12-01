@@ -34,13 +34,14 @@ Here's the full list of configurable options:
         stop_discovery_after_sec: 10.0 # < 0 run forever
 
         ## Extra packages to install on the 1st container run
-        ## See Custom message and service types
+        ## (See Custom message and service types)
         extra_packages:
          - /ros2_ws/src/vision_msgs
          - /ros2_ws/src/astra_camera_msgs
          - some_other_package
 
         ## Blink LEDs via GPIO on network activity
+        ## (See Status LEDs)
         conn_led_gpio_chip: /dev/gpiochip0
         conn_led_pin: 23
         data_led_pin: 24
