@@ -8,7 +8,7 @@ drive the robot, and to control various actuators and other systems from the com
     :align: right
     :class: user-input-ui
 
-Keyboard keys, gamepad buttons and axis, as well as virutal touch gamepad and buttons can be configured to generate certain kinds of ROS messages that the machine may already understand (such as `sensor_msgs/msg/Joy`, `geometry_msgs/msg/Twist` or `TwistStamped`).
+Keyboard keys, gamepad buttons and axes, as well as virutal touch gamepad and buttons can be configured to generate certain kinds of ROS messages that the machine may already understand (such as `sensor_msgs/msg/Joy`, `geometry_msgs/msg/Twist` or `TwistStamped`).
 You can also call ROS services and trigger various UI functions. A completely unique output can be achieved by implementing a custom `input driver`.
 
 This provides a plug-and-play enhancement of existing teleop and control mechanisms, while improving user experience, overcoming the typical range limitation of Bluetooth, and offering vastly more flexibility.
@@ -51,27 +51,27 @@ To tell the Bridge node which file to use, use `input_defaults` parameter in you
 This setup is then used as the defaults for all devices and users accessing the robot's Bridge Web UI.
 At any point, these defaults can be overridden by the local browser's settings which always take priority.
 
-.. Note:: Modifying input profiles and configuration is always saved and applied to the current web browser only. Changes always need to be saved to your robot's phntm_input_config.json file in order to be apllied to other peers or devices you may want to control the robot with. Deleting the configuration or a profile in a web browser will reset it to the robot's defaults on the next Web UI page load.
+.. Note:: Modifying input profiles and configuration is always saved and applied to the current web browser only. Changes need to be saved to your robot's `phntm_input_config.json` file in order to be applied to other peers or devices you may want to control the robot with. Deleting the configuration or a profile in a web browser will reset it to the robot's defaults on the next Web UI page load.
 
 Custom Touch UI buttons
 -----------------------
 The touch interface can be extended by defining extra custom buttons that will be placed in the top or bottom part of the screen.
-These can be configured like any other keyboard or gamepad buttons and will be accompanied by a virtual gamepad, useful for controlling up to 4 custom output axis.
+These can be configured like any other keyboard or gamepad buttons and will be accompanied by a virtual gamepad, useful for controlling up to 4 custom output axes.
 You can change the display order of these buttons by dragging them around, and even use emojis as icons to save on valuable screen space.
 
-Implementing custom drivers (TODO!)
------------------------------------
+Implementing custom drivers
+---------------------------
 Custom input drivers should be implemented by extending the `InputDriver <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/base-driver.js>`_ class. 
-Examine the built-in `JoyInputDriver <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/joy-driver.js>`_ and `TwistInputDriver <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/joy-driver.js>`_ classes to get an idea of what the input and output of a driver should look like.
+See the `bridge_ui_extras <https://github.com/PhantomCybernetics/bridge_ui_extras>`_ repo and in particular `custom-input-driver.js <https://github.com/PhantomCybernetics/bridge_ui_extras/blob/main/examples/custom-input-driver.js>`_ to get an idea of what the input and output of a driver should look like.
+You can also examine the built-in `JoyInputDriver <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/joy-driver.js>`_ and `TwistInputDriver <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/joy-driver.js>`_ classes. 
 
-In order to add a new driver to the Web UI, you need to place it somewhere on the internet where it can be accessed. For development and testing purposes, this can even be a localhost. It is important for the web server to provide a valid SSL certificate, otherwise the browser will complain about unsecure content.
+In order to add a new driver to the Web UI, you need to place it somewhere on the internet where it can be accessed by a web browser. For development and testing purposes, this can even be localhost. It is important for the web server to provide a valid SSL certificate, otherwise the browser will complain about unsecure content.
 
 To register your custom input driver, use the `custom_input_drivers` parameter in your phntm_bridge.yaml config file like so:
 
 .. code-block::
    :caption: phntm_bridge.yaml
 
-    input_drivers: [ 'Twist', 'MyFirstDriver', 'MySecondDriver' ] # you can combine enabled input drivers with the built-in ones
+    input_drivers: [ 'Twist', 'ExampleCustomDriver' ] # you can combine enabled input drivers with the built-in ones
     custom_input_drivers: 
-     - 'MyFirstDriver https://my-domain.com/my-first-driver-class.js' # class name, space, url to be used
-     - 'MySecondDriver https://my-other-domain.com/my-second-driver-class.js'
+     - 'ExampleCustomDriver https://my-domain.com:443/custom-input-driver.js' # class name, space, url to be used
