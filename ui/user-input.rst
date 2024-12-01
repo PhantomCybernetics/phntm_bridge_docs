@@ -55,17 +55,17 @@ At any point, these defaults can be overridden by the local browser's settings w
 
 Custom Touch UI buttons
 -----------------------
-The touch interface can be extended by defining extra custom buttons that will be placed in the top or bottom part of the screen.
+On touchscreen devices, the interface can be extended by defining extra custom buttons that will be placed in the top or bottom part of the screen.
 These can be configured like any other keyboard or gamepad buttons and will be accompanied by a virtual gamepad, useful for controlling up to 4 custom output axes.
 You can change the display order of these buttons by dragging them around, and even use emojis as icons to save on valuable screen space.
 
 Implementing custom drivers
 ---------------------------
 Custom input drivers should be implemented by extending the `InputDriver <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/base-driver.js>`_ class. 
-See the `bridge_ui_extras <https://github.com/PhantomCybernetics/bridge_ui_extras>`_ repo and in particular `custom-input-driver.js <https://github.com/PhantomCybernetics/bridge_ui_extras/blob/main/examples/custom-input-driver.js>`_ to get an idea of what the input and output of a driver should look like.
+See the `bridge_ui_extras <https://github.com/PhantomCybernetics/bridge_ui_extras>`_ repo and `custom-input-driver.js <https://github.com/PhantomCybernetics/bridge_ui_extras/blob/main/examples/custom-input-driver.js>`_ in particular to get an idea of what the input and output of a driver should look like.
 You can also examine the built-in `JoyInputDriver <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/joy-driver.js>`_ and `TwistInputDriver <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/joy-driver.js>`_ classes. 
 
-In order to add a new driver to the Web UI, you need to place it somewhere on the internet where it can be accessed by a web browser. For development and testing purposes, this can even be localhost. It is important for the web server to provide a valid SSL certificate, otherwise the browser will complain about unsecure content.
+In order to add a new driver to the Web UI, you need to host it somewhere on the internet where it can be accessed by a web browser. For development and testing purposes, this can even be your localhost. It is important for the web server to provide a valid SSL certificate, otherwise the browser will complain about unsecure content.
 
 To register your custom input driver, use the `custom_input_drivers` parameter in your phntm_bridge.yaml config file like so:
 

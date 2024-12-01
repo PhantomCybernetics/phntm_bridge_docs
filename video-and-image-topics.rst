@@ -11,7 +11,7 @@ doesn't come at extra CPU cost. In this scenario, the Bridge node simply packeti
 and sends them via the media stream.
 
 For instance, Raspberry Pi 4, Compute Module 4, or Raspberry Pi Zero 2 W all come with a H.264 hardware encoder that can be used with all compatible Pi Camera modules.
-**Raspberry PI 5 does not have a hardware video encoder**, video streams needs to be encoded on the CPU. In both cases, you may want to use our `picam_ros2 package <https://github.com/PhantomCybernetics/picam_ros2>`_ to ROSify your Pi Cameras.
+Raspberry Pi 5 does not have a hardware video encoder, video streams needs to be encoded on the CPU. In both cases, you may want to use our `picam_ros2 package <https://github.com/PhantomCybernetics/picam_ros2>`_ to ROSify your Pi Cameras.
 
 Similarly, `OAK cameras <https://shop.luxonis.com/collections/oak-cameras-1>`_ by Luxonis offer hardware encoded H.264 video and their `ROS package <https://docs.luxonis.com/software/ros/depthai-ros/>`_ supports FFMPEGPacket output of the box.
 

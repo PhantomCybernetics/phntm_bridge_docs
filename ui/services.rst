@@ -35,11 +35,21 @@ At any point, these defaults can be overridden by the local browser’s settings
 
 .. Note:: Modified service buttons are always saved and applied to the current web browser only. Changes need to be saved to your robot’s `phntm_services_config.json` file in order to be applied to other peers or devices you may want to control the robot with. Deleting the configuration in a web browser will reset it to the robot’s defaults on the next Web UI page load.
 
-Implementing custom service UI widgets (TODO!)
-----------------------------------------------
-On top of the above mentioned options, you may want to create a completely custom controls for a ROS service. 
-The best way to do that would be to create a custom service widget, which is then used in the services dropdown menu in a similar fashion to the buttons.
+Implementing custom widgets
+---------------------------
+On top of the above mentioned options, you may want to create a completely unique controls for a ROS service. 
+The best way to do that would be to create a custom service widget, which is then used in the service dropdown menu in a similar fashion to the buttons.
 
+Custom service widgets should be implemented by extending the `ServiceInput <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/service-widgets.js>`_ class. 
+See the `bridge_ui_extras <https://github.com/PhantomCybernetics/bridge_ui_extras>`_ repo and `custom-service-slider-widget.js <https://github.com/PhantomCybernetics/bridge_ui_extras/blob/main/examples/custom-service-slider-widget.js>`_ in particular to get an idea of what a service widget should look like.
 
+To register your custom service widgets, use the custom_service_widgets and service_widgets parameters in your phntm_bridge.yaml config file like so:
 
-TODO
+.. code-block::
+   :caption: phntm_bridge.yaml
+
+    custom_service_widgets: # add widgets to load
+     - 'ServiceInput_ExampleSlider https://my-domain.com:443/custom-service-slider-widget.js' # class name, space, url to be used
+    service_widgets: # map services
+     - '/camera/set_color_exposure ServiceInput_ExampleSlider {min: 0, max: 1, value_read: "get_color_exposure"}' # service id, space, class name, space, json data to pass
+     - '/camera/set_color_gain ServiceInput_ExampleSlider {min: -100, max: 100, value_read: "get_color_gain"}'

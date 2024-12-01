@@ -73,8 +73,12 @@ Here's the full list of configurable options:
         ## User input config
         input_drivers: [ 'Twist', 'Joy' ] # enabled input drivers, see User input & Teleoperation
         input_defaults: /ros2_ws/phntm_input_config.json # See User input & Teleoperation
+        custom_input_drivers: [ 'ClassName https://' ] # link custom drivers, see Implementing custom drivers
+
         service_defaults: /ros2_ws/phntm_services_config.json # See Services
-        custom_input_drivers: [] # link custom drivers, see Implementing custom drivers
+        custom_service_widgets: [] # See Implementing custom service UI widgets
+        service_widgets: [] # See Implementing custom service UI widgets
+
 
 Topic subscription options
 --------------------------

@@ -11,13 +11,15 @@ for real-time ROS data visualization and video streaming, teleoperation, human-r
 and both local and remote robot monitoring.
 
 It comes with Docker Container control for the host machine, system load and Wi-Fi monitoring,
-and customizable Web Interface for both desktop and touch devices.
+and customizable Web Interface for both desktop and mobile touchscreen devices.
 
 This Bridge is indended to be a modern replacement for RViz, in some cases going beyong what is
 typically consideted a ROS visualization tool, in order to make robotics development with ROS2 easier.
 
 Features
 ========
+- Connects P2P or via a TURN server when P2P link is not possible
+- ~5-10ms RTT on local network, 50ms+ RTT remote teleoperation via a TURN server
 - ROS2 topic and service discovery
 - Fast streamimg of binary ROS2 messages (both in a out)
 - Fast H.264 video streaming (hw or sw-encodeded frames)
@@ -31,11 +33,10 @@ Features
 - File retreival from any running Docker container and host fs (such as URDF models)
 - System load and Docker stats monitoring
 - Standalone lightweight Bridge Agent for monitoring and management of various parts of a distributed system
-- Connects P2P or via a TURN server when P2P link is not possible
 - Multiple peers can connect to the same machine at a very low extra CPU cost
-- ~5-10ms RTT on local network, 50ms+ RTT remote teleoperation via a TURN server
 - Works with rosbag and sims such as Gazebo or Webots
 - Fully open-source under the MIT license
+- Customizable by self-hosted plug-ins
 
 .. toctree::
    :maxdepth: 3
