@@ -34,7 +34,7 @@ Here's the full list of configurable options:
         stop_discovery_after_sec: 10.0 # < 0 run forever
 
         ## Extra packages to install on the 1st container run
-        ## (See Custom message and service types)
+        ## (See Custom message & Service types)
         extra_packages:
          - /ros2_ws/src/vision_msgs
          - /ros2_ws/src/astra_camera_msgs
