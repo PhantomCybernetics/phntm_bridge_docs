@@ -74,4 +74,4 @@ To register your custom input driver, use the `custom_input_drivers` parameter i
 
     input_drivers: [ 'Twist', 'ExampleCustomDriver' ] # you can combine enabled input drivers with the built-in ones
     custom_input_drivers: 
-     - 'ExampleCustomDriver https://my-domain.com:443/custom-input-driver.js' # class name, space, url to be used
+     - 'ExampleCustomDriver https://my-domain.com:443/custom-input-driver.js' # class name, space, source file URL to be loaded

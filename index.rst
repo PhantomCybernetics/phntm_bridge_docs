@@ -50,9 +50,8 @@ Features
    basics/custom-message-types.rst
    
    ui/overview
-   ui/user-input
+   ui/user-input-and-teleoperation
    ui/services
-   ui/touch-ui
    ui/custom-widgets
 
    video-and-image-topics

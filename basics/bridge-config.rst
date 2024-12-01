@@ -53,10 +53,6 @@ Here's the full list of configurable options:
           reliability: 1 # Reliable
           durability: 1 # Transient local
           lifespan_sec: -1 # Infinity
-        /tf_static:
-          reliability: 1 # Reliable
-          durability: 1 # Transient local
-          lifespan_sec: -1 # Infinity
         /battery:
           min_voltage: 9.0 # empty voltage
           max_voltage: 12.6 # full voltage
@@ -70,14 +66,17 @@ Here's the full list of configurable options:
         ui_docker_control: True # Docker control via Agent
         docker_monitor_topic: /docker_info # produced by the Agent
 
-        ## User input config
-        input_drivers: [ 'Twist', 'Joy' ] # enabled input drivers, see User input & Teleoperation
-        input_defaults: /ros2_ws/phntm_input_config.json # See User input & Teleoperation
-        custom_input_drivers: [ 'ClassName https://' ] # link custom drivers, see Implementing custom drivers
+        ## User input config (see User input & Teleoperation)
+        input_drivers: [ 'Twist', 'Joy' ] # enabled input drivers
+        input_defaults: /ros2_ws/phntm_input_config.json # path to input defaults config file as mapped inside the container
+        custom_input_drivers: [ 'ExampleCustomDriver https://my-domain.com:443/custom-input-driver.js' ] # see Implementing custom drivers
 
-        service_defaults: /ros2_ws/phntm_services_config.json # See Services
-        custom_service_widgets: [] # See Implementing custom service UI widgets
-        service_widgets: [] # See Implementing custom service UI widgets
+        ## Services input config (see Services)
+        service_defaults: /ros2_ws/phntm_services_config.json # path to services defaults config file as mapped inside the container
+        custom_service_widgets: [ 'ServiceInput_ExampleSlider https://my-domain.com:443/custom-service-slider-widget.js' ] # see Implementing custom widgets
+        service_widgets: # custom widgets service mapping, see Implementing custom widgets
+         - '/camera/set_color_exposure ServiceInput_ExampleSlider {min: 0, max: 1, value_read: "get_color_exposure"}'
+         - '/camera/set_color_gain ServiceInput_ExampleSlider {min: -100, max: 100, value_read: "get_color_gain"}'
 
 
 Topic subscription options
@@ -122,9 +121,9 @@ vision_msgs/msg/Detection2DArray, Detection3DArray
    :caption: phntm_bridge.yaml
 
     /some_detection_topic:
-      nn_input_w: 416 # nn input frame width
-      nn_input_h: 416 # nn input frame height
-      nn_detection_labels: [ 'person', 'woman', 'man', 'camera', 'TV' ] # nn class label map
+      input_width: 416 # detection input frame width
+      input_height: 416 # detection input frame height
+      label_map: [ 'person', 'woman', 'man', 'camera', 'TV' ] # class label map
 
 sensor_msgs/msg/Image
 ---------------------
