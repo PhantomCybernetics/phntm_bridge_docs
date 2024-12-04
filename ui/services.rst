@@ -43,10 +43,14 @@ Implementing custom widgets
 On top of the above mentioned options, you may want to create a completely unique controls for a ROS service. 
 The best way to do that would be to create a custom service widget, which is then used in the service dropdown menu in a similar fashion to the buttons.
 
-Custom service widgets should be implemented by extending the `ServiceInput <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/service-widgets.js>`_ class. 
-See the `bridge_ui_extras <https://github.com/PhantomCybernetics/bridge_ui_extras>`_ repo and `custom-service-slider-widget.js <https://github.com/PhantomCybernetics/bridge_ui_extras/blob/main/examples/custom-service-slider-widget.js>`_ in particular to get an idea of what a service widget should look like.
+Custom service widgets should be implemented by extending the `CustomServiceInput <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/custom-service-input.js>`_ class. 
+See the `bridge_ui_extras <https://github.com/PhantomCybernetics/bridge_ui_extras>`_ repo and in particular `custom-service-slider-widget.js <https://github.com/PhantomCybernetics/bridge_ui_extras/blob/main/examples/custom-service-slider-widget.js>`_ to get an idea of what a service widget class can look like. Here's the ServiceInput_ExampleSlider in action:
 
-To register your custom service widgets, use the custom_service_widgets and service_widgets parameters in your phntm_bridge.yaml config file as shown below:
+.. figure:: ../img/custom-slider-demo.gif
+    :align: center
+    :class: service-custom-widget
+
+To register your custom service widgets, use the `custom_service_widgets` and `service_widgets` parameters in your phntm_bridge.yaml config file as shown below:
 
 .. code-block::
    :caption: phntm_bridge.yaml
@@ -54,5 +58,7 @@ To register your custom service widgets, use the custom_service_widgets and serv
     custom_service_widgets: # first, add widget classes to load
      - 'ServiceInput_ExampleSlider https://my-domain.com:443/custom-service-slider-widget.js' # class name, space, source file URL to be loaded
     service_widgets: # then map services to widget classes
-     - '/camera/set_color_exposure ServiceInput_ExampleSlider {min: 0, max: 1, value_read: "get_color_exposure"}' # service id, space, class name, space, custom JSON data to pass
-     - '/camera/set_color_gain ServiceInput_ExampleSlider {min: -100, max: 100, value_read: "get_color_gain"}'
+     - '/camera/set_ir_exposure ServiceInput_ExampleSlider {"min": 1, "max": 3000, "value_read_srv": "/camera/get_ir_exposure"}' # service id, space, class name, space, custom JSON data to pass
+     - '/camera/set_ir_gain ServiceInput_ExampleSlider {"min": 0, "max": 20000, "value_read_srv": "/camera/get_ir_gain"}'
+
+.. Note:: The services API provides a reliable way of calling ROS services, however, it is not designed with speed nor low latency in mind. All service requests are queued and processed in sequential order by the Bridge node which also waits for every service reply. If no reply arrives withing 10s, you will receive a `timeout` error. If you need to call a service say several times per second, you should probably use topic messages instead.

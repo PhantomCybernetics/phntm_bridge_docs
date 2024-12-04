@@ -59,7 +59,7 @@ Features
    status-leds
    
    performance
-   ai
+   cloud-robotics
    debugging
    self-hosted
    roadmap-and-contributing

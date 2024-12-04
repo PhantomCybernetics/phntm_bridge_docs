@@ -106,3 +106,8 @@ img.service-buttons-editor {
     border-radius: 12px;
     margin-bottom: 00px;
 }
+
+img.service-custom-widget {
+    width: 523px;
+    margin-bottom: 20px;
+}

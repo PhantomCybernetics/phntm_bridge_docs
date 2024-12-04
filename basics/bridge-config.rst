@@ -68,16 +68,14 @@ Here's the full list of configurable options:
         docker_monitor_topic: /docker_info # produced by the Agent
 
         ## User input config (see User input & Teleoperation)
-        input_drivers: [ 'Twist', 'Joy' ] # enabled input drivers
+        input_drivers: [ 'Twist', 'Joy' ] # enabled input drivers, use [ '' ] to disable user input entirely
         input_defaults: /ros2_ws/phntm_input_config.json # path to input defaults config file as mapped inside the container
-        custom_input_drivers: [ 'ExampleCustomDriver https://my-domain.com:443/custom-input-driver.js' ] # see Implementing custom drivers
+        custom_input_drivers: [] # custom drivers to load, see Implementing custom drivers
 
         ## Services input config (see Services)
         service_defaults: /ros2_ws/phntm_services_config.json # path to services defaults config file as mapped inside the container
-        custom_service_widgets: [ 'ServiceInput_ExampleSlider https://my-domain.com:443/custom-service-slider-widget.js' ] # see Implementing custom widgets
-        service_widgets: # custom widgets service mapping, see Implementing custom widgets
-         - '/camera/set_color_exposure ServiceInput_ExampleSlider {min: 0, max: 1, value_read: "get_color_exposure"}'
-         - '/camera/set_color_gain ServiceInput_ExampleSlider {min: -100, max: 100, value_read: "get_color_gain"}'
+        custom_service_widgets: [] # custom widgets to load, see Implementing custom widgets
+        service_widgets: [] # custom widgets service mapping, see Implementing custom widgets
 
 
 Topic subscription options
@@ -129,12 +127,13 @@ vision_msgs/msg/Detection2DArray, Detection3DArray
 sensor_msgs/msg/Image
 ---------------------
 Configuration is only needed for processing of Image message containing depth frames.
-Each option is prefixed with its internal image format, included in message.encoding attribute.
 Supported depth image types are '16UC1', 'mono16', and '32FC1'.
+The colormap parameter is an integer value from the `cv2.COLORMAP <https://docs.opencv.org/4.x/d3/d50/group__imgproc__colormap.html#enum-members>`_ enum and is only used to stylize the non-RGB frame encodings.
+See :doc:`Video & Image topics </video-and-image-topics>` for more on Image topics processing.
 
 .. code-block::
    :caption: phntm_bridge.yaml
 
     /some_depth_image_topic:
-      16UC1_max_sensor_value: 4000.0 # depth max distance from the sensor in mm
-      16UC1_colormap: 13 # cv2.COLORMAP, e.g. 13 = cv2.COLORMAP_MAGMA
+      max_sensor_value: 4000.0 # depth max distance from the sensor in mm
+      colormap: 13 # cv2.COLORMAP, e.g. 13 = cv2.COLORMAP_MAGMA
