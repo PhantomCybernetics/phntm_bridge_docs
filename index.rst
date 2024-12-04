@@ -61,6 +61,8 @@ Features
    performance
    cloud-robotics
    debugging
+   
+   availability-zones
    self-hosted
    roadmap-and-contributing
    

@@ -85,6 +85,10 @@
     }
 }
 
+.rst-content section ul {
+    margin-top: -15px;
+}
+
 .rst-content .align-right {
     margin: 0 0 15px 24px;
 }

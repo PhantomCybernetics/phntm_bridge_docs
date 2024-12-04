@@ -15,6 +15,7 @@ author = 'Mirek Burkon'
 
 extensions = [
     'sphinxcontrib.jquery',
+    'sphinxcontrib.email'
 ]
 
 templates_path = ['_templates']
