@@ -29,8 +29,6 @@
 - multitopic
 - linking external library
 
-## ROS Services
-
 ## ROS Params
 
 ## Introspection
@@ -60,12 +58,6 @@
 - mount live repo to container in dev mode
 
 ## Roadmap & Contributing
-- Compressed CostMap streaming
-- Compressed PointCloud streaming
-- State machine UI
-- UI schemes & toggle
-- Self-hosted custom UI widgets
-- Audio in/out streaming
 - User & robot management UI, Auth/Login, Robot peer limits
 - Variable bitrate for video (?)
 - Generic USB camera support (?!)

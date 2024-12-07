@@ -8,6 +8,6 @@ too long for practical use, depending on where you are.
 When teleoperating a remote machine via TURN server, geographical distance plays a much more important role in overall latency.
 Service response times and UI download speed will certainly benefit from being hosted closer to your physical location.
 
-Our aim is to provide a geographically diverse service, and we'll be launching more regional instances depending on
+Our aim is to provide a geographically well distributed service, and we'll be launching more regional instances depending on
 user demand and feedback. Please get in touch either by :email:`e-mail <hello@phntm.io>` or by `opening an issue on GitHub <https://github.com/PhantomCybernetics/cloud_bridge/issues>`_ to
 discuss this further.
