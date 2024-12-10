@@ -9,14 +9,14 @@ drive the robot, and to control various actuators and other systems from the com
     :class: user-input-ui
 
 Keyboard keys, gamepad buttons and axes, as well as virutal touch gamepad and buttons can be configured to generate certain kinds of ROS messages that the machine may already understand (such as `sensor_msgs/msg/Joy`, `geometry_msgs/msg/Twist` or `TwistStamped`).
-You can also call ROS services and trigger various UI functions. A completely unique output can be achieved by implementing a custom `input driver`.
+You can also call ROS services and trigger various UI functions, or even control Docker containers by mapping input buttons to Agent node's `docker_command` service.  A completely unique output can be achieved by implementing a custom input driver.
 
 This provides a plug-and-play enhancement of existing teleop and control mechanisms, while improving user experience, overcoming the typical range limitation of Bluetooth, and offering vastly more flexibility.
 
 Input profiles
 --------------
-Input configuration is organized into profiles. The idea is that rather than having all possible actions configured as many keys or buttons at all times, a profile can be selected with a certain state of the machine.
-For example, when a mobile robot is equipped with a separate backup camera and a manipulator arm, you can switch to a "Reversing" profile that changes your steering and forward directions, and perhaps even speed when backing up.
+Input configuration is organized into profiles. The idea is that rather than having all possible actions configured as many keys or buttons at all times, a profile can be selected with a certain state of the machine or with a key press.
+For example, when a mobile robot is equipped with a separate backup camera and a manipulator arm, you can switch to a "Reversing" profile that changes your steering and forward directions (perhaps even speed) when backing up.
 Similarly, you can switch to a "Manipulator" profile only when controlling the arm and the robot is otherwise stationary.
 
 The configuration process

@@ -11,7 +11,7 @@ Feel free to open a new issue if you don't see what you'd like implemented. It a
 know what features you care about the most by leaving comments or reacting to issues.
 
 If you'd like to contribute or get otherwise involved, get in touch via `GitHub <https://github.com/PhantomCybernetics>`_ or
-:email:`e-mail <hello@phntm.io>`, pull requets are also highly appreciated.
+:email:`e-mail <human@phntm.io>`, pull requets are also highly appreciated.
 
 Here are some quality-of-life tips for debugging and working with the Phantom Bridge node source code:
 

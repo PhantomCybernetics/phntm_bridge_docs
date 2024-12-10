@@ -1,7 +1,7 @@
-## Docker Compose Configuration
 
 ## User Interface
 - desktop interface 
+- force TURN with ?force_turn=1
 - graph menu 
     - qos compatinility
     - node params
@@ -35,11 +35,6 @@
 
 ## File extraction
 
-## Standalone browser-client.js
-    designed to be a self contained minimal API reference for Phntm Bridge
-
-## Updating the Bridge
-
 ## Cloud Bridge
 - What does Cloud Bridge log
 - Hosting your own
@@ -48,16 +43,7 @@
 # Performance 
 - consider limiting / dedicating certain CPU cores to various processes in compose.yaml
 
-# Debugging
-- logs (mout log dir to contrainer)
-    ```yaml
-        environment:
-        - ROS_LOG_DIR=/ros2_ws/phntm_bridge_logs
-    ```
-- force TURN with ?force_turn=1
-- mount live repo to container in dev mode
-
 ## Roadmap & Contributing
-- User & robot management UI, Auth/Login, Robot peer limits
+
 - Variable bitrate for video (?)
 - Generic USB camera support (?!)
