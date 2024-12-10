@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     let copy_el = $('div[role="contentinfo"]');
     let phntm = 'Phantom Cybernetics Inc';
-    copy_el.html(copy_el.text().replace(phntm, '<a href="https://phntm.io" class="external">'+phntm+'</a>'))
+    copy_el.html(copy_el.text().replace(phntm, '<a href="https://www.phantomcybernetics.com" class="external">'+phntm+'</a>'))
 
     $('a.external').attr('target', '_blank');
 });
