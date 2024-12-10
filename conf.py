@@ -43,7 +43,7 @@ html_theme_options = {
     'logo_only': True,
     'collapse_navigation': True,
     'style_external_links': True,
-    # 'analytics_id': 'G-XXXXXXXXXX',  #  Provided by Google in your dashboard
+    'analytics_id': 'G-1GCHF4TEYM',  #  Provided by Google in your dashboard
     # 'analytics_anonymize_ip': False,
     # 'prev_next_buttons_location': 'bottom',
     # 'style_external_links': False,
