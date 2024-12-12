@@ -21,11 +21,14 @@ Here's the full list of configurable options:
         sio_connection_retry_sec: 5.0
 
         ## WebRTC config
-        ice_servers:
-         - 'turn:turn.phntm.io:3478'
-         - 'turn:turn.phntm.io:3479'
-        ice_username: 'robo' # TURN server auth (this will change at some point)
-        ice_credential: 'pass'
+        ## This config is loaded from the Cloud Brige but can be extended or overriden
+        use_cloud_ice_config: True # cloud config ignored if False
+        ice_servers: # custom ICE servers (will be added to Cloud Bridge's list if use_cloud_ice_config==True)
+         - 'turn:ca.turn.phntm.io:3478'
+         - 'turn:ca.turn.phntm.io:3479'
+        ice_username: 'robo' # STUN/TURN credentials, robot's ID is used if ''
+        ice_secret: 'pass' # STUN/TURN password
+
         log_sdp: True # verbose WebRTC debug
         log_heartbeat: True # debug heartbeat
 
