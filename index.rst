@@ -57,10 +57,9 @@ Features
    video-and-image-topics
    wifi-scanning-and-roaming
    status-leds
-   
-   performance
+
    cloud-robotics
-   debugging
+   security-and-privacy
    
    availability-zones
    self-hosted
