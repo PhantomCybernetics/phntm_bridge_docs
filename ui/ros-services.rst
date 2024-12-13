@@ -1,5 +1,5 @@
-Services
-========
+ROS Services
+============
 
 The Bridge node autodetects all available ROS services of all discovered ROS nodes,
 and the Web UI then provides various tools to call them with custom data payloads.

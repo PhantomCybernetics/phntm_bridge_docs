@@ -51,7 +51,7 @@ Features
    
    ui/overview
    ui/user-input-and-teleoperation
-   ui/services
+   ui/ros-services
    ui/custom-widgets
 
    video-and-image-topics
