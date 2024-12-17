@@ -61,4 +61,7 @@ Then you can launch the process manually like so:
 
 Note that when launched manually like this, on the first run inside the container the Bridge node performs
 :doc:`first run checks </basics/custom-message-types>` and then exists. This is normal behavior but since
-the container doesn't restart afterwards, you'll need to launch the process again by hand.
+the container doesn't restart afterwards, you'll need to launch the node again by hand. Before you do so,
+make sure to source the environment to get access to any custom packages that may have just been installed
+with ``source /ros2_ws/install/setup.bash`` (in normal mode, the whole container restarts and fresh
+environment is sourced automatically).

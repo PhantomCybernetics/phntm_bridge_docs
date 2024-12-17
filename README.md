@@ -24,6 +24,7 @@ pip install sphinx_rtd_theme
 
 ### Build the docs
 ```bash
+source ~/sphinx_env/bin/activate
 cd ~/phntm_bridge_docs
 rm -rf _build/*; make html
 ```
