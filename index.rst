@@ -39,7 +39,7 @@ Features
 - Customizable by self-hosted plug-ins
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :hidden: 
    :caption: Contents:
 
@@ -52,7 +52,8 @@ Features
    ui/overview
    ui/user-input-and-teleoperation
    ui/ros-services
-   ui/custom-widgets
+   ui/runtime-ros-parameters
+   ui/docker-control
 
    video-and-image-topics
    wifi-scanning-and-roaming

@@ -1,3 +1,7 @@
+.wy-nav-content {
+    max-width: 900px;
+}
+
 .rst-content .code-block-caption {
     text-align: left;
     font-style: normal;
@@ -85,6 +89,16 @@
     }
 }
 
+.hidden-heading STRONG {
+    font-size: 150%;
+    margin-top: 0;
+    font-weight: 700;
+    font-family: Roboto Slab, ff-tisa-web-pro, Georgia, Arial, sans-serif;
+    clear: left;
+    display: block;
+    margin-top: 24px;
+}
+
 .rst-content section ul {
     margin-top: -15px;
 }
@@ -113,5 +127,32 @@ img.service-buttons-editor {
 
 img.service-custom-widget {
     width: 523px;
+    margin-bottom: 20px;
+}
+
+img.ui-header {
+    width: 437px;
+    margin-bottom: 20px;
+}
+
+img.ui-menu {
+    width: 722px;
+    margin-bottom: 20px;
+}
+
+img.ui-introspection {
+    width: 50px;
+    margin-bottom: 20px;
+    background-color: black;
+}
+
+img.ui-monkey {
+    width: 59px;
+    max-width: unset;
+    margin: 5px 0px 5px 0px !important;
+}
+
+img.ui-message-definition {
+    width: 453px;
     margin-bottom: 20px;
 }

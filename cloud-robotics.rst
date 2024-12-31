@@ -1,4 +1,4 @@
-Cloud robotics
+Cloud Robotics
 ==============
 
 On top of using Phantom Bridge for teleoperation and system monitoring by a human,

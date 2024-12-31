@@ -53,8 +53,10 @@ At any point, these defaults can be overridden by the local browser's settings w
 
 .. Note:: Modifying input profiles and configuration is always saved and applied to the current web browser only. Changes need to be saved to your robot's `phntm_input_config.json` file in order to be applied to other peers or devices you may want to control the robot with. Deleting the configuration or a profile in a web browser will reset it to the robot's defaults on the next Web UI page load.
 
-Custom Touch UI buttons
------------------------
+.. _custom-touchscreen-buttons:
+
+Custom Touchscreen buttons
+--------------------------
 On touchscreen devices, the interface can be extended by defining extra custom buttons that will be placed in the top or bottom part of the screen.
 These can be configured like any other keyboard or gamepad buttons and will be accompanied by a virtual gamepad, useful for controlling up to 4 custom output axes.
 You can change the display order of these buttons by dragging them around, and even use emojis as icons to save on valuable screen space.

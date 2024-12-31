@@ -1,5 +1,5 @@
 Status LEDs
-===============
+===========
 
 If configured, the Bridge node will use two system LEDs to quickly communicate the state of connection and system activity.
 LEDs can be controlled either via `libgpiod <https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git/about/>`_ (installed with the Docker container), or by
@@ -7,8 +7,10 @@ ROS std_msgs/msg/Bool topics.
 
 See :doc:`Bridge configuration </basics/bridge-config>` for config options.
 
-Connection LED
---------------
+.. rst-class:: hidden-heading
+
+**Connection LED**
+
 .. list-table::
    :widths: 5 20 75
 
@@ -31,8 +33,10 @@ Connection LED
      - On
      - Connected to Cloud Bridge
 
-Data LED
---------
+.. rst-class:: hidden-heading
+     
+**Data LED**
+
 .. list-table::
    :widths: 5 20 75
 
