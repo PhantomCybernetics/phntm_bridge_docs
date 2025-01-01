@@ -15,7 +15,7 @@ If you'd like to contribute or get otherwise involved, get in touch via `GitHub 
 
 Here are some quality-of-life tips for debugging and working with the Phantom Bridge node source code:
 
-Log files
+Log Files
 ---------
 To write Bridge node logs to files, you can configure the `ROS_LOG_DIR` environment variable in the compose.yaml file, as seen below.
 For log persistence across container lifecycles, specify an output directory that's external to the container.
@@ -31,11 +31,12 @@ For log persistence across container lifecycles, specify an output directory tha
         volumes:
           ~/phntm_bridge_logs:/ros2_ws/phntm_bridge_logs
 
-Dev mode
+Dev Mode
 --------
 
 To streamline development with frequently changing code, you can mount a live repository into the Docker container, overwriting the `/ros2_ws/src/phntm_bridge` directory.
-This approach eliminates the need for constant image rebuilds, as illustrated in the example below.
+This approach eliminates the need for constant image rebuilds, as illustrated in the example below. (This is currently the recommended way of running Phantom Bridge,
+as it makes upgrading as easy as pulling updates from the GitHub repo and restarting the Docker container.)
 
 You may also prefer to not launch the Bridge node automatically on the container start, but rather start it manually from
 the container's interactive shell.

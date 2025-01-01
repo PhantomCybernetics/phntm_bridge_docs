@@ -11,7 +11,7 @@ See :doc:`Custom message & Service types </basics/custom-message-types>` for mor
 The most basic service types (e.g. `std_srvs/srv/Empty`, `std_srvs/srv/Trigger` or `std_srvs/srv/SetBool`) come with pre-defined user interface out of the box to make calling them as simple as possible.
 For services that take more complex input data, we first need to define the payload.
 
-Configuring service buttons
+Configuring Service Buttons
 ---------------------------
 In the Services dropdown menu, you will see the **{}** symbol next to each service name, clicking it opens an input editor. 
 The editor allows to define custom data to call the service with, and to save such calls as UI buttons.
@@ -38,7 +38,7 @@ At any point, these defaults can be overridden by the local browser’s settings
 
 .. Note:: Modified service buttons are always saved and applied to the current web browser only. Changes need to be saved to your robot’s `phntm_services_config.json` file in order to be applied to other peers or devices you may want to control the robot with. Deleting the configuration in a web browser will reset it to the robot’s defaults on the next Web UI page load.
 
-Implementing custom widgets
+Implementing Custom Widgets
 ---------------------------
 On top of the above mentioned options, you may want to create a completely unique controls for a ROS service. 
 The best way to do that would be to create a custom service widget, which is then used in the service dropdown menu in a similar fashion to the buttons.

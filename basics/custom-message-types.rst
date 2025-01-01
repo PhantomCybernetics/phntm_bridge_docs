@@ -1,4 +1,4 @@
-Custom message & Service types
+Custom Message & Service Types
 ==============================
 
 The Bridge node looks for IDL files containing messsage type definition for every discovered ROS topic and service.

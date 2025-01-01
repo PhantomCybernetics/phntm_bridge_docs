@@ -1,4 +1,4 @@
-User input & Teleoperation
+User Input & Teleoperation
 ============================
 
 The Web UI offers a comprehensive set of tools for mapping user input from a keyboard, gamepad or touch screen to ROS messages. This allows an operator to manually
@@ -13,14 +13,14 @@ You can also call ROS services and trigger various UI functions, or even control
 
 This provides a plug-and-play enhancement of existing teleop and control mechanisms, while improving user experience, overcoming the typical range limitation of Bluetooth, and offering vastly more flexibility.
 
-Input profiles
+Input Profiles
 --------------
 Input configuration is organized into profiles. The idea is that rather than having all possible actions configured as many keys or buttons at all times, a profile can be selected with a certain state of the machine or with a key press.
 For example, when a mobile robot is equipped with a separate backup camera and a manipulator arm, you can switch to a "Reversing" profile that changes your steering and forward directions (perhaps even speed) when backing up.
 Similarly, you can switch to a "Manipulator" profile only when controlling the arm and the robot is otherwise stationary.
 
-The configuration process
--------------------------
+Configuration Process
+---------------------
 
 .. figure:: ../img/user-input-actions.png
     :align: right
@@ -55,13 +55,13 @@ At any point, these defaults can be overridden by the local browser's settings w
 
 .. _custom-touchscreen-buttons:
 
-Custom Touchscreen buttons
+Custom Touchscreen Buttons
 --------------------------
-On touchscreen devices, the interface can be extended by defining extra custom buttons that will be placed in the top or bottom part of the screen.
+On :doc:`touchscreen devices </ui/touchscreen-interface>`, the interface can be extended by defining extra custom buttons that will be placed in the top or bottom part of the screen.
 These can be configured like any other keyboard or gamepad buttons and will be accompanied by a virtual gamepad, useful for controlling up to 4 custom output axes.
 You can change the display order of these buttons by dragging them around, and even use emojis as icons to save on valuable screen space.
 
-Implementing custom drivers
+Implementing Custom Drivers
 ---------------------------
 Custom input drivers should be implemented by extending the `InputDriver <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/base-driver.js>`_ class. 
 See the `bridge_ui_extras <https://github.com/PhantomCybernetics/bridge_ui_extras>`_ repo and `custom-input-driver.js <https://github.com/PhantomCybernetics/bridge_ui_extras/blob/main/examples/custom-input-driver.js>`_ in particular to get an idea of what the input and output of a driver should look like.

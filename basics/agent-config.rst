@@ -1,4 +1,4 @@
-Agent configuration
+Agent Configuration
 ===================
 
 The Bridge Agent is a lightweight node that performs system monitoring, Docker container control, and various related tasks.
@@ -24,7 +24,7 @@ Here's an example config file, e.g. ~/phntm_agent.yaml with all possible configu
         iw_control: True # enable wi-fi scanning, must be also enabled in Bridge UI config
         iw_roaming: False # enable wi-fi roaming, must be also enabled in Bridge UI config
 
-Distributed systems
+Distributed Systems
 -------------------
 
 On distributed systems (robots utilizing more than one compute board), you would typically run only one

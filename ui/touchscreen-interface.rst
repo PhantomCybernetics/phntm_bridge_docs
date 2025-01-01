@@ -1,4 +1,4 @@
-Touchscreen interface
+Touchscreen Interface
 =====================
 
 The Web UI is optimized for touchscreen devices, automatically detects phones and tablets and 
@@ -9,13 +9,13 @@ You can also add :ref:`custom buttons <custom-touchscreen-buttons>` that only ap
 
 [GIF HERE]
 
-Touchscreen-specific gestures
+Touchscreen-specific Gestures
 -----------------------------
 
 * To resize or move a panel, ``tap and hold its title bar (the label) for 2 seconds``, until the panel turns green
 * To maximize any panel into fullscreen, ``double tap on its content``, then double tap on it again to exit fullscreen mode
 
-Fullscreen mode
+Fullscreen Mode
 ---------------
 
 * On Android, to switch the whole Web UI to fullscreen (hiding the address bar, etc.), click the ``[ ]`` icon in the ``≡`` (hamburger) menu.

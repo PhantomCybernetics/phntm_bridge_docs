@@ -1,4 +1,4 @@
-Availability zones
+Availability Zones
 ==================
 
 At the time of writing, Phantom cloud infrastructure is hosted at a single datacenter in Northern California.

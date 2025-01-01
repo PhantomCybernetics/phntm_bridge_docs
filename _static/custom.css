@@ -1,5 +1,5 @@
 .wy-nav-content {
-    max-width: 900px;
+    max-width: 910px;
 }
 
 .rst-content .code-block-caption {
@@ -111,6 +111,11 @@
     border-radius: 5px;
 }
 
+.rst-content video {
+    border-radius: 5px;
+    margin-bottom: 24px;
+}
+
 img.user-input-ui {
     width: 413px; /* @2x */
 }
@@ -132,12 +137,22 @@ img.service-custom-widget {
 
 img.ui-header {
     width: 437px;
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
 }
 
 img.ui-menu {
     width: 722px;
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
+}
+
+img.ui-graph-view {
+    width: 805px;
+    margin-bottom: 20px !important;
+}
+
+img.ui-services-menu {
+    width: 455px;
+    margin-bottom: 20px !important;
 }
 
 img.ui-introspection {
@@ -155,4 +170,44 @@ img.ui-monkey {
 img.ui-message-definition {
     width: 453px;
     margin-bottom: 20px;
+}
+
+img.ui-ros-params {
+    width: 429px;
+    margin-bottom: 20px;
+}
+
+img.ui-docker-control {
+    width: 514px;
+    margin-bottom: 20px;
+}
+
+img.widget-battery {
+    width: 741px;
+    margin-bottom: 24px !important;
+}
+
+img.widget-imu {
+    width: 741px;
+    margin-bottom: 24px !important;
+}
+
+img.widget-laser {
+    width: 741px;
+    margin-bottom: 24px !important;
+}
+
+img.widget-log {
+    width: 741px;
+    margin-bottom: 24px !important;
+}
+
+img.widget-range {
+    width: 240px;
+    margin-bottom: 24px !important;
+}
+
+img.widget-system-info {
+    width: 741px;
+    margin-bottom: 24px !important;
 }

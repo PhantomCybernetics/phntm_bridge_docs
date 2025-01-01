@@ -1,4 +1,4 @@
-Bridge configuration
+Bridge Configuration
 =========================
 A config file is generated in the registration step of the Bridge node install process and saved as e.g phntm_bridge.yaml.
 Here's the full list of configurable options:
@@ -107,6 +107,8 @@ sensor_msgs/msg/CameraInfo
       frustum_near: 0.01 
       frustum_far: 1.0 
       force_frame_id: 'camera_color' # force frame_id in URDF model (in the UI)
+
+.. _battery-state-config:
 
 sensor_msgs/msg/BatteryState
 ----------------------------

@@ -1,5 +1,5 @@
-Cloud Robotics
-==============
+Cloud Robotics & AI
+===================
 
 On top of using Phantom Bridge for teleoperation and system monitoring by a human,
 AI and Expert Systems can be used to control an autonomous machine from the cloud.

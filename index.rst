@@ -37,6 +37,7 @@ Features
 - Works with rosbag and sims such as Gazebo or Webots
 - Fully open-source under the MIT license
 - Customizable by self-hosted plug-ins
+- No need for an X server running on the robot, nor any wired connections
 
 .. toctree::
    :maxdepth: 2
@@ -47,14 +48,17 @@ Features
    basics/install
    basics/bridge-config
    basics/agent-config
-   basics/custom-message-types.rst
    
    ui/overview
+   ui/built-in-widgets
+   ui/custom-widgets
    ui/user-input-and-teleoperation
    ui/ros-services
    ui/runtime-ros-parameters
    ui/docker-control
+   ui/touchscreen-interface
 
+   basics/custom-message-types.rst
    video-and-image-topics
    wifi-scanning-and-roaming
    status-leds

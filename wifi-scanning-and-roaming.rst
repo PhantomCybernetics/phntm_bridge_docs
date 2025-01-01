@@ -1,4 +1,4 @@
-Wi-Fi scanning & Roaming
+Wi-Fi Scanning & Roaming
 ========================
 
 The Bridge Agent node facilitates wireless network scanning and automatic connection switching between different APs in the same wireless network (same SSID, different BSSID)
@@ -17,7 +17,7 @@ On some systems, switching between different AP frequencies (e.g. from 5 GHz to 
 
 The `roam` command automatically selects the AP in the current network with the best signal. If the currently conneced AP has the strongest signal, no roaming is performed.
 
-Failure recovery
+Failure Recovery
 ----------------
 
 .. Danger:: In case of a roaming failure, your machine might end up offline, need rebooting or to be manually connected to the desired AP again. Make sure you have local console access before attemting this for the first time on untested configurations.
