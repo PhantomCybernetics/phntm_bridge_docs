@@ -1,3 +1,5 @@
+:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/ui/touchscreen-interface.rst
+
 Touchscreen Interface
 =====================
 
@@ -19,4 +21,4 @@ Fullscreen Mode
 ---------------
 
 * On Android, to switch the whole Web UI to fullscreen (hiding the address bar, etc.), click the ``[ ]`` icon in the ``≡`` (hamburger) menu.
-* On iOS, only Safari is able to switch to fullscreen at the time of writing. Tap the ``aA`` button, then select ``Hide Toolbar``. Neither Mobile Opera nor Chrome offers fullscreen capability on iOS.
+* On iOS, only Safari is able to switch to fullscreen at the time of writing, use the ``Hide Toolbar`` option. Neither Mobile Opera nor Chrome offers fullscreen capability on iOS.

@@ -37,8 +37,9 @@ html_js_files = [
     'custom.js',
 ]
 
-github_url = 'https://github.com/PhantomCybernetics'
-   
+# github_url = 'https://github.com/PhantomCybernetics'
+vcs_pageview_mode = 'edit'
+
 html_theme_options = {
     'logo_only': True,
     'collapse_navigation': True,

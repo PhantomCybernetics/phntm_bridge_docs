@@ -1,16 +1,37 @@
+:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/ui/built-in-widgets.rst
+
 Built-in Panel Widgets
 ======================
 
 The following panel widgets are provided out of the box. You can easily :doc:`create custom panel widgets </ui/custom-widgets>`, too.
 
+.. _3d-scene-view-widget:
+
+3D Scene View
+-------------
+This is a *composite* widget that displays the URDF model from ``/robot_description`` and transforms from ``/tf`` and ``/tf_static``.
+Model files are discovered on the robot, uploaded to the Cloud Bridge and cached there. Supported formats are STL and DAE
+This can be meshed with additional data from ``sensor_msgs/msg/CameraInfo``, ``vision_msgs/msg/Detection3DArray``, ``sensor_msgs/msg/LaserScan`` and ``sensor_msgs/msg/Range`` topics.
+See :ref:`CameraInfo <camera-info-config>` and :ref:`Detection3DArray <detection-array-config>` for configuration options.
+
+The URDF model only updates when /robot_description changes, or on page reload.
+
+[GIF]
+
+(More features will be added to this widget, such as support for `visualization markers <https://github.com/PhantomCybernetics/bridge_ui/issues/7>`_ and `path planning <https://github.com/PhantomCybernetics/bridge_ui/issues/10>`_)
+
+.. _battery-state-widget:
+
 Battery State
 -------------
-This panel displays robot's battery voltage from ``sensor_msgs/msg/BatteryState`` topics as a graph. (It will display current, too.)
-See :ref:`sensor_msgs/msg/BatteryState <battery-state-config>` for configuration options.
+This panel displays robot's battery voltage from ``sensor_msgs/msg/BatteryState`` topics as a graph.
+See :ref:`BatteryState <battery-state-config>` for configuration options.
 
 .. image:: ../img/widget-battery.gif
     :align: center
     :class: widget-battery
+
+(Battery State `will display current <https://github.com/PhantomCybernetics/bridge_ui/issues/3>`_, too.)
 
 Imu
 ---
@@ -54,13 +75,12 @@ See :doc:`Agent Configuration </basics/agent-config>` for available options.
     :align: center
     :class: widget-system-info
 
+.. _video-widget:
+
 Video
 -----
-Topic types: ``ffmpeg_image_transport_msgs/msg/FFMPEGPacket``, ``sensor_msgs/msg/Image``, ``sensor_msgs/msg/CompressedImage``
-Besides being the default widget for any video, panel also allows to display overlay data from ``vision_msgs/msg/Detection2DArray`` topics.
+This is the default widget for any Video and Image topics, transmitted as H.264.
+It allows to display overlay data from ``vision_msgs/msg/Detection2DArray`` topics.
+See :ref:`Detection2DArray <detection-array-config>` and :ref:`Image <image-config>` for config options.
 
-Everything 3D
--------------
-This is a compound widget that allows to display the URDF model from ``/robot_description`` and transforms from ``/tf`` and ``/tf_static``.
-Model files are discovered on the robot, uploaded to the Cloud Bridge server and cached there.
-It can also display some additional data from ``sensor_msgs/msg/CameraInfo``, ``vision_msgs/msg/Detection3DArray``, ``sensor_msgs/msg/LaserScan`` and ``sensor_msgs/msg/Range`` topics.
+[GIF]

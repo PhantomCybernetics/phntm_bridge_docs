@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/index.rst
+
 Phantom Bridge Documentation
 ============================
 

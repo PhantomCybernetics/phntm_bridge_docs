@@ -1,3 +1,5 @@
+:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/basics/bridge-config.rst
+
 Bridge Configuration
 =========================
 A config file is generated in the registration step of the Bridge node install process and saved as e.g phntm_bridge.yaml.
@@ -13,12 +15,17 @@ Here's the full list of configurable options:
         name: 'Unnamed Robot' # the name to show in the UI
         maintainer_email: 'robot.master@domain.com' # your e-mail for service announcements
 
+        ## The Cloud Bridge instance to connect to
+        cloud_bridge_address: https://bridge.phntm.io
+
         ## Socket.io config
-        sio_address: https://bridge.phntm.io
         sio_path: /robot/socket.io
         sio_port: 1337
         sio_ssl_verify: True
         sio_connection_retry_sec: 5.0
+
+        ## File Receiver
+        file_upload_port: 1336,
 
         ## WebRTC config
         ## This config is loaded from the Cloud Brige but can be extended or overriden
@@ -81,7 +88,7 @@ Here's the full list of configurable options:
         service_widgets: [] # custom widgets service mapping, see Implementing custom widgets
 
 
-Topic subscription options
+Topic Subscription Options
 --------------------------
 Each topic subscription can be configured separately in the phntm_bridge.yaml file.
 Common cofiguration includes the ROS QOS subcriber options, e.g:
@@ -94,11 +101,16 @@ Common cofiguration includes the ROS QOS subcriber options, e.g:
       durability: 2 # 0 = System default, 1 = Transient local, 2 = Volatile (default)
       lifespan_sec: -1 # -1 = Infinity (default)
 
+.. _topic-specific-options:
 
 Some configuraton options are further specific to the topic's message type:
 
+.. _camera-info-config:
+
 sensor_msgs/msg/CameraInfo
 --------------------------
+Used by :ref:`3D Scene View <3d-scene-view-widget>`
+
 .. code-block::
    :caption: phntm_bridge.yaml
 
@@ -112,6 +124,8 @@ sensor_msgs/msg/CameraInfo
 
 sensor_msgs/msg/BatteryState
 ----------------------------
+Used by :ref:`Battery State <battery-state-widget>`
+
 .. code-block::
    :caption: phntm_bridge.yaml
 
@@ -119,8 +133,12 @@ sensor_msgs/msg/BatteryState
       min_voltage: 9.0 # battery empty voltage
       max_voltage: 12.6 # battery full voltage
 
+.. _detection-array-config:
+
 vision_msgs/msg/Detection2DArray, Detection3DArray
-------------------------------------------------------------------
+--------------------------------------------------
+Used by :ref:`Video <video-widget>` overlay and :ref:`3D Scene View <3d-scene-view-widget>`
+
 .. code-block::
    :caption: phntm_bridge.yaml
 
@@ -128,6 +146,8 @@ vision_msgs/msg/Detection2DArray, Detection3DArray
       input_width: 416 # detection input frame width
       input_height: 416 # detection input frame height
       label_map: [ 'person', 'woman', 'man', 'camera', 'TV' ] # class label map
+
+.. _image-config:
 
 sensor_msgs/msg/Image
 ---------------------
