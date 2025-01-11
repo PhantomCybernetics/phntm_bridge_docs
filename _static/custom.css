@@ -247,7 +247,7 @@ img.widget-system-info {
 }
 
 /* Next & previous buttons */
-.slideshow.prev, .slideshow .next {
+.slideshow .prev, .slideshow .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
