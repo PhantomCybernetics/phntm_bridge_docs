@@ -73,7 +73,6 @@ See :ref:`CameraInfo <camera-info-config>` and :ref:`Detection3DArray <detection
     </script>
 
 The URDF model only updates when /robot_description changes, or on page reload. Call the ``/phntm_bridge/clear_cloud_file_cache`` service to invalidate the model cache on Cloud Bridge, then reload the page.
-
 (More features will be added to this widget, such as support for interactive `visualization markers <https://github.com/PhantomCybernetics/bridge_ui/issues/7>`_ and `path planning <https://github.com/PhantomCybernetics/bridge_ui/issues/10>`_)
 
 .. _battery-state-widget:
