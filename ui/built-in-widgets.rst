@@ -18,7 +18,7 @@ See :ref:`CameraInfo <camera-info-config>` and :ref:`Detection3DArray <detection
 .. raw:: html
 
     <!-- Slideshow container -->
-    <div id="widget-scene-view">
+    <div id="widget-scene-view" class="slideshow">
         <div class="slideshow-container">
 
             <div class="mySlides fade">
