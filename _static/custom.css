@@ -191,7 +191,7 @@ img.ui-docker-control {
 }
 
 img.widget-scene-view {
-    width: 100%;
+    width: 741px;
     margin-bottom: 24px !important;
 }
 
@@ -222,7 +222,7 @@ img.widget-range {
 
 img.widget-system-info {
     width: 741px;
-    margin-bottom: 0px !important;
+    margin-bottom: 24px !important;
 }
 
 /* Slideshow container */
@@ -238,7 +238,8 @@ img.widget-system-info {
 }
 
 .slideshow-container  {
-    width: 100%;
+    width: 741px;
+    max-width: 100%;
     margin-bottom: 24px;
 }
 

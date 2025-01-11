@@ -29,7 +29,7 @@ See :ref:`CameraInfo <camera-info-config>` and :ref:`Detection3DArray <detection
 
 .. raw:: html
 
-                <div class="text">[1/3] Caption Text</div>
+                <div class="text">[1/3] Laser scan, range detection, colliders, camera frustum</div>
             </div>
 
             <div class="mySlides fade">
@@ -40,7 +40,7 @@ See :ref:`CameraInfo <camera-info-config>` and :ref:`Detection3DArray <detection
 
 .. raw:: html
 
-                <div class="text">[2/3] Caption Two</div>
+                <div class="text">[2/3] Transforms + camera frustum</div>
             </div>
 
             <div class="mySlides fade">
