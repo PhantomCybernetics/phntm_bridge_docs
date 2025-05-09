@@ -8,7 +8,7 @@
 Phantom Bridge Documentation
 ============================
 
-Phantom Bridge is a fast WebRTC and Socket.io ROS2 Bridge written in Python
+Phantom Bridge is a fast WebRTC and Socket.io ROS2 Bridge written in C++
 for real-time ROS data visualization and video streaming, teleoperation, human-robot interaction,
 and both local and remote robot monitoring.
 
@@ -34,7 +34,7 @@ Features
 - Robot's Wi-Fi signal monitoring, scan & roaming (requires wpa_supplicant)
 - File retreival from any running Docker container and host fs (such as URDF models)
 - System load and Docker stats monitoring
-- Standalone lightweight Bridge Agent for monitoring and management of various parts of a distributed system
+- Standalone lightweight Bridge Agent (written in Python) for monitoring and management of various parts of a distributed system
 - Multiple peers can connect to the same machine at a very low extra CPU cost
 - Works with rosbag and sims such as Gazebo or Webots
 - Fully open-source under the MIT license
@@ -62,6 +62,7 @@ Features
 
    basics/custom-message-types.rst
    video-and-image-topics
+   file-extraction
    wifi-scanning-and-roaming
    status-leds
 
