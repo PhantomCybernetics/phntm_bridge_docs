@@ -30,10 +30,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install sphinx
-        pip install sphinxcontrib.jquery
-        pip install sphinxcontrib.email
-        pip install sphinx_rtd_theme
+        pip install sphinx sphinxcontrib.jquery sphinxcontrib.email sphinx_rtd_theme
         
     - name: Build documentation
       run: |
