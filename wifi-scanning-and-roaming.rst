@@ -28,5 +28,5 @@ The best way to switch back to your original access point is using nmcli from th
 
 .. code-block::
 
-    nmcli d wifi # performs a fresh scan
-    sudo nmcli d wifi connect %YOUR_AP_BSSID% # switch to the desired BSSID
+nmcli d wifi # performs a fresh scan
+sudo nmcli d wifi connect %YOUR_AP_BSSID% # switch to the desired BSSID

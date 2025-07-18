@@ -319,3 +319,7 @@ img.widget-system-info {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+img.video-encoding {
+    margin-bottom: 30px !important;
+}

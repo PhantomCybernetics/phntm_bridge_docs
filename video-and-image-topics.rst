@@ -1,25 +1,76 @@
 :github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/video-and-image-topics.rst
 
-Video & Image Topics
-======================
+Video & Image Topics Transmission
+=================================
 
-Phantom Bridge transmits all video as H.264 via WebRTC media streams. ROS Image messages are also converted into H.264,
+Phantom Bridge transmits all video as H.264 via WebRTC media streams. ROS `Image` and `CompressedImage` messages are also converted into H.264,
 this includes depth frames and compressed image frames. 
+
+
+
+
 
 Hardware-encoded H.264 Video
 ----------------------------
-Purely from teleoperation or remote monitoring point of view, having video streams encoded into H.264 by a hardware accelerator or GPU is preferable as it
-doesn't come at extra CPU cost. In this scenario, the Bridge node simply packetizes received `FFMPEGPacket <https://github.com/ros-misc-utilities/ffmpeg_image_transport_msgs/blob/master/msg/FFMPEGPacket.msg>`_ messages
-and sends them via the media stream.
+Having video streams encoded into H.264 by a hardware accelerator or GPU is preferable as it doesn't come at extra CPU cost.
+In this scenario, the Bridge Client simply packetizes received `FFMPEGPacket <https://github.com/ros-misc-utilities/ffmpeg_image_transport_msgs/blob/master/msg/FFMPEGPacket.msg>`_ messages
+and transports them via a WebRTC media stream.
 
-For instance, Raspberry Pi 4, Compute Module 4, or Raspberry Pi Zero 2 W all come with a H.264 hardware encoder that can be used with all compatible Pi Camera modules.
-Raspberry Pi 5 does not have a hardware video encoder, video streams needs to be encoded on the CPU. In both cases, you may want to use our `picam_ros2 package <https://github.com/PhantomCybernetics/picam_ros2>`_ to ROSify your Pi Cameras.
+The Bridge Client can also perform transcoding of Image/Compressed messages into H.264 using either the CPU (expensive), Nvidia or AMD GPU. 
+There are several camera models on the market that can produce hardware-encoded H.264 frames (such as `OAK cameras by Luxonis <https://www.luxonis.com>`_).
+If you're using Raspberry Pi with CSI cameras, consider our `picam_ros2 package <https://github.com/PhantomCybernetics/picam_ros2>`_ which utilizes hardware encoder when available, or performs CPU encoding with low latency.
 
-Similarly, `OAK cameras <https://shop.luxonis.com/collections/oak-cameras-1>`_ by Luxonis offer hardware encoded H.264 video and their `ROS package <https://docs.luxonis.com/software/ros/depthai-ros/>`_ supports FFMPEGPacket output of the box.
+.. list-table::
+   :widths: 50 33 33
+   :header-rows: 1
+
+   * - Hardware
+     - Support
+     - Provider
+
+   * - Raspberry Pi 5
+     - Software video encoding
+     - Bridge Client
+     
+   * - 
+     - 
+     - `picam_ros2 <https://github.com/PhantomCybernetics/picam_ros2>`_
+    
+   * - Raspberry Pi 4B / Compute Module 4
+     - Hardware video encoding (BCM2711)
+     - `picam_ros2 <https://github.com/PhantomCybernetics/picam_ros2>`_
+    
+   * -
+     - Software video encoding
+     - Bridge Client
+
+   * - Nvidia GPU
+     - Hardware video encoding (CUDA)
+     - Bridge Client
+
+   * - AMD GPU
+     - Hardware video encoding (VAAPI)
+     - Bridge Client
+
+   * - Jetson Orin Nano 
+     - Software video encoding
+     - Bridge Client
+
+   * - OAK Cameras
+     - Hardware video encoding
+     - `depthai-ros <https://docs.luxonis.com/software/ros/depthai-ros/>`_
+
+When using the H.264 Encoder of the Bridge Client with a GPU, some software scaling is often necessary to transform raw camera frames into the format supported by the hardware codec.
+
+In case you're running Gazebo for headless simulations (cloud-based), consider adopting our `customized version of Gazebo Harmonic <https://github.com/PhantomCybernetics/simbot_gz>`_. In our setup,
+the CameraSensor avoids using the ros_gz_bridge and publishes H.264 hw-encoded frames (as well as raw Image frames) directly into a ROS topic for low latency and maximum performance.
+
+.. image:: ./img/video-encoding.svg
+    :class: video-encoding
 
 ROS Image Messages
 ------------------
-All ROS sensor_msgs/msg/Image messages will be transcoded into H.264 on the CPU and packetized before transmission.
+All ROS sensor_msgs/msg/Image messages will be transcoded into H.264 and packetized before transmission.
 This may have an impact on your evengy consumtion and cut down on system recources. In general the latency difference is quite low where
 CPU is not the main constraint, for instance Raspberry PI 5 performs quite well.
 

@@ -10,16 +10,13 @@ cd phntm_bridge_docs
 ```
 
 ### Install Sphinx & Deps
-On Ubuntu:
+On Ubuntu / Mac:
 
 ```bash
-python3 -m venv sphinx_env
+python3 -m venv ~/sphinx_env
 source ~/sphinx_env/bin/activate
 
-pip install -U sphinx
-pip install sphinxcontrib.jquery
-pip install sphinxcontrib.email
-pip install sphinx_rtd_theme
+pip install -U sphinx sphinxcontrib.jquery sphinxcontrib.email sphinx_rtd_theme
 ```
 
 ### Build the docs

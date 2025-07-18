@@ -47,6 +47,7 @@ Features
    :caption: Contents:
 
    basics/architecture
+   demos
    basics/install
    basics/bridge-config
    basics/agent-config
