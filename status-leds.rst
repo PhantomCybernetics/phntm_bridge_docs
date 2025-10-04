@@ -7,7 +7,7 @@ If configured, the Bridge node will use two system LEDs to quickly communicate t
 LEDs can be controlled either via `libgpiod <https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git/about/>`_ (installed with the Docker container), or by
 ROS std_msgs/msg/Bool topics.
 
-See :doc:`Bridge configuration </basics/bridge-config>` for config options.
+See :doc:`Bridge configuration </basics/bridge-client-config>` for config options.
 
 .. rst-class:: hidden-heading
 

@@ -116,6 +116,7 @@ You can adjust the behavior of the encoder by the following params:
             max_sensor_value: 4000.0 # depth max distance/sensor value for normalizing
             colormap: 13 # cv2.COLORMAP, e.g. 13 = cv2.COLORMAP_MAGMA
 
-Ogg/Theora Video
-----------------
-Although some cameras offer Ogg/Theora output, this format is not supported by Phantom Brige as the WebRTC standard does not include it and most web browser implemenations `are depricated anyway <https://caniuse.com/ogv>`_.
+Notes
+-----
+Although some cameras offer Ogg/Theora output, this format is not supported by Phantom Brige at this point.
+The WebRTC standard does not include it (transcoding into H.264 would be necessary), and most web browser implemenations `are depricated anyway <https://caniuse.com/ogv>`_.

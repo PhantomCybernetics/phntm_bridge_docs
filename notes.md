@@ -47,3 +47,6 @@
 
 - Variable bitrate for video (?)
 - Generic USB camera support (?!)
+
+## Chromium
+    in `chrome://flags/` set WebRTC IP policy to *Default* (`Disable non proxied udp` is the Chromium default)

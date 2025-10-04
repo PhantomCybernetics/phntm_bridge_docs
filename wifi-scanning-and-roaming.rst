@@ -8,7 +8,7 @@ also known as roaming. This is very useful when a robot needs to navigate a vast
 
 .. Note:: `Wpa_supplicant <https://w1.fi/wpa_supplicant/>`_ needs to be installed on the host system. The Bridge Agent accesses it via /host_run, which is the host machine's /var/run directory mapped into the Docker contaier in your compose.yaml file. `Network Manager <https://www.networkmanager.dev/>`_ is also assumed to be installed on the host machine.
 
-The scan or roam commands can be initiated from the Web UI, either one needs to be enabled both in the Agent's and Bridge node's UI config. See :doc:`Agent config </basics/agent-config>` and :doc:`Bridge config </basics/bridge-config>` for configuration options.
+The scan or roam commands can be initiated from the Web UI, either one needs to be enabled both in the Agent's and Bridge node's UI config. See :doc:`Bridge Agent config </basics/bridge-agent-config>` and :doc:`Bridge Client config </basics/bridge-client-config>` for configuration options.
 You can also invoke both by calling the `iw_scan` service of the Agent node.
 
 In order to perform the scan, the wireless radio typically has to momentatily pause transmission, so you can expect a brief interruption of video and data straming.

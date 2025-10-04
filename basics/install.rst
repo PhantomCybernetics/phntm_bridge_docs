@@ -5,6 +5,6 @@ Install
 
 .. Note:: This documentation assumes you are faminilar with `ROS2 <https://docs.ros.org/>`_ concepts, `Docker <https://docs.docker.com/>`_ and `Docker Compose <https://docs.docker.com/compose/>`_
 
-Docker container is the preferred way of installing Phantom Bridge node. Only ROS2 distros on Linux are supported at this time.
+Docker container is the preferred way of installing the Bridge Client node. Only ROS2 distros on Linux (Humble and newer) are supported at this time.
 
-To install the Bridge node, please follow `these instructions on GitHub <https://github.com/PhantomCybernetics/phntm_bridge?tab=readme-ov-file#install>`_
+To install the Bridge Client node, please follow `these instructions on GitHub <https://github.com/PhantomCybernetics/phntm_bridge_client?tab=readme-ov-file#install>`_

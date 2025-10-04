@@ -1,7 +1,7 @@
-:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/basics/agent-config.rst
+:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/basics/bridge-agent-config.rst
 
-Agent Configuration
-===================
+Bridge Agent Configuration
+==========================
 
 The Bridge Agent is a lightweight node that performs system monitoring, Docker container control, and various related tasks.
 Typically, it's run in the same container as the Bridge, but can be also installed separately and run in multiple instances in case of a distributed system (hence the separatae configuration).

@@ -4,7 +4,7 @@ File Extraction
 ===============
 
 In certain situations, it is very useful to be able to locate and extract files from running Docker containers on a ROS2-enabled machine.
-These can be for instance URDF mesh files (STL, OBJ, DAE), as used and displayed by the Scene View widget.
+These can be for instance URDF mesh files (STL, OBJ, DAE) and textures, or objects detected by computer vision, as displayed by the Scene View widget.
 
 Files are uploaded to the Bridge Server, cached and served from there on subsequent requests to save on robot's networking bandwidth.
 In order to invalidate this cache, call the ``phntm_bridge/clear_cloud_file_cache`` service (availale in the Services menu in the Web UI).
