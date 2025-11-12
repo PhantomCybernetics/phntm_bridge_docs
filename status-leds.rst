@@ -3,15 +3,12 @@
 Status LEDs
 ===========
 
-If configured, the Bridge node will use two system LEDs to quickly communicate the state of connection and system activity.
+If configured, the Bridge Client node will use two hardware LEDs on the Robot to quickly communicate the state of connection and system activity.
 LEDs can be controlled either via `libgpiod <https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git/about/>`_ (installed with the Docker container), or by
-ROS std_msgs/msg/Bool topics.
+ROS ``std_msgs/msg/Bool`` topics.
 
-See :doc:`Bridge configuration </basics/bridge-client-config>` for config options.
 
-.. rst-class:: hidden-heading
-
-**Connection LED**
+.. rubric:: Connection LED
 
 .. list-table::
    :widths: 5 20 75
@@ -35,9 +32,8 @@ See :doc:`Bridge configuration </basics/bridge-client-config>` for config option
      - On
      - Connected to Cloud Bridge
 
-.. rst-class:: hidden-heading
-     
-**Data LED**
+
+.. rubric:: Data LED
 
 .. list-table::
    :widths: 5 20 75
@@ -47,4 +43,10 @@ See :doc:`Bridge configuration </basics/bridge-client-config>` for config option
           <span class="data-led short-flash"></span>
 
      - Short flash
+
      - Message was sent to a peer via WebRTC
+
+
+.. rubric:: Configuration options
+
+.. include:: config-blocks/leds.rst

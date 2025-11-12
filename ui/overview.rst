@@ -4,7 +4,7 @@ User Interface Overview
 =======================
 
 Phantom Bridge comes with a flexible web-based User Interface. It can display autodetected Topics either as raw 
-deserialized data, or using visual widgets. Several widget types are :doc:`built in </ui/built-in-widgets>`, you can also easily :doc:`implement your own. </ui/custom-widgets>`
+deserialized data, or using visual widgets. Several widget types are :doc:`built in </ui-widgets/index>`, you can also easily :doc:`implement your own. </ui/customizing>`
 You can :doc:`call any ROS Service </ui/ros-services>`, set :doc:`runtime ROS Parameters </ui/runtime-ros-parameters>`, and completely customize :doc:`User Input </ui/user-input-and-teleoperation>` for tele-operation.
 
 .. Tip:: The current configuration of the displayed panels and their settings are stored in the URL.
@@ -59,16 +59,6 @@ You can also make your own custom control widgets. :doc:`See more here. </ui/ros
 .. image:: ../img/ui-services-menu.png
     :align: center
     :class: ui-services-menu
-
-Introspection
--------------
-
-.. image:: ../img/introspection-running.svg
-    :align: left
-    :class: ui-introspection
-
-This button controls Introspection (discovery of ROS Nodes, Topics, Services and Docker containers).
-When animating as shown here, Introspection is running on the Robot. You can manually start and stop it at any time.
 
 User Input Indicator
 --------------------

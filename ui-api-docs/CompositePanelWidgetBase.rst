@@ -1,0 +1,4 @@
+CompositePanelWidgetBase
+========================
+
+TODO

@@ -73,9 +73,9 @@ In order to add a new driver to the Web UI, you need to host it somewhere on the
 
 To register your custom input driver, use the `custom_input_drivers` parameter in your phntm_bridge.yaml config file like so:
 
-.. code-block::
-   :caption: phntm_bridge.yaml
-
-    input_drivers: [ 'Twist', 'ExampleCustomDriver' ] # you can combine enabled input drivers with the built-in ones
-    custom_input_drivers: 
-     - 'ExampleCustomDriver https://my-domain.com:443/custom-input-driver.js' # class name, space, source file URL to be loaded
+#.. code-block::
+#   :caption: phntm_bridge.yaml
+#
+#    input_drivers: [ 'Twist', 'ExampleCustomDriver' ] # you can combine enabled input drivers with the built-in ones
+#    custom_input_drivers: 
+#     - 'ExampleCustomDriver https://my-domain.com:443/custom-input-driver.js' # class name, space, source file URL to be loaded

@@ -3,27 +3,27 @@
 Custom Message & Service Types
 ==============================
 
-The Bridge node looks for IDL files containing messsage type definition for every discovered ROS topic and service.
-These files are uploaded to the Cloud Bridge, parsed, and then pushed into the Web UI as JSON.
+The Bridge Client node looks for IDL files containing messsage type definition for every discovered ROS topic and service.
+These files are uploaded to the Bridge Server, parsed, and then pushed into the Web UI as JSON definitions.
 This enables binary messages to be serialized and deserialized on each end regardless of ROS version.
 
-Various basic message and service types are installed with the Bridge node. In order to handle any message or service type,
-it is necessary to install these definitoins inside the Bridge node's docker container.
-This is done using the extra_packages configuration option in the phntm_bridge.yaml.
+Various basic message and service types are installed with the Bridge Client node. In order to handle any message or service type,
+it is necessary to make custom definitoins available inside the Bridge Client node's Docker container.
+
+This is done using the extra_packages configuration option in the phntm_bridge.yaml config file.
+This list contains either a ROS project folder (mapped into the Docker container(,
+or a ROS2 package name to be installed with apt-get (for "ros-distro-some-package" use only "some_package")
 
 .. code-block::
    :caption: phntm_bridge.yaml
 
     extra_packages:
-     - /ros2_ws/src/vision_msgs
+     - /ros2_ws/src/vision_msgs # ROS project folder to be compiled
      - /ros2_ws/src/astra_camera_msgs
-     - some_other_package
-
-This list contains either a package folder mapped into the Docker container,
-or a ROS2 package name to be installed via apt-get (for "ros-distro-some-package" only use "some_package")
+     - some_other_package # package to be installed wit apt-get
 
 Don't forget live package folders need to be mapped inside the container using the volumes attribute in compose.yaml.
-You need to reference the package root (i.e. where the package.xml file is):
+You need to reference the package root folder (i.e. where the package.xml file is located):
 
 .. code-block::
    :caption: compose.yaml
@@ -32,21 +32,12 @@ You need to reference the package root (i.e. where the package.xml file is):
       - ~/vision_msgs/vision_msgs:/ros2_ws/src/vision_msgs
       - ~/ros2_astra_camera/astra_camera_msgs:/ros2_ws/src/astra_camera_msgs
 
-On the first run of the container, the system checks the list of directories to compile and packages to install with apt-get.
-After this step, the node restarts and proceeds with normal operation.
+On every launch, the Bridge Client checks the list of extra packages and processes new ones. 
+After any change, the node restarts, then proceeds with normal operation on the subsequent launch.
 
-After editing the package list, to force the check and/or re-build, remove and re-create the Bridge container with:
+In case you're launching the Bridge Client node manually inside the container (dev mode),
+you'll need to `source /ros2_ws/install/setup.bash` to make the newly installed packages visible to teh ROS environment.
+This happens automatically when the whole Docker container restarts.
 
-.. code-block::
-
-    docker stop phntm-bridge
-    docker rm phntm-bridge
-    docker compose up phntm-bridge
-
-You can also force this check on every start of the container with the `FORCE_FIRST_RUN_CHECKS` enviromental variable in the compose.yaml:
-
-.. code-block::
-   :caption: compose.yaml
-
-    environment:
-      - "FORCE_FIRST_RUN_CHECKS=True" # this will force first run package checks on every start
+To force a re-build or re-install of a particular package, you can edit (or delete) `/ros2_ws/phntm_checked_packages.yaml` 
+inside the Bridge Client container.

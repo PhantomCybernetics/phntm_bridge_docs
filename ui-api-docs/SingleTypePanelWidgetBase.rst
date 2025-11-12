@@ -1,0 +1,4 @@
+SingleTypePanelWidgetBase
+=========================
+
+TODO

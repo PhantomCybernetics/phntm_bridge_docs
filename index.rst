@@ -50,12 +50,10 @@ Features
    basics/architecture
    demos
    basics/install
-   basics/bridge-client-config
-   basics/bridge-agent-config
+   basics/configuration
    
    ui/overview
-   ui/built-in-widgets
-   ui/custom-widgets
+   ui-widgets/index
    ui/user-input-and-teleoperation
    ui/ros-services
    ui/runtime-ros-parameters
@@ -68,7 +66,9 @@ Features
    wifi-scanning-and-roaming
    status-leds
 
-   cloud-robotics
+   ui/customizing
+   ui-api-docs/index
+
    security-and-privacy
    
    availability-zones

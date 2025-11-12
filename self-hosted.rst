@@ -1,7 +1,7 @@
 :github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/self-hosted.rst
 
-Self-hosted Cloud Bridge
-========================
+Self-hosted Cloud Infrastructure
+================================
 
 All the necessary cloud infrastrucure is hosted by Phantom Cybernetics and provided free of charge for your conveninence.
 However, you can also host the Bridge Cloud and Web UI servers yourself.

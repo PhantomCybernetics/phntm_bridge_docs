@@ -116,6 +116,25 @@ You can adjust the behavior of the encoder by the following params:
             max_sensor_value: 4000.0 # depth max distance/sensor value for normalizing
             colormap: 13 # cv2.COLORMAP, e.g. 13 = cv2.COLORMAP_MAGMA
 
+.. code-block::
+    :caption: phntm_bridge.yaml
+
+    /**:
+    ros__parameters:
+
+      # QoS defaults for all Image/CompressedImage topics
+      image_topics_default_depth: 1
+      image_topics_default_reliability: BEST_EFFORT
+      image_topics_default_durability: VOLATILE
+      image_topics_default_lifespan_sec: -1.0
+
+      # QoS defaults for all encoded Video topics
+      video_topics_default_depth: 10
+      video_topics_default_reliability: RELIABLIE
+      video_topics_default_durability: VOLATILE
+      video_topics_default_lifespan_sec: -1.0
+
+
 Notes
 -----
 Although some cameras offer Ogg/Theora output, this format is not supported by Phantom Brige at this point.

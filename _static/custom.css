@@ -1,5 +1,9 @@
 .wy-nav-content {
-    max-width: 850px;
+    max-width: 1240px;
+}
+
+.wy-table-responsive TABLE {
+    width: 100%;
 }
 
 .rst-content .code-block-caption {
@@ -322,4 +326,18 @@ img.widget-system-info {
 
 img.video-encoding {
     margin-bottom: 30px !important;
+}
+
+section {
+    position: relative;
+}
+
+.type-hint {
+    position: absolute;
+    right: 0px;
+    margin-top: -50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #80808099;
+    font-style: italic;
 }

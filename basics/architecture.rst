@@ -31,6 +31,16 @@ in favor of low latency. This behavior is intentional and by design baked into t
 replica of all ROS data, but rather to meaningfully optimize and compress it in order to provide accurate and fast representation of
 the machine's internal state in real-time over the network.
 
-Phantom Bridge is distributed as a Docker container but also allows for monitoring and control of other Docker containers installed on your machine.
-This enables ROS Nodes, pre-configured as individual Docker Compose services, to be started or stopped as needed via the Web UI or a ROS service,
+Phantom Bridge is shipped as a Docker container but also allows for monitoring and control of other Docker containers installed on your machine.
+This enables ROS nodes pre-configured as individual Docker Compose services, to be started or stopped as needed via the Web UI or a ROS service,
 thus effectively re-configuring the robot on the fly.
+
+
+Distributed Systems
+-------------------
+
+On distributed systems (robots utilizing more than one compute board), you would typically run only one
+instance of the Phantom Bridge Client, while launching a standalone Agent node for every other compute board.
+Assuming the Client and various Agents can discover each other via the ROS DDS (and use the same ROS_DOMAIN_ID),
+this enables system resources monitoring, Docker container control and file extraction across all parts of your
+distributed machine.

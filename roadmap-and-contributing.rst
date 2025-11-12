@@ -33,8 +33,23 @@ For log persistence across container lifecycles, specify an output directory tha
         volumes:
           ~/phntm_bridge_logs:/ros2_ws/phntm_bridge_logs
 
+Using GDB
+---------
+TODO: 
+
+.. code-block::
+  
+    ros2 launch phntm_bridge client_agent_launch.py gdb_server:=true [gdb_server_port:=3000]
+
+    # then:
+    gdb
+    remote taget localhost:3000
+    continue
+
 Dev Mode
 --------
+
+TODO: mention clangd server
 
 To streamline development with frequently changing code, you can mount a live repository into the Docker container, overwriting the `/ros2_ws/src/phntm_bridge` directory.
 This approach eliminates the need for constant image rebuilds, as illustrated in the example below. (This is currently the recommended way of running Phantom Bridge,
