@@ -115,6 +115,10 @@
     margin-top: -15px;
 }
 
+.rst-content section .js ul {
+    margin-top: 0px;
+}
+
 .rst-content .align-right {
     margin: 0 0 15px 24px;
 }
@@ -340,4 +344,21 @@ section {
     font-weight: bold;
     color: #80808099;
     font-style: italic;
+}
+
+.rst-content TABLE.api-ref-static-attributes TR.row-odd TD {
+    background-color: #d9f2f885 !important;
+}
+
+.rst-content TABLE.api-ref-instance-attributes TR.row-odd TD {
+    background-color: #ffd7f169 !important;
+}
+
+.rst-content TABLE.api-ref-instance-attributes A,
+.rst-content TABLE.api-ref-methods A  {
+    font-style: italic;
+}
+
+.rst-content TABLE.api-ref-methods TR.row-odd TD {
+    background-color: #fbd8d88f !important;
 }

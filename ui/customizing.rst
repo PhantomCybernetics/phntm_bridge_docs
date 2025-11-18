@@ -31,3 +31,5 @@ How to:
  * create Three Renderer
  * create CanvasJS Chart
  * Video/WorldModel overlay
+ * declare and read custom topic/service and global params (client.getTopicConfig() getServiceConfig(), getConfigParam()) explain the '.' notation
+

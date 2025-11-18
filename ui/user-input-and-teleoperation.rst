@@ -73,9 +73,16 @@ In order to add a new driver to the Web UI, you need to host it somewhere on the
 
 To register your custom input driver, use the `custom_input_drivers` parameter in your phntm_bridge.yaml config file like so:
 
-#.. code-block::
-#   :caption: phntm_bridge.yaml
-#
-#    input_drivers: [ 'Twist', 'ExampleCustomDriver' ] # you can combine enabled input drivers with the built-in ones
-#    custom_input_drivers: 
-#     - 'ExampleCustomDriver https://my-domain.com:443/custom-input-driver.js' # class name, space, source file URL to be loaded
+TODO: mention fallback "gamepad" v. device id
+TODO: show driver interace and example config
+TODO: explain config file structure (profiles/keyboard/touch/gamepad)
+TODO: mention the role of 'default': true in profiles (current profile marked as default when exporting full JSON)
+
+.. code-block::
+   :caption: phntm_bridge.yaml
+
+    ui_custom_includes_js:
+     - https://my-domain.com/custom-input-driver.js
+
+    input_drivers: [ 'TwistInputDriver', 'CustomDriverClass' ] # enabled input driver classes, remove to disable user input entirely, custom driver classed must be loaded via ui_custom_includes_js
+    input_defaults: /ros2_ws/phntm_input_config.json # path to input defaults JSON file (as mapped inside the container)

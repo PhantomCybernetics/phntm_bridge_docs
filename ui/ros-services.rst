@@ -64,3 +64,6 @@ To register your custom service widgets, use the `custom_service_widgets` and `s
      - '/camera/set_ir_gain ServiceInput_ExampleSlider {"min": 0, "max": 20000, "value_read_srv": "/camera/get_ir_gain"}'
 
 .. Note:: The services API provides a reliable way of calling ROS services, however, it is not designed with speed nor low latency in mind. All service requests are queued and processed in sequential order by the Bridge node which also waits for every service reply. If no reply arrives withing 10s, you will receive a `timeout` error. If you need to call a service say several times per second, you should probably use topic messages instead.
+
+TODO: show widget interface
+TODO: explain the .json buttons file

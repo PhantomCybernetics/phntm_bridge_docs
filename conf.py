@@ -15,8 +15,9 @@ author = 'Mirek Burkon'
 
 extensions = [
     'sphinxcontrib.jquery',
-    'sphinxcontrib.email'
+    'sphinxcontrib.email',
 ]
+# 'sphinx_js'
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -36,6 +37,16 @@ html_css_files = [
 html_js_files = [
     'custom.js',
 ]
+
+# js_source_path = [
+#     '../bridge_ui/static',
+#     '../bridge_ui/static/widgets',
+#     '../bridge_ui/static/widgets/inc',
+#     '../bridge_ui/static/widgets/video',
+#     '../bridge_ui/static/widgets/world-model-3d',
+# ]
+
+root_for_relative_js_paths = '../bridge_ui/static'
 
 # github_url = 'https://github.com/PhantomCybernetics'
 vcs_pageview_mode = 'edit'
