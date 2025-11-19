@@ -1,4 +1,0 @@
-BridgeClient
-============
-
-TODO

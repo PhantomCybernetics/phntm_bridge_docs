@@ -22,6 +22,14 @@ The following panel widgets are provided out of the box. You can easily :doc:`cr
    range
    system-info
    video
+   
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Examples
+
+   bool-example
+   wifi-map-example
 
 
 

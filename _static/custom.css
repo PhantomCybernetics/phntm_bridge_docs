@@ -354,6 +354,10 @@ section {
     background-color: #ffd7f169 !important;
 }
 
+.rst-content TABLE.api-ref-events TR.row-odd TD {
+    background-color: #fff6c369 !important;
+}
+
 .rst-content TABLE.api-ref-instance-attributes A,
 .rst-content TABLE.api-ref-methods A  {
     font-style: italic;
@@ -361,4 +365,8 @@ section {
 
 .rst-content TABLE.api-ref-methods TR.row-odd TD {
     background-color: #fbd8d88f !important;
+}
+
+.rst-content TABLE .line-block {
+    margin-bottom: 0px;
 }

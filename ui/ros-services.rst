@@ -40,6 +40,8 @@ At any point, these defaults can be overridden by the local browser’s settings
 
 .. Note:: Modified service buttons are always saved and applied to the current web browser only. Changes need to be saved to your robot’s `phntm_services_config.json` file in order to be applied to other peers or devices you may want to control the robot with. Deleting the configuration in a web browser will reset it to the robot’s defaults on the next Web UI page load.
 
+.. _implementing-custom-service-widgets:
+
 Implementing Custom Widgets
 ---------------------------
 On top of the above mentioned options, you may want to create a completely unique controls for a ROS service. 

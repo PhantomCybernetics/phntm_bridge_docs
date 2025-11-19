@@ -3,6 +3,11 @@ VideoPuginBase
 
 Declared in `video-plugin-base.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/video/video-plugin-base.js/>`_
 
+Extend this class to implement a custom plugin for the Video widget as outlined in the code snippet below.
+A working example - :ref:`video overlay displaying TwistStamped messages as input keys <implementing-custom-video-overlays>` - can be found `in the Extras 
+repository <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-video-cmd-vel-overlay/>`_
+and also :doc:`live in our demos </demos/>`. 
+
 .. rubric:: Static Attributes
 
 .. list-table::
@@ -30,8 +35,8 @@ Declared in `video-plugin-base.js <https://github.com/PhantomCybernetics/phntm_b
    :class: api-ref-instance-attributes
 
    * - **client**
-     - :doc:`BridgeClient </ui-api-docs/BridgeClient/>`
-     - Reference to Bridge client
+     - :doc:`BrowserClient </ui-api-docs/BrowserClient/>`
+     - Reference to Browser client
    * - **overlays**
      - *{ 'topic': custom_topic_data }*
      - Custom overlay data by topic
@@ -70,14 +75,10 @@ Declared in `video-plugin-base.js <https://github.com/PhantomCybernetics/phntm_b
      - Setup menu items by adding new lines into the provided menu_els container
 
 
-Extend this class to implement a custom plugin for the Video widget as outlined in the example below.
-A working example - overlay displaying TwistStamped messages as input keys over a video panel - can be found `in the Extras 
-repository <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-video-cmd-vel-overlay/>`_
-and also :doc:`live in our demos </demos/>`. 
-
+.. rubric:: Example
 
 .. code-block:: javascript
-   :caption: custom-plugin.js
+   :caption: custom-video-plugin.js
 
    import { VideoPuginBase } from "https://bridge.phntm.io/static/widgets/video/video-plugin-base.js";
     

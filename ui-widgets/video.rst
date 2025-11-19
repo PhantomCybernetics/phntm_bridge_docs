@@ -8,3 +8,8 @@ See :ref:`Detection2DArray <detection-2d-array-config>` and :ref:`Image <image-c
 [GIF]
 
 See video processing for configuration
+
+.. _implementing-custom-video-overlays:
+
+Implementing Custom Overlays
+----------------------------

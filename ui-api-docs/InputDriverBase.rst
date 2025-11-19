@@ -3,6 +3,11 @@ InputDriverBase
 
 Declared in `input-driver-base.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/input/input-driver-base.js/>`_
 
+Extend this class to implement a custom input driver as outlined in the code snippet below.
+A working example - :ref:`driver generating Bool messages <implementing-custom-input-drivers>` - can be found `in the Extras 
+repository <https://github.com/PhantomCybernetics/bridge_ui_extras/blob/main/examples/input-drivers/example-bool-input-driver.js/>`_
+and also :doc:`live in our demos </demos/>`. 
+
 
 .. rubric:: Static Attributes
 
@@ -21,18 +26,18 @@ Declared in `input-driver-base.js <https://github.com/PhantomCybernetics/phntm_b
    :widths: 25 20 55
    :class: api-ref-instance-attributes
 
+   * - **client**
+     - :doc:`BrowserClient </ui-api-docs/BrowserClient/>`
+     - Reference to Browser client
    * - **input_manager**
      - *InputManager*
      - Reference to the Input Manager
-   * - **client**
-     - :doc:`BridgeClient </ui-api-docs/BridgeClient/>`
-     - Reference to Bridge client
-   * - **output_topic**
-     - *String*
-     - Topic to output to
    * - **output**
      - *MsgType*
      - Last generated output
+   * - **output_topic**
+     - *String*
+     - Topic to output to
 
 
 .. rubric:: Methods
@@ -43,25 +48,22 @@ Declared in `input-driver-base.js <https://github.com/PhantomCybernetics/phntm_b
 
    * - **constructor(** *InputManager* input_manager **)**
      - 
-   * - *MsgType* **generate(**  **)**
+   * - **generate(**  **)** : *MsgType*
      - Generate and return output message based on axes and button states
-   * - *{ 'axis_id': 'Axis name' }* **getAxes(**  **)** 
+   * - **getAxes(**  **)** : *{ 'axis_id': 'Axis name' }*
      - Retrn a map of axes that can be mapped in the Input Manager
-   * - *{ 'btn_id': 'Btn name' }* **getButtons(** **)**
+   * - **getButtons(** **)** : *{ 'btn_id': 'Btn name' }*
      - Retrn a map of buttons that can be mapped in the Input Manager
-   * - *Any* **getConfig(** **)**
+   * - **getConfig(** **)** : *Any*
      - Retrn a custom config (ony when some extra data needs to be saved)
    * - **setConfig(** *Any* cfg **)**
      - Apply the loaded config data
 
 
-Extend this class to implement a custom input driver as outlined in the example below.
-A working example - driver generating Bool messages - can be found `in the Extras 
-repository <https://github.com/PhantomCybernetics/bridge_ui_extras/blob/main/examples/input-drivers/example-bool-input-driver.js/>`_
-and also :doc:`live in our demos </demos/>`. 
+.. rubric:: Example
 
 .. code-block:: javascript
-   :caption: custom-plugin.js
+   :caption: custom-input-driver.js
 
    import { InputDriverBase } from 'https://bridge.phntm.io/static/input/input-driver-base.js'
 

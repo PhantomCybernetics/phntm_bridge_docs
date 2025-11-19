@@ -63,6 +63,8 @@ On :doc:`touchscreen devices </ui/touchscreen-interface>`, the interface can be 
 These can be configured like any other keyboard or gamepad buttons and will be accompanied by a virtual gamepad, useful for controlling up to 4 custom output axes.
 You can change the display order of these buttons by dragging them around, and even use emojis as icons to save on valuable screen space.
 
+.. _implementing-custom-input-drivers:
+
 Implementing Custom Drivers
 ---------------------------
 Custom input drivers should be implemented by extending the `InputDriver <https://github.com/PhantomCybernetics/bridge_ui/blob/main/static/input/base-driver.js>`_ class. 

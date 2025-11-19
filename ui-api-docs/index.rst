@@ -3,20 +3,20 @@ User Interface API Reference
 
 .. toctree::
    :maxdepth: 2
-   :caption: Classes:
+   :caption: Core Classes:
 
-   BridgeClient
+   BrowserClient
    Multitopic
    Panel
    PanelUI
 
 .. toctree::
    :maxdepth: 1
-   :caption: Interfaces:
+   :caption: Extension Interfaces:
 
    CompositePanelWidgetBase
-   ServiceInputBase
    InputDriverBase
+   ServiceInputBase
    SingleTypePanelWidgetBase
    VideoPuginBase
    WorldModel3DPuginBase

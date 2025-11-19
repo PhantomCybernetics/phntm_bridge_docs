@@ -3,6 +3,12 @@ WorldModel3DPuginBase
 
 Declared in `world-model-plugin-base.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/world-model-3d/world-model-plugin-base.js/>`_
 
+Extend this class to implement a custom plugin for the World Model 3D widget as outlined in the code snippet below.
+A working example - :ref:`overlay displaying Battery messages as virtual LEDs on the robot <implementing-custom-world-model-3d-overlays>` - can be found `in the Extras 
+repository <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-world-model-battery-plugin/>`_
+and also :doc:`live in our demos </demos/>`.
+
+
 .. rubric:: Static Attributes
 
 .. list-table::
@@ -30,8 +36,8 @@ Declared in `world-model-plugin-base.js <https://github.com/PhantomCybernetics/p
    :class: api-ref-instance-attributes
 
    * - **client**
-     - :doc:`BridgeClient </ui-api-docs/BridgeClient/>`
-     - Reference to Bridge client
+     - :doc:`BrowserClient </ui-api-docs/BrowserClient/>`
+     - Reference to Browser client
    * - **overlays**
      - *{ 'topic': custom_topic_data }*
      - Custom overlay data by topic
@@ -74,14 +80,10 @@ Declared in `world-model-plugin-base.js <https://github.com/PhantomCybernetics/p
      - Setup menu items by adding new lines into the provided menu_els container
 
 
-Extend this class to implement a custom plugin for the World Model 3D widget as outlined in the example below.
-A working example - overlay displaying Battery messages as virtual LEDs on the robot - can be found `in the Extras 
-repository <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-world-model-battery-plugin/>`_
-and also :doc:`live in our demos </demos/>`.
-
+.. rubric:: Methods
 
 .. code-block:: javascript
-   :caption: custom-plugin.js
+   :caption: custom-world-model-3d-plugin.js
    
    import { WorldModel3DPuginBase } from 'https://bridge.phntm.io/static/widgets/world-model-3d/world-model-plugin-base.js'
 

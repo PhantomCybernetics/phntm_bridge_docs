@@ -3,6 +3,12 @@ ServiceInputBase
 
 Declared in `service-input-base.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/input/service-input-base.js/>`_
 
+Extend this class to implement a custom service input widget as outlined in the code snippet below.
+A working example - :ref:`slider menu element <implementing-custom-service-widgets>` - can be found `in the Extras 
+repository <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-slider-service-widget/>`_
+and also :doc:`live in our demos </demos/>`. 
+
+
 .. rubric:: Instance Attributes
 
 .. list-table::
@@ -10,8 +16,8 @@ Declared in `service-input-base.js <https://github.com/PhantomCybernetics/phntm_
    :class: api-ref-instance-attributes
 
    * - **client**
-     - :doc:`BridgeClient </ui-api-docs/BridgeClient/>`
-     - Reference to Bridge client
+     - :doc:`BrowserClient </ui-api-docs/BrowserClient/>`
+     - Reference to Browser client
    * - **id_service**
      - *String*
      - ID service
@@ -23,25 +29,23 @@ Declared in `service-input-base.js <https://github.com/PhantomCybernetics/phntm_
    :widths: 45 55
    :class: api-ref-methods
 
-   * - **constructor(** *String* id_service, :doc:`BridgeClient </ui-api-docs/BridgeClient/>` client **)**
+   * - **constructor(** *String* id_service, :doc:`BrowserClient </ui-api-docs/BrowserClient/>` client **)**
      - 
-   * - **makeElements(** *jQuery* target_el **)** 
-     - Create your DOM elements here and append them to the target_el
-   * - **updateDisplay(** *Any* value, *Bool* is_error = false **)**
-     - Update created DOM elements with value
    * - **getCurrentValueu(** *Callback* done_cb, *Callback* err_cb **)**
      - Handle loading of the current value, i.e. via a getter service call, call done_cb() or err_cb() when done
+   * - **makeElements(** *jQuery* target_el **)** 
+     - Create your DOM elements here and append them to the target_el
    * - **onValueChanged(** *SrvMsgType* msg **)**
      - Trigerred when another peer updates the service, override to update the UI
+   * - **updateDisplay(** *Any* value, *Bool* is_error = false **)**
+     - Update created DOM elements with value
+   
 
 
-Extend this class to implement a custom service input widget as outlined in the example below.
-A working example - slider menu element - can be found `in the Extras 
-repository <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-slider-service-widget/>`_
-and also :doc:`live in our demos </demos/>`. 
+.. rubric:: Example
 
 .. code-block:: javascript
-   :caption: custom-plugin.js
+   :caption: custom-service-input.js
 
    import { ServiceInputBase } from 'https://bridge.phntm.io/static/input/service-input-base.js'
 

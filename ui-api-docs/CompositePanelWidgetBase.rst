@@ -3,18 +3,24 @@ CompositePanelWidgetBase
 
 Declared in `composite-widget-base.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/inc/composite-widget-base.js/>`_
 
+Extend this class to implement a custom multi-topic composite widget as outlined in the code snippet below.
+A working example - :doc:`Wi-Fi signal strength map</ui-widgets/wifi-map-example/>` - can be found `in the Extras 
+repository <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-wifi-map-panel-widget/>`_
+and also :doc:`live in our demos </demos/>`. 
+
+
 .. rubric:: Static Attributes
 
 .. list-table::
    :widths: 25 20 55
    :class: api-ref-static-attributes
 
-   * - static **DEFAULT_WIDTH**
-     - *Number*
-     - Default panel width in GridScale columns
    * - static **DEFAULT_HEIGHT**
      - *Number*
      - Default panel width in GridScale rows
+   * - static **DEFAULT_WIDTH**
+     - *Number*
+     - Default panel width in GridScale columns
    * - static **LABEL**
      - *String* (required)
      - Text to display as widget's name
@@ -30,8 +36,8 @@ Declared in `composite-widget-base.js <https://github.com/PhantomCybernetics/phn
      - *Bool*
      - If true, resize renderer attached to this widget automatically
    * - **client**
-     - :doc:`BridgeClient </ui-api-docs/BridgeClient/>`
-     - Reference to Bridge client
+     - :doc:`BrowserClient </ui-api-docs/BrowserClient/>`
+     - Reference to Browser client
    * - **panel**
      - :doc:`Panel </ui-api-docs/Panel/>`
      - Reference to widget panel
@@ -54,27 +60,24 @@ Declared in `composite-widget-base.js <https://github.com/PhantomCybernetics/phn
 
    * - **constructor(** :doc:`Panel </ui-api-docs/Panel/>` panel, *String* widget_css_class **)**
      - 
-   * - **onResize(** **)**
-     - Called on panel/window resize
-   * - **setupMenu(** *jQuery* menu_els **)**
-     - Setup menu items by adding new lines into the provided menu_els container
-   * - **onPaused(** **)**
-     - Called when the panel is paused
-   * - **onUnpaused(** **)**
-     - Called when the panel is unpaused
-   * - *String* **getFpsString(** **)**
+   * - **getFpsString(** **)** : *String*
      - Returns string to be displayed in the FPS label
    * - **onClose(** **)**
      - Called when the panel is closed
+   * - **onPaused(** **)**
+     - Called when the panel is paused
+   * - **onResize(** **)**
+     - Called on panel/window resize
+   * - **onUnpaused(** **)**
+     - Called when the panel is unpaused
+   * - **setupMenu(** *jQuery* menu_els **)**
+     - Setup menu items by adding new lines into the provided menu_els container
+   
 
-
-Extend this class to implement a custom multi-topic composite widget as outlined in the example below.
-A working example - panel Wi-Fi signal strength map based on Odometry - can be found `in the Extras 
-repository <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-wifi-map-panel-widget/>`_
-and also :doc:`live in our demos </demos/>`. 
+.. rubric:: Example
 
 .. code-block:: javascript
-   :caption: custom-plugin.js
+   :caption: custom-composite-widget.js
 
    import { CompositePanelWidgetBase } from 'https://bridge.phntm.io/static/widgets/inc/composite-widget-base.js'
 
