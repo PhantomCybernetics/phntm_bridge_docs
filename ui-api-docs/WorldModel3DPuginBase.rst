@@ -62,25 +62,25 @@ and also :doc:`live in our demos </demos/>`.
      - 
    * - **addTopic(** *String* topic **)**
      - Add topic to this plugin, called when the user selects a new topic as overlay input
-   * - **clearAllTopics(** **)**
+   * - **clearAllTopics()**
      - Clear all topics.
    * - **clearTopic(** *String* topic **)** 
      - Clear one topic and all its visuals
    * - **clearVisuals(** *String* topic **)**
      - Remove all visuals for the topic here
-   * - **onModelRemoved(** **)**
+   * - **onModelRemoved()**
      - Called when robot's URDF model is removed of updated   
    * - **onTopicData(** *String* topic, *MsgType* msg **)** 
      - Called when data for the topic is received
-   * - **onRender(** **)**
+   * - **onRender()**
      - Called from the widget's rendering loop
-   * - **onResize(** **)**
+   * - **onResize()**
      - Called on panel/window resize
    * - **setupMenu(** *jQuery* menu_els **)**
      - Setup menu items by adding new lines into the provided menu_els container
 
 
-.. rubric:: Methods
+.. rubric:: Example
 
 .. code-block:: javascript
    :caption: custom-world-model-3d-plugin.js

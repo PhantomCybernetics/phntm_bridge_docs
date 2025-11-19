@@ -61,7 +61,7 @@ and also :doc:`live in our demos </demos/>`.
      - 
    * - **addTopic(** *String* topic **)**
      - Add topic to this plugin, called when the user selects a new topic as overlay input
-   * - **clearAllTopics(** **)**
+   * - **clearAllTopics()**
      - Clear all topics.
    * - **clearTopic(** *String* topic **)** 
      - Clear one topic and all its visuals
@@ -69,7 +69,7 @@ and also :doc:`live in our demos </demos/>`.
      - Remove all visuals for the topic here
    * - **onTopicData(** *String* topic, *MsgType* msg **)** 
      - Called when data for the topic is received
-   * - **onResize(** **)**
+   * - **onResize()**
      - Called on panel/window resize
    * - **setupMenu(** *jQuery* menu_els **)**
      - Setup menu items by adding new lines into the provided menu_els container

@@ -24,9 +24,6 @@ This class is responsible for establishing WebRTC connection to the Robot, Socke
    * - **id_robot**
      - *String*
      - Robot ID
-   * - **input_manager**
-     - *InputManager*
-     - Reference to Input Manager
    * - **media_streams**
      - *{ 'id_stream': MediaStream }*
      - Open inbound media streams
@@ -114,9 +111,9 @@ This class is responsible for establishing WebRTC connection to the Robot, Socke
 
    * - **constructor(** *BridgeClientOptions* opts **)**
      - 
-   * - **connect(** **)**
+   * - **connect()**
      - Connect to the Bridge Server
-   * - **disconnect(** **)**
+   * - **disconnect()**
      - Disconnect from the Bridge Server
    * - **getBridgeFileUrl(** *String* url **)** : *String*
      - Get file URL for file extraction from the robot

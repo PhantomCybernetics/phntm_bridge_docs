@@ -48,13 +48,13 @@ and also :doc:`live in our demos </demos/>`.
 
    * - **constructor(** *InputManager* input_manager **)**
      - 
-   * - **generate(**  **)** : *MsgType*
+   * - **generate()** : *MsgType*
      - Generate and return output message based on axes and button states
-   * - **getAxes(**  **)** : *{ 'axis_id': 'Axis name' }*
+   * - **getAxes()** : *{ 'axis_id': 'Axis name' }*
      - Retrn a map of axes that can be mapped in the Input Manager
-   * - **getButtons(** **)** : *{ 'btn_id': 'Btn name' }*
+   * - **getButtons()** : *{ 'btn_id': 'Btn name' }*
      - Retrn a map of buttons that can be mapped in the Input Manager
-   * - **getConfig(** **)** : *Any*
+   * - **getConfig()** : *Any*
      - Retrn a custom config (ony when some extra data needs to be saved)
    * - **setConfig(** *Any* cfg **)**
      - Apply the loaded config data

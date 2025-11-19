@@ -60,17 +60,17 @@ and also :doc:`live in our demos </demos/>`.
 
    * - **constructor(** :doc:`Panel </ui-api-docs/Panel/>` panel, *String* topic, *String* widget_css_class **)**
      - 
-   * - **getFpsString(** **)** : *String*
+   * - **getFpsString()** : *String*
      - Returns string to be displayed in the FPS label
-   * - **onClose(** **)**
+   * - **onClose()**
      - Called when the panel is closed
    * - **onData(** *MsgType* msg **)** 
      - Called when data for the topic is received
-   * - **onPaused(** **)**
+   * - **onPaused()**
      - Called when the panel is paused
-   * - **onResize(** **)**
+   * - **onResize()**
      - Called on panel/window resize
-   * - **onUnpaused(** **)**
+   * - **onUnpaused()**
      - Called when the panel is unpaused
    * - **setupMenu(** *jQuery* menu_els **)**
      - Setup menu items by adding new lines into the provided menu_els container
