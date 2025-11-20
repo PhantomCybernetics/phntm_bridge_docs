@@ -42,7 +42,7 @@ and also :doc:`live in our demos </demos/>`.
      - :doc:`Panel </ui-api-docs/Panel/>`
      - Reference to widget panel
    * - **sources**
-     - :doc:`MultiTopicSource </ui-api-docs/Multitopic/>`
+     - :doc:`MultiTopicSource <MultiTopicSource>`
      - Topic sources
    * - **ui**
      - :doc:`PanelUI </ui-api-docs/PanelUI/>`

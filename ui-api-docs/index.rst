@@ -6,7 +6,7 @@ User Interface API Reference
    :caption: Core Classes:
 
    BrowserClient
-   Multitopic
+   MultiTopicSource
    Panel
    PanelUI
 
