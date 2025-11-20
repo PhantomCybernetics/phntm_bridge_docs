@@ -7,6 +7,7 @@ This class represents a single panel of the :doc:`user interfce <PanelUI>` and h
 Panel consists of the main widget area, can display raw message source, handles the menu, title bar, and optional extra buttons.
 It also offers a mechanism to store and load custom variables used by the widgets.
 
+
 .. rubric:: Instance Attributes
 
 .. list-table::

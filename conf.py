@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'PHNTM Bridge'
-copyright = '2024, Phantom Cybernetics Inc'
+copyright = '2025, Phantom Cybernetics Inc'
 author = 'Mirek Burkon'
 
 # -- General configuration ---------------------------------------------------
@@ -18,6 +18,9 @@ extensions = [
     'sphinxcontrib.email',
 ]
 # 'sphinx_js'
+# it'd be nice to generate the exact same kind of documentation from live JS, 
+# but sphinx_js is shit and generates unreadable crap
+# so I guess we'll work on parsing later
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']

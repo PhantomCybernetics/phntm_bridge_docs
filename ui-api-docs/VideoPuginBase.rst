@@ -8,6 +8,7 @@ A working example - :ref:`video overlay displaying TwistStamped messages as inpu
 repository <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-video-cmd-vel-overlay/>`_
 and also :doc:`live in our demos </demos/>`. 
 
+
 .. rubric:: Static Attributes
 
 .. list-table::

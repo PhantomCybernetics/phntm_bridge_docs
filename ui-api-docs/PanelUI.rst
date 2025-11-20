@@ -7,6 +7,7 @@ This class represents the panel window manager handling UI panels, notifications
 of the user interaction. Under the hood, it creates all the menus and dialogs, and allows users to call ROS
 services or control Docker containers.
 
+
 .. rubric:: Instance Attributes
 
 .. list-table::
