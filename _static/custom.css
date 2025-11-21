@@ -370,3 +370,14 @@ section {
 .rst-content TABLE .line-block {
     margin-bottom: 0px;
 }
+
+.input-manager-monkeys-wrapper {
+    width: 330px;
+    float: right;
+    margin-left: 20px;
+    margin-top: 27px;
+}
+
+.rst-content TABLE.input-manager-monkeys {
+    
+}

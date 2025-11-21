@@ -3,8 +3,8 @@
 Calling ROS Services
 ====================
 
-The Bridge node autodetects all available ROS services of all discovered ROS nodes,
-and the Web UI then provides various tools to call them with custom data payloads.
+The Bridge Client node autodetects all available ROS services of all discovered nodes,
+and the Web UI then provides various tools to call them with custom data payloads and receive replies.
 Service calls can be even mapped to keyboard keys, gamepad and touch UI buttons.
 
 In order to be able to call any ROS service, the Bridge node needs to have access to its type definitions. 
@@ -67,5 +67,4 @@ To register your custom service widgets, use the `custom_service_widgets` and `s
 
 .. Note:: The services API provides a reliable way of calling ROS services, however, it is not designed with speed nor low latency in mind. All service requests are queued and processed in sequential order by the Bridge node which also waits for every service reply. If no reply arrives withing 10s, you will receive a `timeout` error. If you need to call a service say several times per second, you should probably use topic messages instead.
 
-TODO: show widget interface
-TODO: explain the .json buttons file
+| TODO: explain the .json buttons file maybe

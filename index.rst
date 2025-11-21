@@ -12,12 +12,12 @@ Phantom Bridge is a fast WebRTC ROS2 Bridge written in C++
 for real-time ROS2 data visualization and video streaming, teleoperation, human-robot interaction,
 and both local and remote robot monitoring.
 
-The Bridge comes with Docker Container control for the host machine, system load and Wi-Fi monitoring,
-and customizable Web Interface for both desktop and mobile touchscreen devices.
+The Bridge comes with :doc:`Docker Container control </ui/docker-control>` for the host machine, :doc:`system load </ui-widgets/system-info>`
+and :doc:`Wi-Fi monitoring </wifi-scanning-and-roaming>`, and highly customizable :doc:`Web Interface </ui/overview>` for both desktop and mobile touchscreen devices.
 
 This suite is indended to be a modern replacement for RViz, in many cases going beyong what is
 typically consideted a ROS visualization tool, in order to make robotics development with ROS2 easier.
-The UI is customizable with JavaScrip & CSS plugins, various configuration options make it suitable
+The UI is :doc:`customizable with JavaScrip & CSS plugins </ui/customizing>`, various configuration options make it suitable
 both as a universal development tool and a customer-facing product.
 
 Features

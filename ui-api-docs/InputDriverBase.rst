@@ -3,10 +3,9 @@ InputDriverBase
 
 Declared in `input-driver-base.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/input/input-driver-base.js/>`_
 
-Extend this class to implement a custom input driver as outlined in the code snippet below.
-A working example - :ref:`driver generating Bool messages <implementing-custom-input-drivers>` - can be found `in the Extras 
-repository <https://github.com/PhantomCybernetics/bridge_ui_extras/blob/main/examples/input-drivers/example-bool-input-driver.js/>`_
-and also :doc:`live in our demos </demos/>`. 
+Extend this class to :ref:`implement a custom input driver <implementing-custom-input-drivers>` as outlined in the code snippet below.
+A working example - driver generating Bool messages - can be found `in the Extras repository <https://github.com/PhantomCybernetics/bridge_ui_extras/blob/main/examples/input-drivers/example-bool-input-driver.js>`_
+and also :doc:`live in our demos </demos/>` (switch to the `Bool Test` profile in the `Input Manager`). 
 
 
 .. rubric:: Static Attributes

@@ -60,39 +60,11 @@ You can also make your own custom control widgets. :doc:`See more here. </ui/ros
     :align: center
     :class: ui-services-menu
 
-User Input Indicator
---------------------
+User Input
+----------
 
-If configured on the Robot, you will see the User Input menu on the top-right of the screen. 
-Based on the current state of the input system, this is what the icon means.
-More information about user input :doc:`can be found here. </ui/user-input-and-teleoperation>`
+...
 
-.. list-table::
-   :widths: 5 95
-
-   * - .. image:: ../img/ui-monkey-blue.png
-        :align: left
-        :class: ui-monkey
-
-     - Input disabled
-
-   * - .. image:: ../img/ui-monkey-green.png
-        :align: left
-        :class: ui-monkey
-
-     - Input enabled and ready, not transmitting
-
-   * - .. image:: ../img/ui-monkey-yellow.png
-        :align: left
-        :class: ui-monkey
-
-     - Input enabled and transmitting
-
-   * - .. image:: ../img/ui-monkey-red.png
-        :align: left
-        :class: ui-monkey
-
-     - Error occured, not transmitting
 
 .. image:: ../img/ui-message-definition.png
     :align: right

@@ -9,14 +9,14 @@ Here's the full reference of all the configurable options.
 
 Basics
 ------
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
       ros__parameters:
 
-        id_robot: %ID_ROBOT% # robot's ID generated during registration
-        key: %SECRET_KEY% # robot's secret key generated during registration
+        id_robot: '%ID_ROBOT%' # robot's ID generated during registration
+        key: '%SECRET_KEY%' # robot's secret key generated during registration
         name: 'Unnamed Robot' # the name to show in the UI
 
         maintainer_email: 'robot.master@domain.com' # your e-mail for service announcements
@@ -29,7 +29,7 @@ It can be changed as needed, for instance when the robot moves, see :doc:`Availa
 
 UI Customization
 ----------------
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
@@ -63,7 +63,7 @@ Introspection & Blacklisting
 ----------------------------
 These settings affect how topics, nodes and services are discovered.
 
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
@@ -88,7 +88,7 @@ Low FPS / Hz warning threshold can be also set individually for every topic, the
 
 Note that ``Image``, ``CompressedImage`` and ``Video`` topics have different QoS defaults, more about this in :doc:`Video Processing </video-and-image-topics>`.
 
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
@@ -118,7 +118,7 @@ Extra ROS Packages to Install
 -----------------------------
 Custom packages can be installed to enable support for any topic or service types, see :doc:`Custom message & Service types </basics/custom-message-types>` for more details.
 
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
@@ -134,7 +134,7 @@ User Input
 ----------
 See :doc:`User input & Teleoperation </ui/user-input-and-teleoperation>`
 
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
@@ -148,7 +148,7 @@ ROS Service Controls
 --------------------
 See :doc:`ROS Services </ui/ros-services>`
 
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
@@ -177,7 +177,7 @@ Video Encoding & Streaming
 --------------------------
 See :doc:`Video Processing </video-and-image-topics>` for configuration params.
 
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
@@ -201,7 +201,7 @@ Custom UI JS/CSS Includes
 -------------------------
 See UI more here
 
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
@@ -223,7 +223,7 @@ See :doc:`Status LEDs </status-leds>` for more.
 
 Socket.io Configuration
 -----------------------
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
@@ -241,7 +241,7 @@ WebRTC Configuration
 --------------------
 This config is received from the Brige Server but can be extended or overriden for use with custom ICE/TURN servers.
 
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
@@ -262,7 +262,7 @@ File Extraction
 ---------------
 See file extraction for more
 
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
@@ -274,7 +274,7 @@ See file extraction for more
 
 Logs and Debugging
 ------------------
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:
@@ -295,7 +295,7 @@ Typically, it runs in the same container as the Bridge Client and can share the 
 In case of a distributed system, it can be also installed separately and run in multiple instances. The Agent only expects the following options in the 
 config file:
 
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml or phnrm_agent.yaml
 
     /**
