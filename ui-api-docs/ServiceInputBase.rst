@@ -31,7 +31,7 @@ and also :doc:`live in our demos </demos/>`.
 
    * - **constructor(** *String* id_service, :doc:`BrowserClient </ui-api-docs/BrowserClient/>` client **)**
      - 
-   * - **getCurrentValueu(** *Callback* done_cb, *Callback* err_cb **)**
+   * - **getCurrentValue(** *Callback* done_cb, *Callback* err_cb **)**
      - Handle loading of the current value, i.e. via a getter service call, call done_cb() or err_cb() when done
    * - **makeElements(** *jQuery* target_el **)** 
      - Create your DOM elements here and append them to the target_el

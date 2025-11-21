@@ -50,10 +50,23 @@ create a custom drivers that map user's keyboard, gamepad or touch screen input 
 See more under :ref:`User Input & Teleoperation <implementing-custom-input-drivers>`.
 
 
-Service Menu Widgets
---------------------
+Service Service Menu Widgets
+----------------------------
+
+Any ROS service can be called with a pre-defined payload using the built-in UI functionality.
+You can also easily create a completely bespoke interface elements to be displayed in the Services
+menu and associated with your ROS services.
+
+See more under :ref:`Implementing Custom Service Widgets <implementing-custom-service-widgets>`.
 
 
+Single-type Panel Widgets
+-------------------------
+
+
+
+Composite Panel Widgets
+-----------------------
 
 
 

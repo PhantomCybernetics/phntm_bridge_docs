@@ -86,7 +86,7 @@ And you also need to tell the Bridge to use it with the ``input_defaults`` param
 
 Restart the client / container and reload the Web UI. This setup will be used as the defaults for all devices
 and users accessing the robot's Bridge Web UI. At any point, these defaults can be overridden by the user's own local
-configuration, which always take priority.
+configuration, which always takes priority.
 
 
 .. Note:: Configuration changes are always saved and applied to the current browser only.
