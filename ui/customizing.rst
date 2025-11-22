@@ -119,4 +119,4 @@ Browse the `Bridge UI Extras repository <https://github.com/PhantomCybernetics/b
 Feel free to `have a look <https://github.com/PhantomCybernetics/phntm_bridge_ui/tree/main/static/widgets>`_ at how the built-in widgets are
 implemented and use the API.
 
-If you create something useful worth sharing with others, consider letting us know.
+If you create some useful extensions worth sharing with others, consider letting us know.
