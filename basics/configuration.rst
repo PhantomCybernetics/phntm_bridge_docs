@@ -146,7 +146,7 @@ See :doc:`User input & Teleoperation </ui/user-input-and-teleoperation>`
 
 ROS Service Controls
 --------------------
-See :doc:`ROS Services </ui/ros-services>`
+See more in :doc:`ROS Services </ui/ros-services>`.
 
 .. code-block:: yaml
    :caption: phntm_bridge.yaml
@@ -166,7 +166,7 @@ See :doc:`ROS Services </ui/ros-services>`
 
         # custom service menu widget mapping
         /some_node/some_service:
-          menu_widget: ServiceInput_ClassName # widget class to use, must be indluded via ui_custom_includes_js
+          menu_widget: ServiceInput_ClassName # widget class to use, must be included via ui_custom_includes_js
           custom_widget_param_1: 0.5 # custom attributes for the widget class follow
           custom_widget_param_2: 'This is a string param'
           custom_widget_param_3: False
@@ -256,6 +256,22 @@ This config is received from the Brige Server but can be extended or overriden f
         enable_ice_udp_mux: True # multiple WebRTC peer connections can be multiplexed over a single UDP port
         enable_ice_tcp: False # in addition to the default UDP candidates, the library will also attempt to establish peer-to-peer connections over TCP if UDP is unavailable or blocked by network restrictions
         disable_fingerprint_verification: False
+
+
+ROS Parameter Services
+----------------------
+You can fine tune access to node runtime ROS parameters as shown below. See more in :doc:`Runtime ROS Parameters </ui/runtime-ros-parameters>`.
+
+.. code-block:: yaml
+   :caption: phntm_bridge.yaml
+
+    /**:
+      ros__parameters:
+
+        blacklist_parameter_services:
+          - controller_manager # nodes with disabled parameter services
+        enable_node_parameters_read: True
+        enable_node_parameters_write: False # only reading allowed
 
 
 File Extraction

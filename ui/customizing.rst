@@ -4,8 +4,8 @@ Customizing the User Interface
 ==============================
 
 There are several ways to extend or customize the :doc:`web User Interface </ui/overview>` by loading custom JavaScript modules
-and CSS files into it. This is done from the robot's `phntm_bridge.yaml` config file. None of the following requires you to to host
-any part of the Phantom Bridge cloud infrastructure, only your extension sources.
+and CSS files into it. This is configured in the robot's ``phntm_bridge.yaml`` config file. None of the following techniques require
+you to to host any part of the Phantom Bridge cloud infrastructure besides your own extension sources.
 
 .. code-block:: yaml
    :caption: phntm_bridge.yaml
@@ -24,8 +24,8 @@ any part of the Phantom Bridge cloud infrastructure, only your extension sources
           Included file that fails to load will likely break the UI, or cause unexpected behavior.
 
 In the `Bridge UI Extras repository <https://github.com/PhantomCybernetics/bridge_ui_extras>`_, you will find all examples mentioned below
-and a lighweight Node.js server that can serve your extensions with proper `CORS policy <https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS>`_
-and SSL certificate, both required for proper functioning with modern browsers.
+and a lighweight Node.js server that can serve your extensions with the proper `CORS policy <https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS>`_
+and SSL certificate, both required for security reasons by all modern browsers.
 
 Customizing of the Bridge Interface can be split into the following categories:
 
@@ -63,34 +63,60 @@ See more under :ref:`Implementing Custom Service Widgets <implementing-custom-se
 Single-type Panel Widgets
 -------------------------
 
+The UI comes with :doc:`several built-in widgets </ui-widgets/index>` for visualizing ROS topics based on their type.
+You can make your own custom panel widgets by extending the :doc:`SingleTypePanelWidgetBase </ui-api-docs/SingleTypePanelWidgetBase>` class.
+You can use either 2D graphics or create a custom 3D scene.
+
+There is a simple example widget :doc:`displaying Bool messages </ui-widgets/bool-example>` available in the
+`Extras repo <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-bool-panel-widget>`_
+and in our :doc:`live demos </demos>`.
 
 
 Composite Panel Widgets
 -----------------------
 
+Composite widgets offer the possibility to mesh together different topic types in order to present them jointly either in 2D or 3D.
+A showcase of this would be the :doc:`World Model 3D </ui-widgets/world-model-3d>` widget, or a much simpler example which :doc:`creates a map of Wi-Fi signal strength </ui-widgets/wifi-map-example>`
+in combination with robot's odometry. 
+
+For a composite panel widget, you will need to extend the :doc:`CompositePanelWidgetBase </ui-api-docs/CompositePanelWidgetBase>` class.
 
 
-Ways to customize:
- * Panel widgets for specific topic message type
- * Composite panel widget 
- * Overlay for the Video panel widget
- * Overlay for the World Model 3D widget
+2D Video Overlays
+-----------------
 
-Mention:
- * topic v. composite widget (+ multisource)
- * base classes DescriptionTF, Zoomable3dTiles
- * extend any existing class
- * add menu items / panel buttons
- * url params
- * consider a PR
+The built-in :doc:`Video </ui-widgets/video>` widget allows to create custom data overlays to display information over the video frames.
+In the :doc:`live demos </demos>`, you can see this work with `vision_msgs/msg/Detection2DArray` messages. There is one other example built-in displaying
+`TwistStamped` messages as a visualisation of the input keys.
 
-Available libraries:
-Three.js, D3.js, CanvasJS Charts, jQuery
+In order to create a new video overlay plugin, extend the :doc:`VideoPluginBase </ui-api-docs/VideoPluginBase>` class.
 
-How to:
- * use panel vars
- * create Three Renderer
- * create CanvasJS Chart
- * Video/WorldModel overlay
- * declare and read custom topic/service and global params (client.getTopicConfig() getServiceConfig(), getConfigParam()) explain the '.' notation
 
+World Model 3D Plugins
+----------------------
+
+In a simlar fashion, the :doc:`World Model 3D </ui-widgets/world-model-3d/>` widget can also be extended to show custom data in 3D. One example of that would be
+the virtual battery LEDs shown on the robot in our :doc:`demos </demos>`. The widget can already combine several data types and show
+them on the URDF model animated with TF messages. You can add any other data visualisation or interactive element and map these to the
+correct reference frames on the URDF model.
+
+To create a custom plugin for the World Model 3D, extend the :doc:`WorldModel3DPluginBase </ui-api-docs/WorldModel3DPluginBase>` class.
+
+
+Notes
+-----
+
+The public :doc:`User Interface API </ui-api-docs/index>` allows to add extra items to the panel's menu, create functional buttons in the title bar, open dialogs
+or store and load custom panel variables. You can read custom config parameters passed from the robot's ``phntm_bridge.yaml`` file both for the whole UI and for
+specific topics or services. You can also call ROS services programatically and write data into your topics via fast UDP Data Channels.
+
+`jQuery <https://jquery.com>`_, `D3.js <https://d3js.org>`_, `CanvasJS Charts <https://canvasjs.com>`_ and `Three.js <https://threejs.org>`_ are all
+available to your extensions out of the box and used by the :doc:`built-in widgets </ui-widgets/index>`. If you need some inspiration, take a look at how these are implemented.
+
+You can load custom graphics from the internet as well as :doc:`3D models and other sources from the robot </file-extraction>`.
+
+Browse the `Bridge UI Extras repository <https://github.com/PhantomCybernetics/bridge_ui_extras>`_ for example code and to see how your files need to be hosted.
+Feel free to `have a look <https://github.com/PhantomCybernetics/phntm_bridge_ui/tree/main/static/widgets>`_ at how the built-in widgets are
+implemented and use the API.
+
+If you create something useful worth sharing with others, consider letting us know.

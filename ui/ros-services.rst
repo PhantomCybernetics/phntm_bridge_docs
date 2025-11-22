@@ -9,8 +9,26 @@ Service calls can be even :doc:`mapped to keyboard keys, gamepad and touch UI bu
 
 .. Note:: The services API provides a reliable way of calling ROS services, however, it is not designed with speed nor
           low latency in mind. All service requests are queued and processed in sequential order by the Bridge Client node
-          which also waits for every service reply. If no reply arrives withing 20s, you will receive a `timeout` error.
+          which also waits for every service reply. If no reply arrives withing 20s (default), you will receive a `timeout` error.
           If you need to call a service several times per second, you should probably use topic messages instead.
+
+
+Services can be blacklisted or collapsed in the menu, the default timeout can be adjusted in the ``phntm_bridge.yaml`` config file:
+
+.. code-block:: yaml
+   :caption: phntm_bridge.yaml
+
+    /**:
+      ros__parameters:
+
+        blacklist_services: [] # blacklist services from discovery (msg types or full service ids)
+        collapse_unhandled_services: True # the UI will collapse services with unsupported message types
+        collapse_services: # list of service IDs and/or types to be collapsed in the UI
+          - rcl_interfaces/srv/DescribeParameters
+          - rcl_interfaces/srv/GetParameterTypes
+          - type_description_interfaces/srv/GetTypeDescription
+        default_service_timeout_sec: 20.0 # default timeout for service replies 
+
 
 In order to be able to call any ROS service, the Bridge node needs to have access to its type definitions. 
 See :doc:`Custom message & Service types </basics/custom-message-types>` for more info.

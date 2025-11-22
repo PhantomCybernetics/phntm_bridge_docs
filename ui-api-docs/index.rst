@@ -18,5 +18,5 @@ User Interface API Reference
    InputDriverBase
    ServiceInputBase
    SingleTypePanelWidgetBase
-   VideoPuginBase
-   WorldModel3DPuginBase
+   VideoPluginBase
+   WorldModel3DPluginBase
