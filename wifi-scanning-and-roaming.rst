@@ -23,7 +23,7 @@ The roam command automatically selects the AP in the current network with the be
 
 .. Danger:: In case of a roaming failure, your machine might end up offline, need rebooting or to be manually connected to the desired AP again. Make sure you have local console access before attemting this for the first time on untested configurations.
 
-.. code-block::
+.. code-block:: bash
    :caption: $ bash
     
     # The best way to switch back to your original access point is using nmcli from the command line:
@@ -34,7 +34,7 @@ The roam command automatically selects the AP in the current network with the be
 
 .. rubric:: Configuration options
 
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml or phnrm_agent.yaml
 
     /**

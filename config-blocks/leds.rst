@@ -1,4 +1,4 @@
-.. code-block::
+.. code-block:: yaml
    :caption: phntm_bridge.yaml
 
     /**:

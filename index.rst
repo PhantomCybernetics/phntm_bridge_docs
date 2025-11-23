@@ -28,12 +28,12 @@ Features
 - Extra ROS packages can be easily included for :doc:`custom message type support </basics/custom-message-types>`
 - Robot's :doc:`Wi-Fi signal monitoring </wifi-scanning-and-roaming>`, network scanning & roaming
 - :doc:`File retreival </file-extraction>` from any running Docker container and host fs (such as URDF models)
-- System load, disk space, and Docker stats monitoring
+- :doc:`System load, disk space </ui-widgets/system-info>`, and :doc:`Docker stats </ui/docker-control>` monitoring
 - Standalone lightweight Bridge Agent for monitoring and management of various parts of a distributed system
 - Multiple peers can connect to the same machine at a very low extra CPU cost
 - Works with `rosbag` and simulators such as `Gazebo`, `Isaac Sim` or `Webots`
 - Fully open-source under the MIT license; you can host any part of this system
-- User interface customizable with JavaScript & CSS plug-ins
+- User interface :doc:`customizable </ui/customizing>` with JavaScript & CSS plug-ins
 - No need for an X server running on your robot, nor for any wired connections
 
 .. toctree::

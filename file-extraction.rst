@@ -20,6 +20,12 @@ Notes
 - Thanks to the standalone Bridge Agent design, it is possible to extract files from all parts of a distributed system.
   One Agent instance needs to be installed on every component.
 
+Configuration options
+"""""""""""""""""""""
+
+.. include:: config-blocks/file-extraction.rst
+
+
 How it works
 """"""""""""
 

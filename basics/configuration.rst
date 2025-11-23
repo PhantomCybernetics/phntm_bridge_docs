@@ -54,7 +54,6 @@ UI Customization
 
 Individual UI Widget Options
 ----------------------------
-
 Many UI panel widgets define and expect custom configuration parameteres in the YAML file. 
 See :doc:`Built-in Widgets </ui-widgets/index>` for full reference.
 
@@ -116,7 +115,7 @@ Note that ``Image``, ``CompressedImage`` and ``Video`` topics have different QoS
 
 Extra ROS Packages to Install
 -----------------------------
-Custom packages can be installed to enable support for any topic or service types, see :doc:`Custom message & Service types </basics/custom-message-types>` for more details
+Custom packages can be installed to enable support for any topic or service types, see :doc:`Custom message & Service types </basics/custom-message-types>` for more details.
 
 .. code-block:: yaml
    :caption: phntm_bridge.yaml
@@ -132,7 +131,7 @@ Custom packages can be installed to enable support for any topic or service type
 
 User Input
 ----------
-See :doc:`User input & Teleoperation </ui/user-input-and-teleoperation>`
+See :doc:`User input & Teleoperation </ui/user-input-and-teleoperation>`.
 
 .. code-block:: yaml
    :caption: phntm_bridge.yaml
@@ -146,7 +145,7 @@ See :doc:`User input & Teleoperation </ui/user-input-and-teleoperation>`
 
 ROS Service Controls
 --------------------
-See more in :doc:`Calling ROS Services </ui/ros-services>`
+See more in :doc:`Calling ROS Services </ui/ros-services>`.
 
 .. code-block:: yaml
    :caption: phntm_bridge.yaml
@@ -175,7 +174,7 @@ See more in :doc:`Calling ROS Services </ui/ros-services>`
 
 Video Encoding & Streaming
 --------------------------
-See :doc:`Video Processing </video-and-image-topics>` for configuration params.
+See :doc:`Video Processing </video-and-image-topics>` for complete explanation and complete list of configuration options.
 
 .. code-block:: yaml
    :caption: phntm_bridge.yaml
@@ -199,7 +198,7 @@ See :doc:`Video Processing </video-and-image-topics>` for configuration params.
 
 Custom UI JS/CSS Includes
 -------------------------
-See UI more here
+See :doc:`Customizing the User Interface </ui/customizing>` for the full overview on how to extend or customize the user interface.
 
 .. code-block:: yaml
    :caption: phntm_bridge.yaml
@@ -276,16 +275,9 @@ You can fine tune access to node runtime ROS parameters as shown below. See more
 
 File Extraction
 ---------------
-See file extraction for more
+See :doc:`File extraction </file-extraction>` for full explanation.
 
-.. code-block:: yaml
-   :caption: phntm_bridge.yaml
-
-    /**:
-      ros__parameters:
-
-        file_upload_port: 1336 # Bridge Server port to upload files to (File Receiver)
-        file_chunks_topic: /file_chunks # receiving extracted file chunks from Agent nodes on this topic
+.. include:: ../config-blocks/file-extraction.rst
 
 
 Logs and Debugging
