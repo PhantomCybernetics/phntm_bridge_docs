@@ -116,7 +116,7 @@ Note that ``Image``, ``CompressedImage`` and ``Video`` topics have different QoS
 
 Extra ROS Packages to Install
 -----------------------------
-Custom packages can be installed to enable support for any topic or service types, see :doc:`Custom message & Service types </basics/custom-message-types>` for more details.
+Custom packages can be installed to enable support for any topic or service types, see :doc:`Custom message & Service types </basics/custom-message-types>` for more details
 
 .. code-block:: yaml
    :caption: phntm_bridge.yaml
@@ -146,7 +146,7 @@ See :doc:`User input & Teleoperation </ui/user-input-and-teleoperation>`
 
 ROS Service Controls
 --------------------
-See more in :doc:`ROS Services </ui/ros-services>`.
+See more in :doc:`Calling ROS Services </ui/ros-services>`
 
 .. code-block:: yaml
    :caption: phntm_bridge.yaml

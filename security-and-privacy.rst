@@ -3,12 +3,23 @@
 Security & Privacy
 ==================
 
-All communication between the ROS machine and the peers (web UI) takes place over encrypted channels.
+All communication between the ROS machine and the peers (Web UI) takes place over encrypted channels.
 
-The Bridge Server only stores basic metadata about the Robot for purpose of improving the service.
+The Bridge Server only stores basic metadata about the robots for the purposes of improving the service.
 
 No telemetry data or video is ever stored on any part of the Phantom infrastructure.
 
-The maintainer's email is only used for service announcements.
+The files extracted from a ros machine are cached on the Bridge Server until the cache is invalidated.
 
-We don't sell personal data to any 3rd parties.
+Access to your robot is public to anyone with the unique URL of your robot's UI, don't share it on the internet!
+Re-register your machine in case you need to invalidate it. There will be an option to make access fully private and
+precisely control who can do what with your robots, this will be a feature of a paid service.
+You will always be able to use the hosted service free of charge in this "public" way. 
+
+At this point, there are no limits to how much you can use our TURN servers. This is likely to change and
+unlimited relay will be part of a paid service. This is only relevant for tele-operating your
+machines over the internet. Local P2P connection will be always possible.
+
+The maintainer's email is only used for service announcements. We don't sell your personal data to anyone.
+
+The source code is provided under the MIT license "as is" without any waranty or liability.

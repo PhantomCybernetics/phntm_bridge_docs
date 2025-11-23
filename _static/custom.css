@@ -204,33 +204,86 @@ img.widget-scene-view {
 }
 
 img.widget-battery {
-    width: 741px;
-    margin-bottom: 24px !important;
+    width: 100%;
+    max-width: 741px;
+    margin-bottom: 10px !important;
 }
 
 img.widget-imu {
-    width: 741px;
-    margin-bottom: 24px !important;
+    max-width: 967px;
+    width: 100%;
+    margin-bottom: 10px !important;
 }
 
 img.widget-laser {
-    width: 741px;
-    margin-bottom: 24px !important;
+    max-width: 1068px;
+    width: 100%;
+    margin-bottom: 10px !important;
 }
 
 img.widget-log {
-    width: 741px;
-    margin-bottom: 24px !important;
+    width: 100%;
+    max-width: 968px;
+    margin-bottom: 10px !important;
 }
 
 img.widget-range {
-    width: 240px;
-    margin-bottom: 24px !important;
+    width: 100%;
+    max-width: 240px;
+    margin-bottom: 10px !important;
 }
 
 img.widget-system-info {
-    width: 741px;
+    width: 100%;
+    max-width: 741px;
+    margin-bottom: 10px !important;
+}
+
+img.widget-bool {
+    width: 100%;
+    max-width: 577px;
+    margin-bottom: 10px !important;
+}
+
+img.widget-wifi-map {
+    width: 100%;
+    max-width: 992px;
+    margin-bottom: 10px !important;
+}
+
+video.video-panel-widget {
+    width: 100%;
+    max-width: 743px;
+    margin-bottom: 10px !important;
+}
+
+video.video-panel-widget-twist {
+    width: 100%;
+    max-width: 503px;
     margin-bottom: 24px !important;
+}
+
+img.widget-world-model-battery {
+    width: 100%;
+    max-width: 503px;
+    margin-bottom: 24px !important;
+}
+
+@media (min-width: 1275px) { 
+    video.video-panel-widget-twist{
+        float: right;
+        margin-left: 50px;
+    }
+    img.widget-world-model-battery{
+        float: right;
+        margin-left: 50px;
+    }
+}
+
+video.world-model-widget {
+     width: 100%;
+    max-width: 926px;
+    margin-bottom: 10px !important;
 }
 
 /* Slideshow container */
@@ -380,4 +433,8 @@ section {
 
 .rst-content TABLE.input-manager-monkeys {
     
+}
+
+.overlay-section H2 {
+    margin-bottom: 0px; /* remove gap between headline and src link */
 }
