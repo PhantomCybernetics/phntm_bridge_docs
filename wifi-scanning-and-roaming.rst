@@ -37,7 +37,7 @@ The roam command automatically selects the AP in the current network with the be
 .. code-block:: yaml
    :caption: phntm_bridge.yaml or phnrm_agent.yaml
 
-    /**
+    /**:
       ros__parameters:
 
         wifi_interface: 'wlan0' # wi-fi interface to monitor on Agent, disabled if ''

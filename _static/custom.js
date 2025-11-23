@@ -16,35 +16,3 @@ $(document).ready(function () {
 
     $('a.external').attr('target', '_blank');
 });
-
-// Next/previous controls
-function plusSlides(n, id_cont) {
-    window.slideIndex[id_cont] += n;
-    showSlides(id_cont);
-}
-
-// Thumbnail image controls
-function currentSlide(n, id_cont) {
-    window.slideIndex[id_cont] = n;
-    showSlides(id_cont);
-}
-
-function showSlides(id_cont) {
-    let i;
-    let cont = document.getElementById(id_cont);
-    let slides = cont.getElementsByClassName("mySlides");
-    let dots = cont.getElementsByClassName("dot");
-
-    let n = window.slideIndex[id_cont];
-    if (n > slides.length) {window.slideIndex[id_cont] = 1}
-    if (n < 1) {window.slideIndex[id_cont] = slides.length}
-
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[window.slideIndex[id_cont]-1].style.display = "block";
-    dots[window.slideIndex[id_cont]-1].className += " active";
-}

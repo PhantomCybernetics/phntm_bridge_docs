@@ -105,7 +105,8 @@ Implementing custom overlays
 ----------------------------
 
 .. image:: ../img/widget-world-model-battery.gif
-    :class: widget-world-model-battery
+   :align: right
+   :class: widget-world-model-battery
 
 We will be adding more 3D overlays such as `visualization markers <https://github.com/PhantomCybernetics/bridge_ui/issues/7>`_ or
 `path planning <https://github.com/PhantomCybernetics/bridge_ui/issues/10>`_, and so can you.
