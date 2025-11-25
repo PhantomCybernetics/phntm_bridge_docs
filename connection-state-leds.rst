@@ -1,11 +1,11 @@
-:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/status-leds.rst
+:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/connection-statew-leds.rst
 
-Status LEDs
-===========
+Connection State LEDs
+=====================
 
-If configured, the Bridge Client node will use two hardware LEDs on the Robot to quickly communicate the state of connection and system activity.
-LEDs can be controlled either via `libgpiod <https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git/about/>`_ (installed with the Docker container), or by
-ROS ``std_msgs/msg/Bool`` topics.
+If configured, the Bridge Client node will use two hardware LEDs on the robot to quickly communicate the state of connection and system activity.
+LEDs can be controlled diretly via `libgpiod <https://git.kernel.org/pub/scm/libs/libgpiod/libgpiod.git/about/>`_ (installed with the Docker container).
+Alternatively, the Bridge Client can produce ``std_msgs/msg/Bool`` topics to allow some other process to control the LEDs.
 
 
 .. rubric:: Connection LED
@@ -47,6 +47,6 @@ ROS ``std_msgs/msg/Bool`` topics.
      - Message was sent to or received from a peer
 
 
-.. rubric:: Configuration options
+.. rubric:: Configuration Options
 
 .. include:: config-blocks/leds.rst

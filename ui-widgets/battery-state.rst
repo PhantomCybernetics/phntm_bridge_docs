@@ -7,7 +7,7 @@ Battery State
 Declared in `battery.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/battery.js>`_
 
 This panel displays robot's battery voltage from ``sensor_msgs/msg/BatteryState`` topics as a graph.
-At some point, `it will display current, too <https://github.com/PhantomCybernetics/bridge_ui/issues/3>`_
+At some point, `it will display current, too <https://github.com/PhantomCybernetics/phntm_bridge_ui/issues/3>`_
 
 
 .. rubric:: Configuration options

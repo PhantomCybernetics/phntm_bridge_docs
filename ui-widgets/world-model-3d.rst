@@ -26,7 +26,7 @@ This widgets allow to switch beween orthographic and perpective camera. Skybox, 
 
 .. rst-class:: overlay-section
 
-CameraInfo overlay
+CameraInfo Overlay
 ------------------
 
 Declared in `camera-info.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/world-model-3d/camera-info.js>`_
@@ -50,7 +50,7 @@ corresponding `frame_id` frame on the robot's URDF model. You can set the displa
 
 .. rst-class:: overlay-section
 
-Detection3DArray overlay
+Detection3DArray Overlay
 ------------------------
 
 Declared in `detections3d.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/world-model-3d/detections3d.js>`_
@@ -80,7 +80,7 @@ All detections are mapped into the correct frames on the robot model according t
 
 .. rst-class:: overlay-section
 
-LaserScan overlay
+LaserScan Overlay
 -----------------
 
 Declared in `laser.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/world-model-3d/laser.js>`_
@@ -90,7 +90,7 @@ Displays ``sensor_msgs/msg/LaserScan`` messages as 3D laser hits, mapped into th
 
 .. rst-class:: overlay-section
 
-Range overlay
+Range Overlay
 -------------
 
 Declared in `range.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/world-model-3d/range.js>`_
@@ -101,15 +101,15 @@ The `min_range` and `max_range` values are taken into account when rendering.
 
 .. _implementing-custom-world-model-3d-overlays:
 
-Implementing custom overlays
+Implementing Custom Overlays
 ----------------------------
 
 .. image:: ../img/widget-world-model-battery.gif
    :align: right
    :class: widget-world-model-battery
 
-We will be adding more 3D overlays such as `visualization markers <https://github.com/PhantomCybernetics/bridge_ui/issues/7>`_ or
-`path planning <https://github.com/PhantomCybernetics/bridge_ui/issues/10>`_, and so can you.
+We will be adding more 3D overlays such as `visualization markers <https://github.com/PhantomCybernetics/phntm_bridge_ui/issues/7>`_ or
+`path planning <https://github.com/PhantomCybernetics/phntm_bridge_ui/issues/10>`_, and so can you.
 In order to create a custom overlay plugin, you'll need to extend the :doc:`WorldModel3DPluginBase </ui-api-docs/WorldModel3DPluginBase>` class.
 You can examine source code of all the overlays mentioned above for inspiration.
 

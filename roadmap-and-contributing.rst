@@ -1,28 +1,28 @@
 :github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/roadmap-and-contributing.rst
 
-Roadmap & Contributing
-======================
+Roadmap, Debugging & Contributing
+=================================
 
 If you're curious about the planned features and overall development roadmap, see the open issues on GitHub:
 
-- `Bridge UI <https://github.com/PhantomCybernetics/bridge_ui/issues>`_ for UI related improvements and new features
-- `Phantom Bridge <https://github.com/PhantomCybernetics/phntm_bridge/issues>`_ for the Bridge node related features and capabilities
-- `Cloud Briudge <https://github.com/PhantomCybernetics/cloud_bridge/issues>`_ for cloud related topics
+- `User Interface <https://github.com/PhantomCybernetics/phntm_bridge_ui/issues>`_ for UI related improvements and new features
+- `Bridge Client <https://github.com/PhantomCybernetics/phntm_bridge_client/issues>`_ for the Bridge Client node related features and capabilities
+- `Bridge Server <https://github.com/PhantomCybernetics/phntm_bridge_server/issues>`_ for cloud related topics
 
 Feel free to open a new issue if you don't see what you'd like implemented. It also helps if you let us
 know what features you care about the most by leaving comments or reacting to issues.
 
 If you'd like to contribute or get otherwise involved, get in touch via `GitHub <https://github.com/PhantomCybernetics>`_ or
-:email:`e-mail <human@phntm.io>`, pull requets are also highly appreciated.
+:email:`e-mail <human@phntm.io>`, pull requets are highly appreciated.
 
-Here are some quality-of-life tips for debugging and working with the Phantom Bridge node source code:
+Here are some quality-of-life tips for debugging and working with the Phantom Bridge Client node source code:
 
 Log Files
 ---------
-To write Bridge node logs to files, you can configure the `ROS_LOG_DIR` environment variable in the compose.yaml file, as seen below.
+To enable Bridge Client logslogging into files, you can configure the ``ROS_LOG_DIR`` environment variable in the ``compose.yaml file``, as seen below.
 For log persistence across container lifecycles, specify an output directory that's external to the container.
 
-.. code-block::
+.. code-block:: yaml
    :caption: compose.yaml
 
     services:
@@ -33,32 +33,35 @@ For log persistence across container lifecycles, specify an output directory tha
         volumes:
           ~/phntm_bridge_logs:/ros2_ws/phntm_bridge_logs
 
-Using GDB
----------
-TODO: 
 
-.. code-block::
-  
+Using GDB Server
+----------------
+For debugging crashes, GDB Server wrapper can be turned on for the Bridge Client node. (The Agent is written in Python).
+Both `gdb` and `gdbserver` are installed in the container.
+
+.. code-block:: bash
+   :caption: $ bash
+
+    # launch your node like this inside the container:
     ros2 launch phntm_bridge client_agent_launch.py gdb_server:=true [gdb_server_port:=3000]
 
-    # then:
+    # then on the host machine:
+    sudo apt-get install gdb
     gdb
-    remote taget localhost:3000
-    continue
+    (gdb) remote taget localhost:3000
+    (gdb) continue
+
 
 Dev Mode
 --------
 
-TODO: mention clangd server
+To streamline development with frequently changing code, you can mount a live repository into the Docker container, overwriting the ``/ros2_ws/src/phntm_bridge`` directory.
+This approach eliminates the need for constant image rebuilds, as illustrated in the example below.
 
-To streamline development with frequently changing code, you can mount a live repository into the Docker container, overwriting the `/ros2_ws/src/phntm_bridge` directory.
-This approach eliminates the need for constant image rebuilds, as illustrated in the example below. (This is currently the recommended way of running Phantom Bridge,
-as it makes upgrading as easy as pulling updates from the GitHub repo and restarting the Docker container.)
+You may also prefer to not launch the Bridge Client and Agent nodes automatically on the container start, but rather start it manually from
+the container's interactive shell:
 
-You may also prefer to not launch the Bridge node automatically on the container start, but rather start it manually from
-the container's interactive shell.
-
-.. code-block::
+.. code-block:: yaml
    :caption: compose.yaml
 
     services:
@@ -71,15 +74,20 @@ the container's interactive shell.
 
 Then you can launch the process manually like so:
 
-.. code-block::
+.. code-block:: bash
+   :caption: $ bash
 
     docker compose up phntm_bridge -d # launch the modified container (detached)
     docker exec -it phntm-bridge bash # get interactive shell inside the container
     ros2 launch phntm_bridge bridge_agent_launch.py # launches Bridge & Agent nodes, Ctrl-C kills both
 
-Note that when launched manually like this, on the first run inside the container the Bridge node performs
-:doc:`first run checks </basics/custom-message-types>` and then exists. This is normal behavior but since
-the container doesn't restart afterwards, you'll need to launch the node again by hand. Before you do so,
-make sure to source the environment to get access to any custom packages that may have just been installed
-with ``source /ros2_ws/install/setup.bash`` (in normal mode, the whole container restarts and fresh
-environment is sourced automatically).
+Note that when launched manually like this, on the first run inside the container the Bridge Client performs
+:doc:`first run checks </basics/custom-message-types>` and exists when some packages are installed. You may need to
+``source /ros2_ws/install/setup.bash`` to make the new packages visible to ROS, then start Bridge Client again.
+
+VS Code Setup
+-------------
+When editing the Bridge Client's or Agent's code, it is recommended to SSH into your ROS machine with VS Code, then to start its process
+inside the Bridge's Docker container. Clangd server is pre-installed in our images and the environment will have access to all C++ and Python header files.
+When doing this, you will want to start the nodes manually, as described above.
+

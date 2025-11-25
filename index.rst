@@ -58,7 +58,7 @@ Features
    video-and-image-topics
    file-extraction
    wifi-scanning-and-roaming
-   status-leds
+   connection-state-leds
 
    ui/customizing
    ui-api-docs/index

@@ -7,13 +7,13 @@ The following panel widgets are provided out of the box. You can easily :doc:`cr
 
 .. toctree::
    :maxdepth: 1
-   :caption: Composite widgets
+   :caption: Composite Widgets
 
    world-model-3d
 
 .. toctree::
    :maxdepth: 1
-   :caption: Single topic type widgets
+   :caption: Single Topic Type Widgets
 
    battery-state
    imu

@@ -16,7 +16,7 @@ for configuration options related to video encoding.
 
 .. rst-class:: overlay-section
 
-Detection2DArray overlay
+Detection2DArray Overlay
 ------------------------
 
 Declared in `detections2d.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/video/detections2d.js>`_
@@ -39,7 +39,7 @@ that are often used in computer vision. Below are configuration options for a De
 
 .. _implementing-custom-video-overlays:
 
-Implementing custom overlays
+Implementing Custom Overlays
 ----------------------------
 
 .. raw:: html

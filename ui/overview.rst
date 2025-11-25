@@ -20,7 +20,7 @@ You can :doc:`call any ROS service </ui/ros-services>`, set :doc:`runtime ROS pa
 Most elements are designed to be intuitive and self-explanatory, here are some bits that may need a small introduction:
 
 
-Connection state, Battery & Wi-Fi
+Connection State, Battery & Wi-Fi
 ---------------------------------
 
 .. image:: ../img/ui-header.png
@@ -28,7 +28,7 @@ Connection state, Battery & Wi-Fi
     :class: ui-header
 
 
-Discovered resources
+Discovered Resources
 --------------------
 
 .. image:: ../img/ui-menu.png
@@ -38,7 +38,7 @@ Discovered resources
 .. _graph-view:
 
 
-Nodes & topics (Graph view)
+Nodes & Topics (Graph View)
 ---------------------------
 
 Under the `Nodes & Topics` menu, you will find the Graph View. On the left you can see all the discovered ROS nodes,
@@ -53,7 +53,7 @@ Each connection in the graph shows publisher's and subscriber's QoS. A warning i
     :class: ui-graph-view
 
 
-Services menu
+Services Menu
 -------------
 
 The `Services` menu allows you to call any discovered ROS service on your system. Some buttons are instantly available,
@@ -64,7 +64,7 @@ other may need to be configured. You can also make your own custom control widge
     :class: ui-services-menu
 
 
-Input manager
+Input Manager
 -------------
 
 .. raw:: html
@@ -100,7 +100,7 @@ See :doc:`more about input here </ui/user-input-and-teleoperation>`.
     <div class="cleaner"></div>
 
 
-Message type inspector
+Message Type Inspector
 ----------------------
 
 .. image:: ../img/ui-message-definition.png

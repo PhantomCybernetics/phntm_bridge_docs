@@ -19,7 +19,7 @@ On some systems, switching between different AP frequencies (e.g. from 5 GHz to 
 
 The roam command automatically selects the AP in the current network with the best signal. If the currently conneced AP has the strongest signal, no roaming is performed.
 
-.. rubric:: Recovery from a failure
+.. rubric:: Recovery from a Failure
 
 .. Danger:: In case of a roaming failure, your machine might end up offline, need rebooting or to be manually connected to the desired AP again. Make sure you have local console access before attemting this for the first time on untested configurations.
 
@@ -32,7 +32,7 @@ The roam command automatically selects the AP in the current network with the be
     sudo nmcli d wifi connect %YOUR_AP_BSSID% # switch to the desired BSSID
 
 
-.. rubric:: Configuration options
+.. rubric:: Configuration Options
 
 .. code-block:: yaml
    :caption: phntm_bridge.yaml or phnrm_agent.yaml

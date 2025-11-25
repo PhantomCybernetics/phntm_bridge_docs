@@ -22,7 +22,7 @@ communication between the Peers, with the Bridge Server acting as a relay.
 
 To start using this Bridge, you only need to :doc:`install the Bridge Client</basics/install>` node on your ROS2 machine.
 
-The aforementioned cloud services and Web UI are all hosted by `Phantom Cybernetics <https://www.phantomcybernetics.io>`_ and
+The aforementioned cloud services and Web UI are all hosted by `Phantom Cybernetics <https://www.phantomcybernetics.com>`_ and
 provided free of charge. However, you can also :doc:`install these on your own infrasturcure </self-hosted>` and host
 everything or just selected components yourself, should you so desire.
 

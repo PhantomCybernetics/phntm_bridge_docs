@@ -215,7 +215,7 @@ See :doc:`Customizing the User Interface </ui/customizing>` for the full overvie
 
 Hardware LEDs
 -------------
-See :doc:`Status LEDs </status-leds>` for more.
+See :doc:`Connection State LEDs </connection-state-leds>` for more.
 
 .. include:: ../config-blocks/leds.rst
 

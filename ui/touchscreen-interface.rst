@@ -21,13 +21,13 @@ are only shown with the virtual gamepad.
     </video>
    </div>
 
-Touchscreen-specific gestures
+Touchscreen-specific Gestures
 -----------------------------
 
 * To resize or move a panel, ``tap and hold its title bar (the label) for 2 seconds``, until the panel turns green
 * To maximize any panel into fullscreen, ``double tap on its content``, then double tap on it again to exit fullscreen mode
 
-Fullscreen mode
+Fullscreen Mode
 ---------------
 
 * On Android, to switch the whole UI to fullscreen, click the ``[ ]`` icon in the `≡` hamburger menu
