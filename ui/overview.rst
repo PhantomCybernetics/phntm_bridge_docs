@@ -90,7 +90,7 @@ Input manager
         }, 1000);
     </script>
 
-The monkey icon in the top-right corner opens the `Input manager`. Here you can map input from keyboard, gamepad or touch screen
+The monkey icon in the top-right corner opens the `Input manager`. Here you can map input from keyboard, gamepad or touchscreen
 to ROS messages to be generted in order to tele-operate your ROS machine.
 
 See :doc:`more about input here </ui/user-input-and-teleoperation>`.

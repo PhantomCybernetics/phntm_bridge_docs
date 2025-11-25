@@ -18,19 +18,19 @@ ROS ``std_msgs/msg/Bool`` topics.
           <span class="conn-led off"></span>
 
      - Off
-     - Bridge not running
+     - Bridge Client not running
    * - .. raw:: html
 
           <span class="conn-led flashing-fast"></span>
 
      - Flashing
-     - Trying to connect to Cloud Bridge
+     - Trying to connect to Bridge Server
    * - .. raw:: html
 
           <span class="conn-led on"></span>
 
      - On
-     - Connected to Cloud Bridge
+     - Connected to Bridge Server
 
 
 .. rubric:: Data LED
@@ -44,7 +44,7 @@ ROS ``std_msgs/msg/Bool`` topics.
 
      - Short flash
 
-     - Message was sent to a peer via WebRTC
+     - Message was sent to or received from a peer
 
 
 .. rubric:: Configuration options

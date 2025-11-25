@@ -45,7 +45,7 @@ Custom Input Drivers
 --------------------
 
 On top of the built-in Input Drivers that can generate `Twist`, `TwistStamped` and `Joy` messages, you can also easily
-create a custom drivers that map user's keyboard, gamepad or touch screen input to any other ROS message types.
+create a custom drivers that map user's keyboard, gamepad or touchscreen input to any other ROS message types.
 
 See more under :ref:`User Input & Teleoperation <implementing-custom-input-drivers>`.
 

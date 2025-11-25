@@ -50,7 +50,7 @@ services or control Docker containers.
        | *String* confirm_label, *Callback* confirm_cb, *String* cancel_label, *Callback* cancel_cb **)**
      - Creates a modal dialog that asks for user's confirmation
    * - **isTouchDevice()** : *Bool*
-     - Returns *true* on mobile devices with a touch screen
+     - Returns *true* on mobile devices with a touchscreen
    * - | **makePanelFromConfig(** *String* id_source, *Number* w, *Number* h,
        | *Number* x = null, *Number* y = null, *Object* panel_vars = {} **)**
      - | Creates a new panel for *id_source* (topic or composite widget id)

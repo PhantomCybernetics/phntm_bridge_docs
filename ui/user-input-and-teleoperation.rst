@@ -3,7 +3,7 @@
 User Input & Teleoperation
 ==========================
 
-The Web UI offers a comprehensive Input Manager that can map various forms of user input (keyboard, gamepad, touch screen) 
+The Web UI offers a comprehensive Input Manager that can map various forms of user input (keyboard, gamepad, touchscreen) 
 into messages produced into ROS topics, and even ROS service calls. Any ROS machine can be teleoperated both over the local network
 or remotely over the Internet, often without any need for re-configuration.
 

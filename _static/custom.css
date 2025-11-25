@@ -274,6 +274,21 @@ video.video-panel-widget-twist {
     margin-right: auto;
 }
 
+/* crop the bottom 63px (Adroid UI bug) */
+.touch-video-wrapper {
+  width: 100%;
+  aspect-ratio: 1724 / 1017;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 24px !important;
+}
+
+video.ui-touch {
+  position: absolute;
+  width: 100%;
+  top: 0px; /* shift video up by 63px to crop bottom */
+}
+
 img.widget-world-model-battery {
     width: 100%;
     max-width: 503px;

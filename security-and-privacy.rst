@@ -16,10 +16,6 @@ Re-register your machine in case you need to invalidate it. There will be an opt
 precisely control who can do what with your robots, this will be a feature of a paid service.
 You will always be able to use the hosted service free of charge in this "public" way. 
 
-At this point, there are no limits to how much you can use our TURN servers. This is likely to change and
-unlimited relay will be part of a paid service. This is only relevant for tele-operating your
-machines over the internet. Local P2P connection will be always possible.
-
 The maintainer's email is only used for service announcements. We don't sell your personal data to anyone.
 
 The source code is provided under the MIT license "as is" without any waranty or liability.
