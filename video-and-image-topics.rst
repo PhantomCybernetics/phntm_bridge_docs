@@ -115,7 +115,11 @@ it intentially drops messages in order to prevent lag buildup.
     /**:
     ros__parameters:
 
+        # Defaults
         encoder_hw_device_default: 'vaapi' # 'cuda' for Nvidia, 'vaapi' for AMD/Intel or 'sw' for CPU (default)
+        encoder_default_thread_count: 2
+        encoder_default_gop_size: 30 # key frame every N frames
+        encoder_default_bit_rate: 5000000 # 610 KB/s
 
         # QoS defaults for all Image/CompressedImage topics
         image_topics_default_depth: 1
@@ -146,6 +150,11 @@ it intentially drops messages in order to prevent lag buildup.
 
 Depth Processing
 ----------------
+
+.. image:: ./img/ui-depth.gif
+   :align: right
+   :class: widget-ui-depth
+
 ROS ``Image`` messages containing depth frames will be processed and colorized for better visibility.
 For colorizing, `OpenCV ColorMap <https://docs.opencv.org/3.4/d3/d50/group__imgproc__colormap.html>`_ values are used as integer.
 

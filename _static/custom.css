@@ -321,6 +321,11 @@ img.widget-world-model-battery {
         margin-left: 24px;
         margin-right: 0px;
     }
+    img.widget-ui-depth {
+        position: relative;
+        top: -60px;
+        margin-bottom: -60px !important;
+    }
 }
 
 video.world-model-widget {
@@ -426,6 +431,12 @@ video.world-model-widget {
 
 img.video-encoding {
     margin-bottom: 30px !important;
+}
+
+img.widget-ui-depth {
+    max-width: 458px;
+    width: 100%;
+    margin-bottom: 24px !important;
 }
 
 section {

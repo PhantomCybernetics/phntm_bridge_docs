@@ -174,7 +174,7 @@ See more in :doc:`Calling ROS Services </ui/ros-services>`.
 
 Video Encoding & Streaming
 --------------------------
-See :doc:`Video Processing </video-and-image-topics>` for complete explanation and complete list of configuration options.
+See :doc:`Video & Image Topics Transmission </video-and-image-topics>` for complete explanation and complete list of configuration options.
 
 .. code-block:: yaml
    :caption: phntm_bridge.yaml
@@ -182,14 +182,17 @@ See :doc:`Video Processing </video-and-image-topics>` for complete explanation a
     /**:
       ros__parameters:
 
-        encoder_default_hw_device: sw # sw, cuda, vaapi
+        encoder_default_hw_device: 'sw' # 'cuda' for Nvidia, 'vaapi' for AMD/Intel or 'sw' for CPU (default)
         encoder_default_thread_count: 2
         encoder_default_gop_size: 30 # key frame every N frames
         encoder_default_bit_rate: 5000000 # 610 KB/s
 
         /some_image_topic:
-            encoder_hw_device: '' # 'cuda', 'vaapi' or 'sw'
-            TODO full list
+          create_node: True # create a dedicated ROS node for this topic
+          debug_num_frames: 10 # will print debug for this many frames (incl. NAL units)
+          encoder_thread_count: 2 
+          encoder_gop_size: 30 # key frame every N frames
+          encoder_bit_rate: 5000000 # 610 KB/s
 
         /some_depth_image_topic:
             max_sensor_value: 4000.0 # depth max distance/sensor value for normalizing
