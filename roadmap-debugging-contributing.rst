@@ -1,4 +1,4 @@
-:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/roadmap-and-contributing.rst
+:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/roadmap-debugging-contributing.rst
 
 Roadmap, Debugging & Contributing
 =================================

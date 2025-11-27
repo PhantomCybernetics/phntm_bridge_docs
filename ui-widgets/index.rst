@@ -1,4 +1,4 @@
-:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/ui/built-in-widgets.rst
+:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/ui-widgets/index.rst
 
 Built-in Panel Widgets
 ======================

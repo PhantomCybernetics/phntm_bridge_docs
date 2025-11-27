@@ -1,4 +1,4 @@
-:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/connection-statew-leds.rst
+:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/connection-state-leds.rst
 
 Connection State LEDs
 =====================

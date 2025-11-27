@@ -1,4 +1,4 @@
-:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/basics/bridge-client-config.rst
+:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/basics/configuration.rst
 
 Configuration
 =============

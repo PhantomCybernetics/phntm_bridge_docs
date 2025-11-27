@@ -1,4 +1,4 @@
-:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/ui/custom-widgets.rst
+:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/ui/customizing.rst
 
 Customizing the User Interface
 ==============================

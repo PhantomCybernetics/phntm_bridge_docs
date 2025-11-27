@@ -67,5 +67,5 @@ Features
    
    availability-zones
    self-hosted
-   roadmap-and-contributing
+   roadmap-debugging-contributing
    
