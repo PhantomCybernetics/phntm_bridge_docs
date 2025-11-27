@@ -39,7 +39,7 @@ html_css_files = [
 
 html_js_files = [
     'custom.js',
-    'https://www.phantomcybernetics.com/js/analytics.js',
+    'https://analytics.phntm.io/gs.js',
     'analytics.js'
 ]
 
