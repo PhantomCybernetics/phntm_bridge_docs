@@ -29,6 +29,9 @@ This class is responsible for establishing WebRTC connection to the Robot, Socke
    * - **media_streams**
      - *{ 'id_stream': MediaStream }*
      - Open inbound media streams
+   * - **name**
+     - *String*
+     - Robot name
    * - **pc**
      - *PeerConnection*
      - WebRTC peer connection object

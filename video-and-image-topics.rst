@@ -135,7 +135,7 @@ it intentially drops messages in order to prevent lag buildup.
 
         # Image or CompressedImage frames
         /some_image_topic:
-          encoder_hw_device: 'vaapi' # # 'cuda' for Nvidia, 'vaapi' for AMD/Intel or 'sw' for CPU
+          encoder_hw_device: 'vaapi' # 'cuda' for Nvidia, 'vaapi' for AMD/Intel or 'sw' for CPU
           create_node: True # create a dedicated ROS node for this topic
           debug_num_frames: 10 # will print debug for this many frames (incl. NAL units)
           encoder_thread_count: 2 
