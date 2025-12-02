@@ -47,6 +47,7 @@ UI Customization
         low_fps_default: 25 # low fps warning default for all topics
 
         peer_limit: 10 # limits the numbers of users that can connect to the robot at the same time (DDOS protection)
+        ui_background_disconnect_sec: 120.0 # the UI will disconnect after being this many seconds in the background
 
         about_dialog_header: "Popup dialog's header" # pop-up dialog shown on UI load (like the one in the Demos)
         about_dialog: "Popup dialog's body, <b>some HTML is ok.</b>" # you can customize this HTML with ui_custom_includes_css
