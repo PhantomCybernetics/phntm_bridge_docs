@@ -48,7 +48,7 @@ Both `gdb` and `gdbserver` are installed in the container.
     # then on the host machine:
     sudo apt-get install gdb
     gdb
-    (gdb) remote taget localhost:3000
+    (gdb) target remote localhost:3000
     (gdb) continue
 
 
