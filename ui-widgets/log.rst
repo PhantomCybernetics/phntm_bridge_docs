@@ -24,4 +24,5 @@ Make sure your topic is subscribed to as reliable in order to receive all messag
           durability: TRANSIENT_LOCAL
           history_depth: 1000
           lifespan_sec: -1.0 # infinity
+          history_depth: 20 # make sure we don't miss messages
 
