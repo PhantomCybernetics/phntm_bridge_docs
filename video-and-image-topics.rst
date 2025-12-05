@@ -93,13 +93,15 @@ The following frame formats are supported by the Bridge Client encoder, type mus
    :header-rows: 1
 
    * - Type
-     - Formats
+     - Supported Formats
    * - RGB Image
      - ``rgb8``, ``bgr8``
    * - Depth / Mono Image
      - ``mono8`` / ``8uc1``, ``mono16`` / ``16uc1``, ``32uc1``, ``32fc1``
-   * - Compressed Image
-     - ``JPEG``, ``PNG``
+   * - JPEG CompressedImage
+     - ``rgb8``, ``bgr8``
+   * - PNG CompressedImage
+     - ``rgb8``, ``bgr8``, ``rgb16``, ``bgr16``
 
 
 Configuration Options
