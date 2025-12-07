@@ -558,3 +558,8 @@ section {
 .cleaner {
     clear: both;
 }
+
+/* no win scrollbars in code blocks */
+.rst-content div[class^=highlight], .rst-content div[class^=highlight] pre, .rst-content pre.literal-block {
+    scrollbar-width: none;
+}
