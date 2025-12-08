@@ -31,10 +31,12 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_logo = 'img/phntm_logo_white.png'
 html_favicon = 'img/favicon-white-16x16.png'
 html_theme = 'sphinx_rtd_theme'
+# html_baseurl = '/bridge/'
 html_static_path = ['_static']
+html_file_suffix = ''
 
 html_css_files = [
-    'custom.css',
+    '/bridge/_static/custom.css',
 ]
 
 html_js_files = [
