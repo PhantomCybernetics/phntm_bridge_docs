@@ -20,7 +20,7 @@ Here are some quality-of-life tips for debugging and working with the Phantom Br
 Logs
 ----
 To enable persistent Bridge Client & Agent logging, we recommend adopting Docker's logging functionality over ROS. Using the configuration shown below,
-you can read your logs using ``docker logs phntm-bridge``. See `Docker documentation <https://docs.docker.com/engine/logging/configure/>`_ for details.
+you can read your logs using ``docker logs -t phntm-bridge``. See `Docker documentation <https://docs.docker.com/engine/logging/configure/>`_ for details.
 
 .. code-block:: yaml
    :caption: compose.yaml
