@@ -17,8 +17,8 @@ If you'd like to contribute or get otherwise involved, get in touch via `GitHub 
 
 Here are some quality-of-life tips for debugging and working with the Phantom Bridge Client node source code:
 
-Log Files
----------
+Logs
+----
 To enable persistent Bridge Client & Agent logging, we recommend adopting Docker's logging functionality over ROS. Using the configuration shown below,
 you can read your logs using ``docker logs phntm-bridge``. See `Docker documentation <https://docs.docker.com/engine/logging/configure/>`_ for details.
 
