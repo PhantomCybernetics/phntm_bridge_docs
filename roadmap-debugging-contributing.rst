@@ -19,8 +19,8 @@ Here are some quality-of-life tips for debugging and working with the Phantom Br
 
 Log Files
 ---------
-To enable Bridge Client logslogging into files, you can configure the ``ROS_LOG_DIR`` environment variable in the ``compose.yaml file``, as seen below.
-For log persistence across container lifecycles, specify an output directory that's external to the container.
+To enable persistent Bridge Client & Agent logging, we recommend adopting Docker's logging functionality over ROS. Using the configuration shown below,
+you can read your logs using ``docker logs phntm-bridge``. See `Docker documentation <https://docs.docker.com/engine/logging/configure/>`_ for details.
 
 .. code-block:: yaml
    :caption: compose.yaml
@@ -28,10 +28,9 @@ For log persistence across container lifecycles, specify an output directory tha
     services:
       phntm_bridge:
         container_name: phntm-bridge
-        environment:
-         - ROS_LOG_DIR=/ros2_ws/phntm_bridge_logs
-        volumes:
-          ~/phntm_bridge_logs:/ros2_ws/phntm_bridge_logs
+        logging:
+          driver: local
+        # ...
 
 
 Using GDB Server
