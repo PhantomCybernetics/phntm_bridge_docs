@@ -71,6 +71,7 @@ Input Manager
     
     <div id="monkey" class="blue">
         <span class="blue"><span class="label">Input disabled</span></span>
+        <span class="locked"><span class="label">Locked by other peer</span><span class="lock"></span></span>
         <span class="green"><span class="label">Input enabled</span></span>
         <span class="yellow"><span class="label">Input producing messages</span></span>
         <!-- <span class="yellow"><span class="lock"></span><span class="label">Input locked by another user</span></span> -->

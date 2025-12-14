@@ -513,13 +513,30 @@ section {
     top: -12px;
     transform: translate(-50%, 0%);
     border-radius: 5px;
+    z-index: 2;
 }
 
 #monkey:hover .label {
     display: block;
 }
 
+#monkey .locked .lock {
+    background-color: yellow;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    background-image: url('icon-lock.svg');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    z-index: 1;
+    border-radius: 5px;
+}
+
 #monkey .blue,
+#monkey .locked,
 #monkey .green,
 #monkey .yellow,
 #monkey .red {
@@ -534,16 +551,18 @@ section {
 }
 
 #monkey.blue .blue,
+#monkey.locked .locked,
 #monkey.green .green,
 #monkey.yellow .yellow,
 #monkey.red .red {
     display: block;
 }
 
-#monkey .blue {
+#monkey .blue, #monkey .locked {
     background: url('ui-monkey-blue.png');
     margin-top: 1px;
 }
+
 #monkey .green {
     background: url('ui-monkey-green.png');
     margin-top: 1px;

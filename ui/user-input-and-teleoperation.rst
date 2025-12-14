@@ -19,6 +19,7 @@ to generate any other message type is a fairly simple process, see :ref:`more be
 ROS service call with a custom payload can be also easily mapped to a keyboard key or gamepad button, offering a wide range of possible interaction with a ROS
 machine. You can even start, stop or restart a Docker container with a single press of a button utilizing the ``docker_command`` service published by Agent nodes.
 
+Only a single peer is allowed to generate input messages into any specific topic at the time.
 
 Input Profiles
 --------------
