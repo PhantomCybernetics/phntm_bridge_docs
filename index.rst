@@ -1,5 +1,11 @@
 :github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/index.rst
 
+.. meta::
+   :description: Phantom Bridge is a fast WebRTC ROS2 Bridge and User Interface for real-time ROS2 data visualization and video streaming, teleoperation, human-robot interaction, and both local and remote robot monitoring
+   :keywords: ros, ros2, bridge, observability, teleoperation, remote debugging, local debugging, monitoring, webrtc, data, video, streaming
+   :author: Phantom Cynernetics Inc.
+
+
 Phantom Bridge Documentation
 ============================
 

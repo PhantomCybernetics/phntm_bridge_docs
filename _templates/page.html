@@ -1,0 +1,10 @@
+{% extends "!page.html" %}
+{% block htmltitle %}
+  {% if pagename == 'index' %}
+    <title>{{ project }} Documentation</title>
+  {% else %}
+    <title>{{ title }} / {{ project }} Documentation</title>
+  {% endif %}
+  <meta property="og:image" content="{{ pathto('_static/og_phntm_bridge_logo.png', 1) }}">
+{% endblock %}
+
