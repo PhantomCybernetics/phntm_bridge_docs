@@ -23,6 +23,9 @@ This class is responsible for establishing WebRTC connection to the Robot, Socke
    * - **discovered_topics**
      - *{ 'id_topic': { TopicInfo } }*
      - Discovered topics and their message types
+   * - **id_instance**
+     - *String*
+     - This peer's session (app instance) ID from Bridge Server
    * - **id_robot**
      - *String*
      - Robot ID
@@ -35,9 +38,9 @@ This class is responsible for establishing WebRTC connection to the Robot, Socke
    * - **pc**
      - *PeerConnection*
      - WebRTC peer connection object
-   * - **session**
+   * - **pc_session**
      - *String*
-     - Session ID
+     - This peer's WebRTC session ID
    * - **socket**
      - *Socket.io*
      - Socket.io connection object

@@ -143,11 +143,13 @@ it intentially drops messages in order to prevent lag buildup.
           encoder_thread_count: 2 
           encoder_gop_size: 30 # key frame every N frames
           encoder_bit_rate: 5000000 # 610 KB/s
+          print_time_deltas: False # debug, prints the delay between received frames in ms
 
         # Encoded FFmpeg video frames
         /some_ffmpeg_packet_frame:
           debug_num_frames: 10 # will print debug for this many frames (incl. NAL units)
           create_node: True # create a special ROS node for this topic
+          print_time_deltas: False # debug, prints the delay between received frames in ms
 
 
 Depth Processing

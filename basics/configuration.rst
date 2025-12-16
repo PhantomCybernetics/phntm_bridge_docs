@@ -194,10 +194,12 @@ See :doc:`Video & Image Topics Transmission </video-and-image-topics>` for compl
           encoder_thread_count: 2 
           encoder_gop_size: 30 # key frame every N frames
           encoder_bit_rate: 5000000 # 610 KB/s
+          print_time_deltas: False # debug, prints the delay between received frames in ms
 
         /some_depth_image_topic:
             max_sensor_value: 4000.0 # depth max distance/sensor value for normalizing
             colormap: 13 # cv2.COLORMAP, e.g. 13 = cv2.COLORMAP_MAGMA
+            print_time_deltas: False # debug, prints the delay between received frames in ms
 
 
 Custom UI JS/CSS Includes
