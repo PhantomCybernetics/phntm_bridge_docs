@@ -6,7 +6,7 @@ Video
 .. raw:: html
 
    <video autoplay loop class="video-panel-widget">
-      <source src="/bridge/video/video-widget.mp4" type="video/mp4">
+      <source src="https://d13exqa8fa735g.cloudfront.net/video-widget.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
@@ -47,7 +47,7 @@ Implementing Custom Overlays
 .. raw:: html
 
    <video autoplay loop class="video-panel-widget-twist">
-      <source src="/bridge/video/video-widget-twist.mp4" type="video/mp4">
+      <source src="https://d13exqa8fa735g.cloudfront.net/video-widget-twist.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 

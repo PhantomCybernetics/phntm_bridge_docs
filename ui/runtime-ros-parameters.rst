@@ -3,7 +3,7 @@
 Runtime ROS Parameters
 ======================
 
-.. image:: ../img/ui-ros-params.png
+.. image:: https://d13exqa8fa735g.cloudfront.net/ui-ros-params.png
     :align: right
     :class: ui-ros-params
 

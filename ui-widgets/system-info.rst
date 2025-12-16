@@ -3,7 +3,7 @@
 System Info
 ===========
 
-.. image:: ../img/widget-system-info.gif
+.. image:: https://d13exqa8fa735g.cloudfront.net/widget-system-info.gif
     :class: widget-system-info
 
 Declared in `system-load.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/system-load.js>`_

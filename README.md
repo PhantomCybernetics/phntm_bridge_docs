@@ -19,8 +19,8 @@ source ~/sphinx_env/bin/activate
 pip install -U sphinx sphinxcontrib.jquery sphinxcontrib.email sphinx_rtd_theme
 ```
 
-### Video files
-Video files are included from the `video/` foler, these are not versioned on GitHub!
+### Assets
+Video and image assets are loaded from S3 bucket `phntm-bridge-docs` via CloudFront.
 
 ### Build the docs
 ```bash

@@ -6,7 +6,7 @@ World Model 3D
 .. raw:: html
 
    <video autoplay loop class="world-model-widget">
-      <source src="/bridge/video/wolrd-model-3d-widget.mp4" type="video/mp4">
+      <source src="https://d13exqa8fa735g.cloudfront.net/wolrd-model-3d-widget.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
@@ -106,7 +106,7 @@ The `min_range` and `max_range` values are taken into account when rendering.
 Implementing Custom Overlays
 ----------------------------
 
-.. image:: ../img/widget-world-model-battery.gif
+.. image:: https://d13exqa8fa735g.cloudfront.net/widget-world-model-battery.gif
    :align: right
    :class: widget-world-model-battery
 

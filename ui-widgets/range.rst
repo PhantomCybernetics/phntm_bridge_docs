@@ -3,7 +3,7 @@
 Range
 =====
 
-.. image:: ../img/widget-range.gif
+.. image:: https://d13exqa8fa735g.cloudfront.net/widget-range.gif
     :class: widget-range
 
 Declared in `range.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/range.js>`_

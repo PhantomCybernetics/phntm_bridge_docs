@@ -43,7 +43,7 @@ In the `Services` dropdown menu, you will see the ``{}`` symbol next to each ser
 The editor allows to define custom data to call the service with, and to save such calls as UI buttons.
 All defined buttons are displayed next to the service name in the dropdown menu.
 
-.. figure:: ../img/user-input-service-buttons-editor.png
+.. figure:: https://d13exqa8fa735g.cloudfront.net/user-input-service-buttons-editor.png
     :align: right
     :class: service-buttons-editor
 
@@ -135,7 +135,7 @@ elements, and can be initialized by a value provided by a getter ROS service.
 An example of such a widget - a slider menu element - can be found in the `Bridge UI Extras repo <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-slider-service-widget>`_
 and also in the :doc:`live demos </demos>`.
 
-.. figure:: ../img/custom-slider-demo.gif
+.. figure:: https://d13exqa8fa735g.cloudfront.net/custom-slider-demo.gif
     :align: center
     :class: service-custom-widget
 

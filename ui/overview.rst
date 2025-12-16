@@ -13,7 +13,7 @@ You can :doc:`call any ROS service </ui/ros-services>`, set :doc:`runtime ROS pa
 .. raw:: html
 
    <video width="100%" height="auto" autoplay loop class="ui-overview">
-      <source src="/bridge/video/ui-overview.mp4" type="video/mp4">
+      <source src="https://d13exqa8fa735g.cloudfront.net/ui-overview.mp4" type="video/mp4">
       Your browser does not support the video tag.
    </video>
 
@@ -23,7 +23,7 @@ Most elements are designed to be intuitive and self-explanatory, here are some b
 Connection State, Battery & Wi-Fi
 ---------------------------------
 
-.. image:: ../img/ui-header.png
+.. image:: https://d13exqa8fa735g.cloudfront.net/ui-header.png
     :align: center
     :class: ui-header
 
@@ -31,7 +31,7 @@ Connection State, Battery & Wi-Fi
 Discovered Resources
 --------------------
 
-.. image:: ../img/ui-menu.png
+.. image:: https://d13exqa8fa735g.cloudfront.net/ui-menu.png
     :align: center
     :class: ui-menu
 
@@ -48,7 +48,7 @@ The icon next to the node's name opens a dialog allowing to :doc:`examine and mo
 The checkbox next to a topic name opens a new panel for the topic.
 Each connection in the graph shows publisher's and subscriber's QoS. A warning is displayed when a QoS mismatch is detected.
 
-.. image:: ../img/ui-graph-view.png
+.. image:: https://d13exqa8fa735g.cloudfront.net/ui-graph-view.png
     :align: center
     :class: ui-graph-view
 
@@ -59,7 +59,7 @@ Services Menu
 The `Services` menu allows you to call any discovered ROS service on your system. Some buttons are instantly available,
 other may need to be configured. You can also make your own custom control widgets. :doc:`Read more here. </ui/ros-services>`
 
-.. image:: ../img/ui-services-menu.png
+.. image:: https://d13exqa8fa735g.cloudfront.net/ui-services-menu.png
     :align: center
     :class: ui-services-menu
 
@@ -104,7 +104,7 @@ See :doc:`more about input here </ui/user-input-and-teleoperation>`.
 Message Type Inspector
 ----------------------
 
-.. image:: ../img/ui-message-definition.png
+.. image:: https://d13exqa8fa735g.cloudfront.net/ui-message-definition.png
     :align: right
     :class: ui-message-definition
 

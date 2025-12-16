@@ -3,7 +3,7 @@
 Imu
 ===
 
-.. image:: ../img/widget-imu.gif
+.. image:: https://d13exqa8fa735g.cloudfront.net/widget-imu.gif
     :class: widget-imu
 
 Declared in `imu.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/imu.js>`_

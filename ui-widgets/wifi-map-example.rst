@@ -3,7 +3,7 @@
 Wi-Fi Map (Composite Example)
 =============================
 
-.. image:: ../img/widget-wifi-map.gif
+.. image:: https://d13exqa8fa735g.cloudfront.net/widget-wifi-map.gif
     :class: widget-wifi-map
 
 Declared in `wifi-map-panel-widget.js <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-wifi-map-panel-widget>`_

@@ -3,7 +3,7 @@
 Laser Scan
 ==========
 
-.. image:: ../img/widget-laser.gif
+.. image:: https://d13exqa8fa735g.cloudfront.net/widget-laser.gif
     :align: left
     :class: widget-laser
 

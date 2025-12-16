@@ -155,7 +155,7 @@ it intentially drops messages in order to prevent lag buildup.
 Depth Processing
 ----------------
 
-.. image:: ./img/ui-depth.gif
+.. image:: https://d13exqa8fa735g.cloudfront.net/video-depth.gif
    :align: right
    :class: widget-ui-depth
 

@@ -7,7 +7,7 @@ The Web UI offers a comprehensive Input Manager that can map various forms of us
 into messages produced into ROS topics, and even ROS service calls. Any ROS machine can be teleoperated both over the local network
 or remotely over the Internet, often without any need for re-configuration.
 
-.. figure:: ../img/user-input-ui.png
+.. figure:: https://d13exqa8fa735g.cloudfront.net/user-input-ui.png
     :align: right
     :class: user-input-ui
 
@@ -55,7 +55,7 @@ ROS messages will be generated into specified topics when the controller is acti
 the fast UDP WebRTC data channels. When the user input stops, the `Input Manager` keeps transmitting for a few more seconds to
 ensure the machine actually receives the `stop` command.
 
-.. figure:: ../img/user-input-actions.png
+.. figure:: https://d13exqa8fa735g.cloudfront.net/user-input-actions.png
     :align: right
     :class: user-input-actions
 
@@ -143,7 +143,7 @@ On :doc:`touchscreen devices </ui/touchscreen-interface>`, the interface can be 
 These can be configured like any other keyboard or gamepad buttons and will be accompanied by a virtual gamepad, useful for controlling up to 4 custom output axes.
 You can change the display order of these buttons by dragging them around, and even use emojis as icons to save on valuable screen space.
 
-.. figure:: ../img/ui-touch-buttons.png
+.. figure:: https://d13exqa8fa735g.cloudfront.net/ui-touch-buttons.png
     :class: user-touch-buttons-ui
 
 .. _implementing-custom-input-drivers:

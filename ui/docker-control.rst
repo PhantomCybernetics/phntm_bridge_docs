@@ -3,7 +3,7 @@
 Docker Control
 ==============
 
-.. image:: ../img/ui-docker-control.png
+.. image:: https://d13exqa8fa735g.cloudfront.net/ui-docker-control.png
     :align: right
     :class: ui-docker-control
 

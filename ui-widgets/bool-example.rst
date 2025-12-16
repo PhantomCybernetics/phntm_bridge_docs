@@ -3,7 +3,7 @@
 Bool (Single-topic Example)
 ===========================
 
-.. image:: ../img/widget-bool.gif
+.. image:: https://d13exqa8fa735g.cloudfront.net/widget-bool.gif
     :class: widget-bool
 
 Declared in `bool-panel-widget.js <https://github.com/PhantomCybernetics/bridge_ui_extras/tree/main/examples/custom-bool-panel-widget>`_

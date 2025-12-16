@@ -16,7 +16,7 @@ are only shown with the virtual gamepad.
 
    <div class="touch-video-wrapper">
     <video width="100%" height="auto" autoplay loop class="ui-touch">
-        <source src="/bridge/video/tablet-screen.mp4" type="video/mp4">
+        <source src="https://d13exqa8fa735g.cloudfront.net/tablet-screen.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
    </div>

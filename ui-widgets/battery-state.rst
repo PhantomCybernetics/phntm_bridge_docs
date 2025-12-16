@@ -3,7 +3,7 @@
 Battery State
 =============
 
-.. image:: ../img/widget-battery.gif
+.. image:: https://d13exqa8fa735g.cloudfront.net/widget-battery.gif
     :class: widget-battery
 
 Declared in `battery.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/battery.js>`_

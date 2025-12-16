@@ -3,7 +3,7 @@
 Log
 ===
 
-.. image:: ../img/widget-log.gif
+.. image:: https://d13exqa8fa735g.cloudfront.net/widget-log.gif
     :class: widget-log
 
 Declared in `log.js <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static/widgets/log.js>`_
