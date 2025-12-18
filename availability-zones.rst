@@ -18,13 +18,13 @@ and can be also changed later. TURN servers are selected automatically.
      - TURN Servers
      - Ping
    * - California, USA
-     - us-ca.bridge.phntm.io
+     - **us-ca.bridge.phntm.io**
      - us-ca.turn.phntm.io     
      - .. raw:: html
 
           <span class="server-conn-test" data-url="https://us-ca.bridge.phntm.io"><span class="icon"></span></span>
    * - Ohio, USA
-     - us-oh.bridge.phntm.io
+     - **us-oh.bridge.phntm.io**
      - us-oh.turn.phntm.io
      - .. raw:: html
 
@@ -44,10 +44,6 @@ and can be also changed later. TURN servers are selected automatically.
     });
    </script>
 
-Our aim is to provide a geographically well distributed service, we will be launching more regional instances and TURN servers depending on
-user demand and feedback. Please get in touch either by :email:`e-mail <human@phntm.io>` or by `opening an issue on GitHub <https://github.com/PhantomCybernetics/phntm_bridge_server/issues>`_ to
-discuss this further.
-
 To change which Bridge Server your ROS machine connects to, simply edit the ``bridge_server_address`` parameter in your `phntm_bridge.yaml` config file, then restart the Bridge Client node and reload the Web UI.
 
 .. code-block:: yaml
@@ -57,3 +53,7 @@ To change which Bridge Server your ROS machine connects to, simply edit the ``br
       ros__parameters:
 
         bridge_server_address: https://us-ca.bridge.phntm.io # the Bridge Server instance to connect to
+
+Our aim is to provide a geographically well distributed service, we will be launching more regional instances and TURN servers depending on
+user demand and feedback. Please get in touch either by :email:`e-mail <human@phntm.io>` or by `opening an issue on GitHub <https://github.com/PhantomCybernetics/phntm_bridge_server/issues>`_ to
+discuss this further.
