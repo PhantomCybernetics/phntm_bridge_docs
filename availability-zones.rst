@@ -32,7 +32,7 @@ and can be also changed later. TURN servers are selected automatically.
 
 .. raw:: html
 
-  <p><span class="gray-note">The displayed ping times are to the Bidge Server only, the actual RTT between peers and robots is usually much shorter.</span></p>
+  <p><span class="gray-note">The displayed ping times are to the Bidge Server and indicative only, the actual RTT between peers and robots is usually much shorter.</span></p>
 
    <script type="text/javascript">
     $(document).ready(() => {
