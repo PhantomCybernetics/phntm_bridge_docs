@@ -1,3 +1,14 @@
+BODY::after {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	z-index: -1;
+	content:
+		url("black-spinner.svg")
+        ;
+}
+
 .wy-nav-content {
     max-width: 1240px;
 }
@@ -581,4 +592,38 @@ section {
 /* no win scrollbars in code blocks */
 .rst-content div[class^=highlight], .rst-content div[class^=highlight] pre, .rst-content pre.literal-block {
     scrollbar-width: none;
+}
+
+.server-conn-test {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+}
+
+.server-conn-test .icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: url('black-spinner.svg');
+    background-repeat: no-repeat;
+    background-size: 25px;
+}
+
+.server-conn-test.con-success .label {
+    color: green;
+    font-weight: bold;
+}
+
+.server-conn-test.con-error .label {
+    color: red;
+    font-weight: bold;
+}
+
+.server-conn-test.con-success .icon,
+.server-conn-test.con-error .icon {
+    display: none;
+}
+
+.gray-note {
+    color: #b2b2b2;
 }
