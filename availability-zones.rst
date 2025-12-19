@@ -35,6 +35,12 @@ and can be also changed later. TURN servers are selected automatically.
      - .. raw:: html
 
           <span class="server-conn-test" data-url="https://eu-ch.bridge.phntm.io"><span class="icon"></span></span>
+   * - Korea, Asia
+     - **asia-kr.bridge.phntm.io**
+     - asia-kr.turn.phntm.io
+     - .. raw:: html
+
+          <span class="server-conn-test" data-url="https://asia-kr.bridge.phntm.io"><span class="icon"></span></span>
 
 
 .. raw:: html
