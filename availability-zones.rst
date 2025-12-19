@@ -29,6 +29,13 @@ and can be also changed later. TURN servers are selected automatically.
      - .. raw:: html
 
           <span class="server-conn-test" data-url="https://us-oh.bridge.phntm.io"><span class="icon"></span></span>
+   * - Switzerland, Europe
+     - **eu-ch.bridge.phntm.io**
+     - eu-ch.turn.phntm.io
+     - .. raw:: html
+
+          <span class="server-conn-test" data-url="https://eu-ch.bridge.phntm.io"><span class="icon"></span></span>
+
 
 .. raw:: html
 
