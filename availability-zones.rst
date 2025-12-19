@@ -16,7 +16,7 @@ and can be also changed later. TURN servers are selected automatically.
    * - Location
      - Bridge Server
      - TURN Servers
-     - Ping
+     - Response time (HTTP)
    * - California, USA
      - **us-ca.bridge.phntm.io**
      - us-ca.turn.phntm.io     
@@ -45,13 +45,11 @@ and can be also changed later. TURN servers are selected automatically.
 
 .. raw:: html
 
-  <p><span class="gray-note">The displayed ping times are to the Bidge Server and indicative only, the actual RTT between peers and robots is usually much shorter.</span></p>
-
    <script type="text/javascript">
     $(document).ready(() => {
       $('.server-conn-test').each(function(index) {
         let url = $(this).data('url');
-        console.log('Checking ping to '+ url);
+        console.log('Checking response time to '+ url);
         fetchWithTiming(url, $(this));
       });
     });
