@@ -47,10 +47,10 @@ and can be also changed later. TURN servers are selected automatically.
 
    <script type="text/javascript">
     $(document).ready(() => {
-      $('.server-conn-test').each(function(index) {
+      $('.server-conn-test').each(async function(index) {
         let url = $(this).data('url');
         console.log('Checking response time to '+ url);
-        fetchWithTiming(url, $(this));
+        await fetchWithTiming(url, $(this));
       });
     });
    </script>
