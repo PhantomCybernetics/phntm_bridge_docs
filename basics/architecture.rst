@@ -18,7 +18,8 @@ the data is actually received.
 `WebSockets <https://en.wikipedia.org/wiki/WebSocket>`_ (namely Socket.io) are used as a reliable means of
 communication between the Peers, with the Bridge Server acting as a relay.
 
-.. image:: ../img/Architecture.png
+.. image:: ../img/Architecture.svg
+    :class: architecture
 
 To start using this Bridge, you only need to :doc:`install the Bridge Client</basics/install>` node on your ROS2 machine.
 

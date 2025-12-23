@@ -143,6 +143,11 @@ BODY::after {
     margin-bottom: 24px;
 }
 
+img.architecture {
+    margin-top: 20px;
+    margin-bottom: 40px !important;
+}
+
 img.user-input-ui {
     width: 413px; /* @2x */
 }
