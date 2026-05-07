@@ -653,3 +653,39 @@ section {
 .demos SPAN.offline {
     background-color: #cc0000;;;
 }
+
+/* Live Demos */
+.toctree-l1:nth-child(2) A::after {
+    content: "ONLINE";
+    position: absolute;
+    background-color: #2a80b9;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    display: inline;
+    padding: 3px 6px;
+    border-radius: 5px;
+    top: 3px;
+    margin-left: 5px;
+}
+
+/* Install */
+.toctree-l1:nth-child(3) A {
+    /* text-transform: uppercase; */
+}
+.toctree-l1:nth-child(3) A::after {
+    content: "";
+    background-image: url('icon-lightning-blue.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    position: absolute;
+    margin-left: 3px;
+    margin-top: 1px;
+}
+
+.toctree-l1:nth-child(3) A.current::after {
+    background-image: url('icon-lightning-gray.svg');
+}
