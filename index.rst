@@ -20,6 +20,13 @@ typically consideted a ROS visualization tool, in order to make robotics develop
 The UI is :doc:`customizable with JavaScript & CSS plugins </ui/customizing>`, various configuration options make it suitable
 both as a universal development tool and a customer-facing product.
 
+.. raw:: html
+
+   <video width="100%" height="auto" autoplay loop class="ui-overview">
+      <source src="https://d13exqa8fa735g.cloudfront.net/ui-overview.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
+
 Features
 ========
 - Connects P2P or via a TURN server when P2P link is not possible
