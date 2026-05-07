@@ -144,9 +144,9 @@ See :doc:`User input & Teleoperation </ui/user-input-and-teleoperation>`.
         input_defaults: /ros2_ws/phntm_input_config.json # path to input defaults JSON file (as mapped inside the container)
 
 
-ROS Service Controls
---------------------
-See more in :doc:`Calling ROS Services </ui/ros-services>`.
+ROS Service & Action Controls
+-----------------------------
+See more in :doc:`Calling ROS Services & Actions </ui/ros-services-and-actions>`.
 
 .. code-block:: yaml
    :caption: phntm_bridge.yaml

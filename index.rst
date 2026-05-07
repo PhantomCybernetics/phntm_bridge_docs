@@ -22,7 +22,7 @@ both as a universal development tool and a customer-facing product.
 
 .. raw:: html
 
-   <video width="100%" height="auto" autoplay loop class="ui-overview">
+   <video width="100%" height="auto" autoplay muted loop class="ui-overview">
       <source src="https://d13exqa8fa735g.cloudfront.net/ui-overview.mp4" type="video/mp4">
       Your browser does not support the video tag.
    </video>
@@ -35,7 +35,7 @@ Features
 - Fast streamimg of binary ROS messages (both in a out)
 - Fast H.264 video streaming, ROS `Image` and `CompressedImage` topics streamed as H.264 video (hw or sw-encodeded frames)
 - Docker container :doc:`discovery and control </ui/docker-control>`
-- Reliable :doc:`ROS service calls </ui/ros-services>`
+- Reliable :doc:`ROS service & action calls </ui/ros-services-and-actions>`
 - :doc:`ROS parameneters </ui/runtime-ros-parameters>` discovery, read and write at runtime
 - :doc:`Keyboard, gamepad and touch interface </ui/user-input-and-teleoperation>` user input mapped into ROS messages
 - Extra ROS packages can be easily included for :doc:`custom message type support </basics/custom-message-types>`
@@ -62,7 +62,7 @@ Features
    ui/overview
    ui-widgets/index
    ui/user-input-and-teleoperation
-   ui/ros-services
+   ui/ros-services-and-actions
    ui/runtime-ros-parameters
    ui/docker-control
    ui/touchscreen-interface

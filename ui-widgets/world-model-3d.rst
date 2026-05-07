@@ -5,7 +5,7 @@ World Model 3D
 
 .. raw:: html
 
-   <video autoplay loop class="world-model-widget">
+   <video autoplay muted loop class="world-model-widget">
       <source src="https://d13exqa8fa735g.cloudfront.net/wolrd-model-3d-widget.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>

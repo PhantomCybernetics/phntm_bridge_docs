@@ -5,14 +5,14 @@ User Interface Overview
 
 Phantom Bridge comes with a flexible web-based user interface. It can display autodetected topics either as raw 
 deserialized data, or using visual widgets. Several widget types are :doc:`built in </ui-widgets/index>`, you can also easily :doc:`implement your own. </ui/customizing>`
-You can :doc:`call any ROS service </ui/ros-services>`, set :doc:`runtime ROS parameters </ui/runtime-ros-parameters>`, and completely customize :doc:`input settings </ui/user-input-and-teleoperation>` for tele-operation.
+You can :doc:`call any ROS service or action </ui/ros-services-and-actions>`, set :doc:`runtime ROS parameters </ui/runtime-ros-parameters>`, and completely customize :doc:`input settings </ui/user-input-and-teleoperation>` for tele-operation.
 
 .. Tip:: Full configuration of the displayed panels is stored in the URL.
          Share it with others and they will see exactly what you see, and be able to control the machine.
 
 .. raw:: html
 
-   <video width="100%" height="auto" autoplay loop class="ui-overview">
+   <video width="100%" height="auto" autoplay muted loop class="ui-overview">
       <source src="https://d13exqa8fa735g.cloudfront.net/ui-overview.mp4" type="video/mp4">
       Your browser does not support the video tag.
    </video>
@@ -53,11 +53,11 @@ Each connection in the graph shows publisher's and subscriber's QoS. A warning i
     :class: ui-graph-view
 
 
-Services Menu
--------------
+Services & Actions Menu
+-----------------------
 
-The `Services` menu allows you to call any discovered ROS service on your system. Some buttons are instantly available,
-other may need to be configured. You can also make your own custom control widgets. :doc:`Read more here. </ui/ros-services>`
+The menu labelled `Services` allows you to call any discovered ROS service or action on your system. Some buttons are instantly available,
+other may need to be configured. You can also make your own custom control widgets. :doc:`Read more here. </ui/ros-services-and-actions>`
 
 .. image:: https://d13exqa8fa735g.cloudfront.net/ui-services-menu.png
     :align: center

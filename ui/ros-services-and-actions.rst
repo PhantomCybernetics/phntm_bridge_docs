@@ -1,9 +1,9 @@
-:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/ui/ros-services.rst
+:github_url: https://github.com/PhantomCybernetics/phntm_bridge_docs/edit/main/ui/ros-services-and-actions.rst
 
-Calling ROS Services
-====================
+Calling ROS Services & Actions
+==============================
 
-The Bridge Client node autodetects all available ROS services of all discovered nodes,
+The Bridge Client node autodetects all available ROS services and actions of all discovered nodes,
 and the Web UI then provides various tools to call them with custom data payloads and receive replies.
 Service calls can be even :doc:`mapped to keyboard keys, gamepad and touch UI buttons <user-input-and-teleoperation>`.
 
