@@ -4,7 +4,7 @@ User Input & Teleoperation
 ==========================
 
 The Web UI offers a comprehensive Input Manager that can map various forms of user input (keyboard, gamepad, touchscreen) 
-into messages produced into ROS topics, and even ROS service calls. Any ROS machine can be teleoperated both over the local network
+to messages produced into ROS topics, and even ROS service and action calls. Any ROS machine can be teleoperated both over the local network
 or remotely over the Internet, often without any need for re-configuration.
 
 .. figure:: https://d13exqa8fa735g.cloudfront.net/user-input-ui.png
@@ -16,7 +16,7 @@ and `Joy <https://github.com/PhantomCybernetics/phntm_bridge_ui/blob/main/static
 ``geometry_msgs/msg/Twist``, ``geometry_msgs/msg/TwistStamped`` and ``sensor_msgs/msg/Joy`` control messages. Creating a custom `input driver`
 to generate any other message type is a fairly simple process, see :ref:`more below <implementing-custom-input-drivers>`.
 
-ROS service call with a custom payload can be also easily mapped to a keyboard key or gamepad button, offering a wide range of possible interaction with a ROS
+ROS service/acion calls with a custom payload can be also easily mapped to a keyboard key or gamepad button, offering a wide range of possible interaction with a ROS
 machine. You can even start, stop or restart a Docker container with a single press of a button utilizing the ``docker_command`` service published by Agent nodes.
 
 Only a single peer is allowed to generate input messages into any specific topic at the time.
