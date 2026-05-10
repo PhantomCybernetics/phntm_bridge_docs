@@ -16,7 +16,11 @@ On Ubuntu / Mac:
 python3 -m venv ~/sphinx_env
 source ~/sphinx_env/bin/activate
 
-pip install -U sphinx sphinxcontrib.jquery sphinxcontrib.email sphinx_rtd_theme
+pip install -U sphinx \
+               sphinxcontrib.jquery \
+               sphinxcontrib.email \
+               sphinx_rtd_theme \
+               sphinx-reredirects
 ```
 
 ### Assets
