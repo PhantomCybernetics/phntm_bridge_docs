@@ -16,6 +16,7 @@ author = 'Mirek Burkon'
 extensions = [
     'sphinxcontrib.jquery',
     'sphinxcontrib.email',
+    'sphinx_reredirects',
 ]
 # 'sphinx_js'
 # it'd be nice to generate the exact same kind of documentation from live JS, 
@@ -44,6 +45,10 @@ html_js_files = [
     'https://analytics.phntm.io/gs.js',
     'analytics.js'
 ]
+
+redirects = {
+    "ui/ros-services": "ros-services-and-actions",
+}
 
 # js_source_path = [
 #     '../bridge_ui/static',
