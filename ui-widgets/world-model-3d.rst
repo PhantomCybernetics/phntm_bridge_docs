@@ -25,8 +25,8 @@ The URDF model can be meshed with additional data via overlays, several are impl
 
 This widget allows to switch beween orthographic and perpective camera. Skybox, light and ground plane can be also ajusted.
 
-`SpaceMouse by 3Dconnexion <https://3dconnexion.com/ca/spacemouse/>`_ can be used to control the camera. On Windows or Mac, use the `propriatery driver <https://3dconnexion.com/drivers/>`_ ,
-on Linux we recommend the open-source alternative consisting of `spacenavd <https://github.com/FreeSpacenav/spacenavd>`_ and `spacenav-ws <https://github.com/mirek-burkon/spacenav-ws>`_ (X11 support is not required).
+`SpaceMouse by 3Dconnexion <https://3dconnexion.com/spacemouse/>`_ can be used to control the camera. On Windows or Mac, use the `propriatery driver <https://3dconnexion.com/drivers/>`_ ,
+on Linux we recommend the open-source alternative consisting of `spacenavd <https://github.com/FreeSpacenav/spacenavd>`_ and `spacenav-ws <https://github.com/PhantomCybernetics/spacenav-ws>`_ (X11 support is not required).
 
 .. rst-class:: overlay-section
 
