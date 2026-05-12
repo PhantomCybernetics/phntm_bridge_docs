@@ -655,7 +655,7 @@ section {
 }
 
 /* Live Demos */
-.toctree-l1:nth-child(2) A::after {
+.wy-menu .toctree-l1:nth-child(2) A::after {
     content: "ONLINE";
     position: absolute;
     background-color: #2a80b9;
@@ -670,10 +670,10 @@ section {
 }
 
 /* Install */
-.toctree-l1:nth-child(3) A {
+.wy-menu .toctree-l1:nth-child(3) A {
     /* text-transform: uppercase; */
 }
-.toctree-l1:nth-child(3) A::after {
+.wy-menu .toctree-l1:nth-child(3) A::after {
     content: "";
     background-image: url('icon-lightning-blue.svg');
     background-size: 100%;
@@ -686,6 +686,6 @@ section {
     margin-top: 1px;
 }
 
-.toctree-l1:nth-child(3) A.current::after {
+.wy-menu .toctree-l1:nth-child(3) A.current::after {
     background-image: url('icon-lightning-gray.svg');
 }
