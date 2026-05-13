@@ -87,7 +87,7 @@ and also :doc:`live in our demos </demos/>`.
 .. code-block:: javascript
    :caption: custom-world-model-3d-plugin.js
    
-   import { WorldModel3DPluginBase } from 'https://bridge.phntm.io/static/widgets/world-model-3d/world-model-plugin-base.js'
+   import { WorldModel3DPluginBase } from 'widgets/world-model-plugin-base';
 
    export class CustomWorldModel3DPlugin extends WorldModel3DPluginBase {
 

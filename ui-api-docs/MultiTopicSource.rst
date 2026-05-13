@@ -37,8 +37,8 @@ It also adds its UI to the :doc:`panel </ui-api-docs/Panel>` menu and handles us
      - Returns true if at least one topic of msg_type is selected
    * - **hasSources()** : *Bool*
      - Returns true if any source topics are selected
-   * - **loadAssignedTopicsFromPanelVars()**
-     - Loads selected topics from widget's panel vars, call after adding sources (saving handled internally)
+   * - **init()**
+     - Initialize, loads selected topics from widget's panel vars (call after adding sources)
    * - **off(** *String* event, *Callback* callback **)**
      - Unregister event handler
    * - **on(** *String* event, *Callback* callback **)**
@@ -52,6 +52,8 @@ It also adds its UI to the :doc:`panel </ui-api-docs/Panel>` menu and handles us
 .. code-block:: javascript
    :caption: multitopic-example.js
    
+   import { CompositePanelWidgetBase } from 'widgets/composite-widget-base';
+
    export class SomeWidget extends CompositePanelWidgetBase {
 
         constructor (panel, widget_css_class) {
@@ -87,7 +89,7 @@ It also adds its UI to the :doc:`panel </ui-api-docs/Panel>` menu and handles us
                 }
             );
             
-            this.sources.loadAssignedTopicsFromPanelVars();  // call when all sources are added
+            this.sources.init();  // call when all sources are added
 
             this.onSourcesChange(this.sources.getSources());
 

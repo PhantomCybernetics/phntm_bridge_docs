@@ -3,7 +3,7 @@
 Calling ROS Services & Actions
 ==============================
 
-The Bridge Client node autodetects all available ROS services and actions of all discovered nodes,
+The Bridge Client node autodetects all available ROS Services and Actions on all discovered nodes,
 and the Web UI then provides various tools to call them with custom data payloads and receive replies.
 Service and action calls can be even :doc:`mapped to keyboard keys, gamepad and touch UI buttons <user-input-and-teleoperation>`.
 
@@ -42,7 +42,7 @@ complex input data, we first need to define the payload.
 
 Configuring Payload Buttons
 ---------------------------
-In the `Services` dropdown menu, you will see the ``{}`` symbol next to each service/action name, clicking it opens the payload editor. 
+In the `Services` dropdown menu, you will see the **{ }** symbol next to each service/action name, clicking it opens the payload editor. 
 The editor allows to define custom data to call the service with, and to save such calls as UI buttons.
 All defined buttons are displayed next to the service/action name in the dropdown menu.
 

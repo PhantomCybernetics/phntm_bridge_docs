@@ -14,7 +14,7 @@ Declared in `world-model-base.js <https://github.com/PhantomCybernetics/phntm_br
 
 This is a *composite* widget that displays the URDF model from ``/robot_description`` and updates it with transforms from ``/tf_static`` and ``/tf``.
 Model files are :doc:`discovered on the robot </file-extraction>`, uploaded to the Bridge Server and cached there. Supported mesh formats are STL and DAE.
-The widget expects the ``/robot_description``, ``/tf_static`` and ``/tf`` topics to exists and tries to subscribe to them.
+By default, this widget expects the ``/robot_description``, ``/tf_static`` and ``/tf`` topics to exists and tries to subscribe to them, custom topics can be also used.
 The ``/tf_static`` and ``/robot_description`` topics should be subscribed to as `RELIABLE` to make sure every published message is received,
 the ``/tf`` topic is expected to be `BEST_EFFORT` and update continuously.
 

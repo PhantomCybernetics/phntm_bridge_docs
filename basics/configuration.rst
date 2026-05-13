@@ -73,7 +73,7 @@ These settings affect how topics, nodes and services are discovered.
         stop_discovery_after_sec: 10.0 # <0 run forever (default)
 
         blacklist_topics: [] # blacklist topics from discovery (msg types or full topic ids)
-        blacklist_services: [] # blacklist services from discovery (msg types or full service ids)
+        blacklist_services: [] # blacklist services and actions from discovery (msg types or full service ids)
         blacklist_msg_types: [] # blacklist IDL definitions from discovery and upload (msg types)
 
 

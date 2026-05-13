@@ -49,7 +49,7 @@ and also :doc:`live in our demos </demos/>`.
 .. code-block:: javascript
    :caption: custom-service-input.js
 
-   import { ServiceInputBase } from 'https://bridge.phntm.io/static/input/service-input-base.js'
+   import { ServiceInputBase } from 'input/service-input-base';
 
    export class ServiceInput_ExampleSlider extends ServiceInputBase {
 

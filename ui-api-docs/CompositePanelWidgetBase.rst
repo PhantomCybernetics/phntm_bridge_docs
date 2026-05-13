@@ -81,7 +81,7 @@ and also :doc:`live in our demos </demos/>`.
 .. code-block:: javascript
    :caption: custom-composite-widget.js
 
-   import { CompositePanelWidgetBase } from 'https://bridge.phntm.io/static/widgets/inc/composite-widget-base.js'
+   import { CompositePanelWidgetBase } from 'widgets/composite-widget-base';
 
    export class CustomSingleTypePanelWidget extends SingleTypePanelWidgetBase {
 
@@ -105,7 +105,7 @@ and also :doc:`live in our demos </demos/>`.
                 (topic, msg) => this.onSomeOtherData(topic, msg),
             );
 
-            this.sources.loadAssignedTopicsFromPanelVars(); // init sources
+            this.sources.init(); // init sources
 
             // set up DOM or Three.js Renderer+Scene here
         }

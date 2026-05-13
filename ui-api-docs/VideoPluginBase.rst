@@ -83,7 +83,7 @@ and also :doc:`live in our demos </demos/>`.
 .. code-block:: javascript
    :caption: custom-video-plugin.js
 
-   import { VideoPluginBase } from "https://bridge.phntm.io/static/widgets/video/video-plugin-base.js";
+   import { VideoPluginBase } from "widgets/video-plugin-base";
     
    export class CustomVideoWidget_CmdVel extends VideoPluginBase {
         static SOURCE_TOPIC_TYPE = 'some_msgs/msg/TopicMsgType';

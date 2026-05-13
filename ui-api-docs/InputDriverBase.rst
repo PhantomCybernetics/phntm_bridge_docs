@@ -66,7 +66,7 @@ and also :doc:`live in our demos </demos/>` (switch to the `Bool Test` profile i
 .. code-block:: javascript
    :caption: custom-input-driver.js
 
-   import { InputDriverBase } from 'https://bridge.phntm.io/static/input/input-driver-base.js'
+   import { InputDriverBase } from 'input/input-driver-base';
 
    export class ExampleBoolInputDriver extends InputDriverBase {
 
