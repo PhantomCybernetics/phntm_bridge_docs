@@ -7,8 +7,13 @@ $(document).ready(function () {
             window.open($(this).attr('href'), '_blank');
         });
 
-    $('<li class="wy-breadcrumbs-aside"><a href="https://github.com/PhantomCybernetics" id="phntm-github-link" class="external"><span class="icon"></span>GitHub</a></li>')
-        .insertBefore($('LI.wy-breadcrumbs-aside'))
+    $('<li class="wy-breadcrumbs-aside">'
+        + '<a href="https://github.com/PhantomCybernetics" id="phntm-github-link" class="external"><span class="icon"></span>GitHub</a>'
+      + '</li>'
+      + '<li class="wy-breadcrumbs-aside">'
+        + '<a href="https://bsky.app/profile/phntm.io" id="phntm-bsky-link" class="external"><span class="icon"></span>Bluesky</a>'
+      + '</li>'
+     ).insertBefore($('LI.wy-breadcrumbs-aside'))
 
     let copy_el = $('div[role="contentinfo"]');
     let phntm = 'Phantom Cybernetics Inc';

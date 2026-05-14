@@ -42,6 +42,13 @@ BODY::after {
     border-top: 0px;
 }
 
+.fa-github:before, .icon-github:before {
+    content: unset;
+}
+.fa-github {
+    margin-left: 10px;
+}
+
 #phntm-github-link {
     display: inline-block;
     position: relative;
@@ -50,13 +57,6 @@ BODY::after {
     /* position: fixed; */
     color: black;
     margin-left: 50px;
-}
-
-.fa-github:before, .icon-github:before {
-    content: unset;
-}
-.fa-github {
-    margin-left: 10px;
 }
 
 #phntm-github-link .icon {
@@ -68,6 +68,45 @@ BODY::after {
     width: 30px;
     height: 30px;
     left: -27px;
+}
+
+#phntm-bsky-link {
+    display: inline-block;
+    position: relative;
+    /* top: 10px;
+    right: 10px; */
+    /* position: fixed; */
+    color: black;
+    margin-left: 50px;
+}
+
+#phntm-bsky-link .icon {
+    display: block;
+    position: absolute;
+    background-image: url(bsky.svg);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 30px;
+    height: 30px;
+    left: -27px;
+}
+
+@media screen and (max-width: 800px) {
+    .wy-breadcrumbs-extra, .wy-breadcrumbs li.wy-breadcrumbs-aside {
+        display:none
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #phntm-bsky-link {
+        display:none
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .fa-github {
+        display:none
+    }
 }
 
 .wy-breadcrumbs-aside A  {
