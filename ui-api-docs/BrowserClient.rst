@@ -123,8 +123,6 @@ This class is responsible for establishing WebRTC connection to the Robot, Socke
      - Connect to the Bridge Server
    * - **disconnect()**
      - Disconnect from the Bridge Server
-   * - **getBridgeFileUrl(** *String* url **)** : *String*
-     - Get file URL for file extraction from the robot
    * - **getConfigParam(** *String* key **)** : *Any*
      - Returns config param from the YAML file
    * - **getPeerConnectionInfo()** : *String[]*
@@ -158,6 +156,9 @@ This class is responsible for establishing WebRTC connection to the Robot, Socke
    * - | **openWriteChannel(** *String* topic, *String* msg_type,
        | *Object* err_out = null **)** : Bool
      - Opens write data channel for a topic, returns false on error and message err_out.message
+   * - | **requestRobotFileDownloadURL(** *String* path, *Bool* use_cdn,
+       | *Callback(String url)* cb, *Callback()* cb_err)**
+     - | Request file extraction from a robot (file:// or package://)
    * - | **serviceCall(** *String* service, *MsgType* data,
        | *Bool* silent_req, *Number* timeout_sec, *Callback* cb **)**
      - | Performs a ROS service call, reply received via callback

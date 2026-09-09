@@ -62,7 +62,7 @@ services or control Docker containers.
      - | Performs a service call linked to a button (UI element). Working state and error
        | will be signalled by adding 'working' and 'btn_err' classes to the *btn_el*.
        | When *show_reply* = null, notification is shown only on error or other reply data.
-   * - **showNotification(** *String* msg_html, *String* css_class, *String* detail_html = null **)**
+   * - **showNotification(** *String* msg_html, *String* css_class, *String* detail_html = null **) : *JQuery* msg_el**
      - | Displays a fading notification message with optional detail.
        | Use *css_class='error'* for errors.
    * - **showPageError(** *String* msg_html **)**
