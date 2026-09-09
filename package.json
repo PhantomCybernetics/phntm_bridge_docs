@@ -1,0 +1,27 @@
+{
+  "name": "phntm_bridge_docs",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Sources for https://docs.phntm.io/bridge",
+  "main": "server-docs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhantomCybernetics/phntm_bridge_docs.git"
+  },
+  "author": "Mirek Burkon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PhantomCybernetics/phntm_bridge_docs/issues"
+  },
+  "homepage": "https://github.com/PhantomCybernetics/phntm_bridge_docs#readme",
+  "dependencies": {
+    "comment-json": "^5.0.0",
+    "express": "^5.2.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "url": "^0.11.4"
+  }
+}

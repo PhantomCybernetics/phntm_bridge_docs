@@ -22,10 +22,15 @@ both as a universal development tool and a customer-facing product.
 
 .. raw:: html
 
-   <video width="100%" height="auto" autoplay muted loop class="ui-overview">
-      <source src="https://d13exqa8fa735g.cloudfront.net/ui-overview.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-   </video>
+   <script src="https://cdn.jsdelivr.net/npm/@mux/mux-player" defer></script>
+   <mux-player
+      playback-id="x702nehU9WXT02rbXzIU7RmEr900EebihFPNdKZgQ6alKU" 
+      metadata-video-title="Phantom Bridge Introduction" 
+      video-title="Phantom Bridge Introduction" 
+      default-hidden-captions="true" 
+      style="width: 100%; border: none; aspect-ratio: 3024/1888; margin: 0px 0px 40px 0px; padding: 0px; display: block; overflow:hidden; border-radius: 5px;"
+      thumbnail-time="3"
+   ></mux-player>
 
 Features
 ========

@@ -1,2 +1,4 @@
 .DS_Store
 _build/*
+node_modules
+config.json
