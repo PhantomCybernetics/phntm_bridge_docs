@@ -12,8 +12,8 @@ Phantom Bridge Documentation
 Phantom Bridge is a fast WebRTC ROS2 Bridge written in C++ for real-time ROS2 data visualization
 and video streaming, teleoperation, human-robot interaction, and both local and remote robot monitoring.
 
-The Bridge comes with :doc:`Docker container control </ui/docker-control>` for the host machine, :doc:`system load </ui-widgets/system-info>`
-:doc:`Wi-Fi monitoring </wifi-scanning-and-roaming>`, and highly customizable :doc:`Web Interface </ui/overview>` for both desktop and mobile touchscreen devices.
+The Bridge comes with :doc:`Docker container control </ui/docker-control>` for the host machine, :doc:`system load </ui-widgets/system-info>`,
+Wi-Fi/Cellular signal strength monitoring, and highly customizable :doc:`Web Interface </ui/overview>` for both desktop and mobile touchscreen devices.
 
 This suite is indended to be a modern replacement for RViz, in many cases going beyong what is
 typically consideted a ROS visualization tool, in order to make robotics development easier.
@@ -35,7 +35,7 @@ both as a universal development tool and a customer-facing product.
 Features
 ========
 - Connects P2P or via a TURN server when P2P link is not possible
-- ~5-10ms RTT on local network, 20ms+ RTT remote teleoperation via a TURN server
+- ~5-10ms RTT on local network, 50ms+ RTT remote teleoperation via a TURN server
 - ROS topic and service discovery
 - Fast streamimg of binary ROS messages (both in a out)
 - Fast H.264 video streaming, ROS `Image` and `CompressedImage` topics streamed as H.264 video (hw or sw-encodeded frames)
@@ -44,7 +44,7 @@ Features
 - :doc:`ROS parameneters </ui/runtime-ros-parameters>` discovery, read and write at runtime
 - :doc:`Keyboard, gamepad and touch interface </ui/user-input-and-teleoperation>` user input mapped into ROS messages
 - Extra ROS packages can be easily included for :doc:`custom message type support </basics/custom-message-types>`
-- Robot's :doc:`Wi-Fi signal monitoring </wifi-scanning-and-roaming>`, network scanning & roaming
+- Robot's Wi-Fi/Cellular signal monitoring, :doc:`Wi-Fi network scanning & AP roaming</wifi-scanning-and-roaming>`
 - :doc:`File retreival </file-extraction>` from any running Docker container and host fs (such as URDF models)
 - :doc:`System load, disk space </ui-widgets/system-info>`, and :doc:`Docker stats </ui/docker-control>` monitoring
 - Standalone lightweight Bridge Agent for monitoring and management of various parts of a distributed system

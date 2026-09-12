@@ -37,7 +37,7 @@ UI Customization
 
         battery_topic: /battery # battery to show in the UI, '' to disable
 
-        wifi_monitor_topic: '/iw_status' # WiFi monitor topic to show in the UI (produced by the Agent)
+        net_monitor_topic: '/net_status' # connectivity monitor topic to show in the UI (produced by Agent)
         enable_wifi_scan: True # must be also enabled in Agent config
         enable_wifi_roam: False # must be also enabled in Agent config
 
@@ -324,7 +324,7 @@ config file:
         system_info_topic: '/system_info_pi5' # writes output here, '' to disable
         disk_volume_paths: [ '/', '/dev/shm' ] # volumes to monitor, must be accessible from the container, [ '/' ] default
 
-        wifi_interface: 'wlan0' # wi-fi interface to monitor, disabled if ''
-        wifi_monitor_topic: '/iw_status' # Agent writes output here, Client reads here
+        net_interface: 'wlan0' # for cellular use the control iface (e.g. 'cdc-wdm0'); wi-fi/cellular/wired interface to monitor, disabled if ''
+        net_monitor_topic: '/net_status' # Agent writes output here, Client reads here
         enable_wifi_scan: True # enable wi-fi scanning (Agent and Client)
         enable_wifi_roam: False # enable wi-fi roaming (Agent and Client)

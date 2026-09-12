@@ -9,7 +9,7 @@ also known as roaming. This is very useful when a robot needs to navigate a vast
 .. Note:: `Wpa_supplicant <https://w1.fi/wpa_supplicant/>`_ needs to be installed on the host system. The Bridge Agent accesses it via /host_run, which is the host machine's /var/run directory mapped into the Docker contaier in your compose.yaml file. `Network Manager <https://www.networkmanager.dev/>`_ is also assumed to be installed on the host machine.
 
 The scan or roam commands can be initiated from the Web UI, either one needs to be enabled both in the Agent's and Client's config.
-You can also invoke both by calling the ``iw_scan`` service of the Agent node.
+You can also invoke both by calling the ``wireless_scan`` service of the Agent node.
 
 In order to perform the scan, the wireless radio typically has to momentatily pause transmission, so you can expect a brief interruption of video and data streaming.
 Internally, Phntm Agent uses iwlib to perform these operations.
@@ -40,7 +40,7 @@ The roam command automatically selects the AP in the current network with the be
     /**:
       ros__parameters:
 
-        wifi_interface: 'wlan0' # wi-fi interface to monitor on Agent, disabled if ''
-        wifi_monitor_topic: '/iw_status' # Agent writes output here, Client reads here
+        net_interface: 'wlan0' # wi-fi interface to monitor on Agent, disabled if ''; use the control interface for modems (e.g. 'cdc-wdm0')
+        net_monitor_topic: '/net_status' # Agent writes output here, Client reads here
         enable_wifi_scan: True # enable wi-fi scanning (Agent and Client)
         enable_wifi_roam: False # enable wi-fi roaming (Agent and Client)
