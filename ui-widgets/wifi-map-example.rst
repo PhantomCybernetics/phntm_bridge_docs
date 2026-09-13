@@ -30,6 +30,6 @@ You can see this widget in action in our :doc:`live demos </demos>`.
 
         wifi_map_example:
           default_odometry_topic: /odom
-          default_wifi_topic: /iw_status
+          default_wifi_topic: /net_status
 
 
