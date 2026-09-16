@@ -673,7 +673,8 @@ section {
 }
 
 .demos A.offline {
-    text-decoration: line-through;;
+    cursor: default;
+    color: #404040;
 }
 
 .demos SPAN.online, .demos SPAN.offline {
