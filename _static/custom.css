@@ -695,7 +695,7 @@ section {
 }
 
 /* Live Demos */
-.wy-menu .toctree-l1:nth-child(2) A::after {
+/* .wy-menu .toctree-l1:nth-child(2) A::after {
     content: "ONLINE";
     position: absolute;
     background-color: #2a80b9;
@@ -707,7 +707,7 @@ section {
     border-radius: 5px;
     top: 3px;
     margin-left: 5px;
-}
+} */
 
 /* Install */
 .wy-menu .toctree-l1:nth-child(3) A {
